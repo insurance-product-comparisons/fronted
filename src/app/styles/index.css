@@ -1,8 +1,4 @@
-.root {
-	/* @TODO: Установить переменные цветов */
-	--max-width: 1200px;
-	--primary-color: #000;
-}
+@import url(./variables.css);
 
 body {
 	margin: 0;
@@ -12,4 +8,5 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: var(--primary-color);
 }
