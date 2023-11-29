@@ -1,4 +1,4 @@
-import { Flexbox } from '/Flexbox.jsx'
+import { Flexbox } from './Flexbox'
 
 export default {
     title: 'Flexbox',

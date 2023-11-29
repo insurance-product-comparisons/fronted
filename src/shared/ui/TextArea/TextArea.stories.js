@@ -1,4 +1,4 @@
-import { TextArea } from '/TextArea.jsx'
+import { TextArea } from './TextArea'
 
 export default {
     title: 'TextArea',
@@ -11,7 +11,7 @@ export default {
             control: 'boolean',
         }, 
         maxLength: {
-            type: number,
+            type: 'number',
             description: 'Устанавливает максимальное число символов',
             control: { 
                 type: 'number', min:1, max:130,

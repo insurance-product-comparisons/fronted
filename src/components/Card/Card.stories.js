@@ -1,4 +1,4 @@
-import { Card } from '/Card.jsx'
+import { Card } from './Card'
 
 export default {
     title: 'Card',
@@ -10,7 +10,7 @@ export default {
             control: 'text'
         },
         rate: {
-            type: number,
+            type: 'number',
             description: 'Устанавливает количество звезд рейтинга',
             control: { 
                 type: 'number', min:1, max:5,

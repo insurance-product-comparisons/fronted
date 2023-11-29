@@ -1,16 +1,16 @@
-import { Modal } from '/Modal.jsx'
+import { Modal } from './Modal'
 
 export default {
     title: 'Modal',
     component: Modal,
     argTypes: {
         maxWidth: {
-            type: string,
+            type: 'string',
             description: 'Задает максимальную ширину модального окна',
             control: 'text',
         }, 
         maxHeight: {
-            type: string,
+            type: 'string',
             description: 'Задает максимальную ширину модального окна',
             control: 'text',
         },

@@ -1,4 +1,4 @@
-import { RadioBtn } from '/RadioBtn.jsx'
+import { RadioBtn } from './RadioBtn'
 
 export default {
     title: 'RadioBtn',

@@ -1,4 +1,4 @@
-import { Button } from '/Button.jsx'
+import { Button } from './Button'
 
 export default {
     title: 'Button',
@@ -67,11 +67,6 @@ export default {
     },
 }
 
-const Template = (arg) => <Button {...arg} /> 
+export const Template = (arg) => <Button {...arg} /> 
 
-export const Default = () => Template.bind({});
-Default.args = {
-    children: 'Клик', 
-    shape: 'small', 
-    type: 'button',
-}
+

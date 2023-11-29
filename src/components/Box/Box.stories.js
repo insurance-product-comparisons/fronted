@@ -1,4 +1,4 @@
-import { Box } from '/Box.jsx'
+import { Box } from './Box'
 
 export default {
     title: 'Box',
@@ -10,14 +10,14 @@ export default {
             control: 'text',
         }, 
         border: {
-            type: number, 
+            type: 'number', 
             description: 'Задает границу контейнера в пикселях',
             control: { 
                 type: 'number', min:1, max:10,
             }
         }, 
         borderRadius: { 
-            type: number, 
+            type: 'number', 
             description: 'Задает радиус для границ контейнера в пикселях',
             control: { 
                 type: 'number', min:1, max:100,

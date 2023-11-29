@@ -1,4 +1,4 @@
-import { Typography } from '/Typography.jsx'
+import { Typography } from './Typography'
 
 export default {
     title: 'Typography',
