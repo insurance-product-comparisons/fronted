@@ -1,7 +1,7 @@
-import { Footer } from './Footer';
+import Footer from '.';
 
 export default {
-	title: 'Footer',
+	title: 'Components/Footer',
 	component: Footer,
 	argTypes: {
 		Logo: {

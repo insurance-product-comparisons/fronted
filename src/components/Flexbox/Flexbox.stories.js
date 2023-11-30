@@ -1,7 +1,7 @@
-import Flexbox from './Flexbox';
+import Flexbox from '.';
 
 export default {
-	title: 'Flexbox',
+	title: 'Components/Flexbox',
 	component: Flexbox,
 	argTypes: {
 		justifyContent: {

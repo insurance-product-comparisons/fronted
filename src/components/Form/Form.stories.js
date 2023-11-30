@@ -1,7 +1,7 @@
-import Form from './Form';
+import Form from '.';
 
 export default {
-	title: 'Form',
+	title: 'Components/Form',
 	component: Form,
 	argTypes: {
 		children: {

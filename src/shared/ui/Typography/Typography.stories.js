@@ -1,7 +1,7 @@
-import Typography from './Typography';
+import Typography from '.';
 
 export default {
-	title: 'Typography',
+	title: 'UI-KIT/Typography',
 	component: Typography,
 	argTypes: {
 		children: {

@@ -1,7 +1,7 @@
-import TextArea from './TextArea';
+import TextArea from '.';
 
 export default {
-	title: 'TextArea',
+	title: 'UI-KIT/TextArea',
 	component: TextArea,
 	argTypes: {
 		autoSize: {

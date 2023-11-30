@@ -1,7 +1,7 @@
-import { Header } from './Header';
+import Header from '.';
 
 export default {
-	title: 'Header',
+	title: 'Components/Header',
 	component: Header,
 	argTypes: {
 		Logo: {

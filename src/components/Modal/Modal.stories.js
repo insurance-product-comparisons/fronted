@@ -1,7 +1,7 @@
-import Modal from './Modal';
+import Modal from '.';
 
 export default {
-	title: 'Modal',
+	title: 'Components/Modal',
 	component: Modal,
 	argTypes: {
 		maxWidth: {

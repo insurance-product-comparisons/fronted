@@ -1,7 +1,7 @@
-import Card from './Card';
+import Card from '.';
 
 export default {
-	title: 'Card',
+	title: 'Components/Card',
 	component: Card,
 	argTypes: {
 		title: {

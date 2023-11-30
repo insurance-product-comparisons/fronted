@@ -1,7 +1,7 @@
-import RadioBtn from './RadioBtn';
+import RadioBtn from '.';
 
 export default {
-	title: 'RadioBtn',
+	title: 'UI-KIT/RadioBtn',
 	component: RadioBtn,
 	argTypes: {
 		color: {

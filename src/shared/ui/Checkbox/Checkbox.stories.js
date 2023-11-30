@@ -1,7 +1,7 @@
-import Checkbox from './Checkbox';
+import Checkbox from '.';
 
 export default {
-	title: 'Checkbox',
+	title: 'UI-KIT/Checkbox',
 	component: Checkbox,
 	argTypes: {
 		checked: {

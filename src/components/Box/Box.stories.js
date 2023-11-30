@@ -1,7 +1,7 @@
-import Box from './Box';
+import Box from '.';
 
 export default {
-	title: 'Box',
+	title: 'Components/Box',
 	component: Box,
 	argTypes: {
 		children: {
