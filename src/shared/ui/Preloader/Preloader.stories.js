@@ -1,4 +1,4 @@
-import { Preloader } from './Preloader'
+import Preloader from './Preloader'
 
 export default {
     title: 'Preloader',

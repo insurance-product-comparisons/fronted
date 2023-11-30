@@ -1,4 +1,4 @@
-import { Flexbox } from './Flexbox'
+import Flexbox from './Flexbox'
 
 export default {
     title: 'Flexbox',
