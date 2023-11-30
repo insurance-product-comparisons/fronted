@@ -1,4 +1,4 @@
-import Tooltip from './Tooltip';
+import Tooltip from '.';
 
 export default {
 	title: 'UI-KIT/Tooltip',

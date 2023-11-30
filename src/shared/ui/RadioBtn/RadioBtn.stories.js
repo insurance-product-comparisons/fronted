@@ -1,4 +1,4 @@
-import RadioBtn from './RadioBtn';
+import RadioBtn from '.';
 
 export default {
 	title: 'UI-KIT/RadioBtn',

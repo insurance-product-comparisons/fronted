@@ -1,4 +1,4 @@
-import Preloader from './Preloader';
+import Preloader from '.';
 
 export default {
 	title: 'UI-KIT/Preloader',

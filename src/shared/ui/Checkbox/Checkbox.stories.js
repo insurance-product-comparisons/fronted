@@ -1,4 +1,4 @@
-import Checkbox from './Checkbox';
+import Checkbox from '.';
 
 export default {
 	title: 'UI-KIT/Checkbox',
