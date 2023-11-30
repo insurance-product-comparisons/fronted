@@ -1,7 +1,7 @@
 import Input from './Input';
 
 export default {
-	title: 'Input',
+	title: 'UI-KIT/Input',
 	component: Input,
 	argTypes: {
 		color: {

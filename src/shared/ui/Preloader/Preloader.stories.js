@@ -1,7 +1,7 @@
 import Preloader from './Preloader';
 
 export default {
-	title: 'Preloader',
+	title: 'UI-KIT/Preloader',
 	component: Preloader,
 	argTypes: {
 		color: {

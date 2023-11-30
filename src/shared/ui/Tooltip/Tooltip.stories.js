@@ -1,7 +1,7 @@
 import Tooltip from './Tooltip';
 
 export default {
-	title: 'Tooltip',
+	title: 'UI-KIT/Tooltip',
 	component: Tooltip,
 	argTypes: {
 		className: {

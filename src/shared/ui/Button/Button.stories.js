@@ -1,7 +1,7 @@
 import Button from './Button';
 
 export default {
-	title: 'Button',
+	title: 'UI-KIT/Button',
 	component: Button,
 	argTypes: {
 		children: {
