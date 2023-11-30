@@ -1,7 +1,7 @@
 import Box from './Box';
 
 export default {
-	title: 'Box',
+	title: 'Components/Box',
 	component: Box,
 	argTypes: {
 		children: {

@@ -1,6 +1,6 @@
 import Layout from '.';
 export default {
-	title: 'Layout',
+	title: 'Components/Layout',
 	component: Layout,
 	argTypes: {
 		maxWidth: {
