@@ -1,4 +1,4 @@
-import Flexbox from './Flexbox';
+import Flexbox from '.';
 
 export default {
 	title: 'Components/Flexbox',
