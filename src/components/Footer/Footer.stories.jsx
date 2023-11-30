@@ -18,6 +18,19 @@ export default {
 				accept: '.png',
 			},
 		},
+		Height: {
+			type: 'string',
+			description: 'Высота подвала сайта',
+			control: 'text',
+		},
+		BacgroundColor: {
+			type: 'string',
+			description: 'Цвет фона',
+			defaultValue: '',
+			control: {
+				type: 'color',
+			},
+		},
 	},
 };
 
