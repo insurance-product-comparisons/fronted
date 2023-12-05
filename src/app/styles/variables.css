@@ -1,5 +1,5 @@
 :root {
-	/* @TODO: Установить переменные цветов и размеров */
 	--max-width: 1200px;
-	--primary-color: rgb(56, 178, 37);
+	--primary-black: #000;
+	--primary-white: #fff;
 }
