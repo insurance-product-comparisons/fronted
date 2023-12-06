@@ -1,5 +1,14 @@
 :root {
+	/*Ширина приложения*/
 	--max-width: 1200px;
-	--primary-black: #000;
-	--primary-white: #fff;
+
+	/*Переменные цветового оформления */
+	--black: #232c32;
+	--white: #fefefe;
+	--grey: #8a9dab;
+	--grey-1: #c4ced5;
+	--grey-2: #e8ebee;
+	--grey-3: #f3f5f7;
+	--grey-5: #4f5c66;
+	--accent-color-yellow: #ffcf53;
 }
