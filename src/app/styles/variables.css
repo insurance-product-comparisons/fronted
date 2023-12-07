@@ -1,6 +1,8 @@
 :root {
 	/*Ширина приложения*/
-	--max-width: 1200px;
+	--max-width-app: 1200px;
+	/*Ширина Меню Accordion */
+	--max-width-accordion: 1091px;
 
 	/*Переменные цветового оформления */
 	--black: #232c32;

@@ -6,6 +6,9 @@ import RadioBtn from './RadioBtn';
 import TextArea from './TextArea';
 import Tooltip from './Tooltip';
 import Typography from './Typography';
+import LinkComponent from './LinkComponent';
+import LinkRouter from './LinkRouter';
+import AnswersItem from './AnswersItem';
 
 export {
 	Button,
@@ -16,4 +19,7 @@ export {
 	TextArea,
 	Tooltip,
 	Typography,
+	LinkComponent,
+	LinkRouter,
+	AnswersItem,
 };

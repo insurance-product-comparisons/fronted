@@ -9,5 +9,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: var(--black);
+	background-color: var(--grey-3);
 	/* @TODO: Установить глобальные стили*/
 }
