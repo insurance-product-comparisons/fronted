@@ -1,0 +1,26 @@
+@import 'app/styles/sass/mixins.scss';
+
+.root {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.default {
+    border-radius: 12px;
+    border: 1px solid;
+    color: var(--primary-black);
+    min-width: 100%;
+
+    &::placeholder {
+        color: var(--primary-black);
+        font-size: 16px;
+        opacity: 52%;
+        padding: 10px 0 0 10px;
+    }
+}
+
+.label {
+    font-size: 16px;
+    padding-bottom: 5px;
+}

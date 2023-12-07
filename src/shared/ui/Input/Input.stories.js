@@ -62,7 +62,7 @@ export default {
 
 const Template = (arg) => <Input {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
-	shape: 'geometric',
+	disabled: false,
 };

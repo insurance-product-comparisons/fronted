@@ -77,7 +77,7 @@ export default {
 
 const Template = (arg) => <TextArea {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	shape: 'geometric',
 };

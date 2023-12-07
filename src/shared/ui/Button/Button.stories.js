@@ -67,4 +67,10 @@ export default {
 	},
 };
 
-export const Template = (arg) => <Button {...arg} />;
+const Template = (arg) => <Button {...arg} />;
+
+export const Default = Template.bind({})
+Default.args = {
+	children: 'Click',
+	disabled: false
+}

@@ -66,7 +66,7 @@ export default {
 
 const Template = (arg) => <Checkbox {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	size: 'small',
 };

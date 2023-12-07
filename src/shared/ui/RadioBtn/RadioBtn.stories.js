@@ -43,7 +43,7 @@ export default {
 
 const Template = (arg) => <RadioBtn {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
-	size: 'small',
+	label: 'Radio',
 };
