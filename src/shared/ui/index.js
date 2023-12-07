@@ -8,6 +8,7 @@ import Tooltip from './Tooltip';
 import Typography from './Typography';
 import LinkComponent from './LinkComponent';
 import LinkRouter from './LinkRouter';
+import AnswersItem from './AnswersItem';
 
 export {
 	Button,
@@ -20,4 +21,5 @@ export {
 	Typography,
 	LinkComponent,
 	LinkRouter,
+	AnswersItem,
 };
