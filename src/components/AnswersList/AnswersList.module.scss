@@ -1,18 +1,18 @@
 .default {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .title-default {
-  margin: 0;
+	margin: 0;
 }
 
 .list-default {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  gap: 16px;
-  list-style: none;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	gap: 16px;
+	list-style: none;
 }
