@@ -1,0 +1,19 @@
+.default {
+	display: flex;
+	flex-direction: column;
+	max-width: 1136px;
+	padding: 32px;
+	gap: 16px;
+	border-radius: 12px;
+	box-sizing: border-box;
+	background-color: var(--white);
+}
+
+.title-default {
+	margin: 0;
+}
+
+.content-default {
+	margin: 0;
+	text-align: justify;
+}
