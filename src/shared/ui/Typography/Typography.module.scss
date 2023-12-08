@@ -42,13 +42,34 @@
     line-height: 20px;
 }
 
-.typography--color-primary {
-    color: var(--primary-black);
+.typography--color-black {
+    color: black;
 }
 
-.typography--color-error {
-    color: red;
+.typography--color-white {
+    color: var(--white);
 }
 
+.typography--color-grey {
+    color: var(--grey);
+}
 
+.typography--color-grey1 {
+    color: var(--grey1);
+}
 
+.typography--color-grey2 {
+    color: var(--grey2);
+}
+
+.typography--color-grey3 {
+    color: var(--grey3);
+}
+
+.typography--color-grey5 {
+    color: var(--grey5);
+}
+
+.typography--color-yellow {
+    color: var(--accent-color-yellow);
+}

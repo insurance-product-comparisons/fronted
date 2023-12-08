@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './TextArea.module.scss'
 
-function TextArea({label = 'Textarea', name, id, placeholder, mode}) {
+function TextArea({label, name, id, placeholder, mode}) {
 	const linkComponentStyle = React.useMemo(
 		() => (mode ? styles[mode] : ' '),
 		[mode]
@@ -14,11 +14,9 @@ function TextArea({label = 'Textarea', name, id, placeholder, mode}) {
 			<textarea
 				name={name}
 				placeholder={placeholder}
-				className={[styles.default, linkComponentStyle].join(' ')}
+				className={[styles.textarea, linkComponentStyle].join(' ')}
 				id={id}
 				value=''
-				rows='4'
-				cols='20'
 				>
 			</textarea>
 		</div>
