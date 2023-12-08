@@ -16,13 +16,13 @@
     .textarea{
         border-radius: 12px;
         border: none;
-        color: var(--primary-black);
+        color: var(--black);
         min-width: 100%;
         padding: 10px 0 0 10px;
-        background-color: #E8EBEE;
+        background-color: var(--grey-2);
 
         &::placeholder {
-            color: black;
+            color: var(--black);
             opacity: 52%;
             font-size: 16px;
             margin: 5px 0 0 5px;
