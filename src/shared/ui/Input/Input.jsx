@@ -1,20 +1,25 @@
 import React from 'react';
+import styles from './Input.module.scss'
 
-function Input({type, label = 'Input', name, placeholder, pattern, id}) {
+function Input({ type, label, name, placeholder, pattern, id, mode }) {
+	const linkComponentStyle = React.useMemo(
+		() => (mode ? styles[mode] : ' '),
+		[mode]
+	);
 	return (
-		<div>
-			<label className='' htmlFor={name}>{label}</label>
+		<div className={[styles.root, linkComponentStyle].join(' ')}>
+			<label className={[styles.label, linkComponentStyle].join(' ')} htmlFor={name}>{label}</label>
 			<input
 				type={type}
 				name={name}
 				placeholder={placeholder}
-				className=''
+				className={[styles.input, linkComponentStyle].join(' ')}
 				id={id}
 				pattern={pattern}
 				value=''
 				>
 			</input>
-			<span className=''></span>
+			<span className={[styles.span, linkComponentStyle].join(' ')}></span>
 		</div>
 	);
 }

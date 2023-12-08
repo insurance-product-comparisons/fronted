@@ -1,15 +1,22 @@
 import React from 'react';
-import Input from "../Input";
+import styles from './RadioBtn.module.scss'
 
-function RadioBtn({label = 'radio', placeholder, id, name}) {
+function RadioBtn({label, placeholder, id, name, mode}) {
+	const linkComponentStyle = React.useMemo(
+		() => (mode ? styles[mode] : ' '),
+		[mode]
+	);
 	return (
-		<Input 
-			type='radio'
-			label={label}
-			placeholder={placeholder}
-			id={id}
-			name={name}
-		/>
+		<div className={[styles.root, linkComponentStyle].join(' ')}>
+			<label className={[styles.label, linkComponentStyle].join(' ')}>{label}</label>
+			<input 
+				type='radio'
+				label={label}
+				id={id}
+				name={name}
+				className={[styles.input, linkComponentStyle].join(' ')}
+			/>
+		</div>
 	);
 }
 

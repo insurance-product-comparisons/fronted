@@ -1,15 +1,22 @@
 import React from 'react';
-import Input from "../Input";
+import styles from './Checkbox.module.scss'
 
-function Checkbox({label = 'Checkbox', placeholder = 'Check', id, name}) {
+function Checkbox({label, id, name, mode}) {
+	const linkComponentStyle = React.useMemo(
+		() => (mode ? styles[mode] : ' '),
+		[mode]
+	);
 	return (
-		<Input 
-			type='checkbox'
-			label={label}
-			placeholder={placeholder}
-			id={id}
-			name={name}
-		/>
+		<div className={[styles.root, linkComponentStyle].join(' ')}>
+			<label className={[styles.label, linkComponentStyle].join(' ')}>{label}</label>
+			<input 
+				type='checkbox'
+				id={id}
+				name={name}
+				className={[styles.checkbox, linkComponentStyle].join(' ')}
+			>
+		</input>
+		</div>
 	);
 }
 

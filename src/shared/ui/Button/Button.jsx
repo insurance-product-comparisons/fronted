@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './Button.module.scss'
 
-function Button({ type, children }) {
+function Button({ type, children, mode, bgcolor }) {
 	return (
 		<button 
 			type={type} 
-			className=''
+			className={[styles[bgcolor], [styles[mode]]].join(' ')}
 		>
 			{children}
 		</button>
