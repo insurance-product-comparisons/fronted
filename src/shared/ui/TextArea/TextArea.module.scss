@@ -1,0 +1,33 @@
+@import 'app/styles/sass/mixins.scss';
+
+.root {
+    position: relative;
+}
+
+.default {
+    display: flex;
+    flex-direction: column;
+
+    .label {
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+
+    .textarea{
+        border-radius: 12px;
+        border: none;
+        color: var(--primary-black);
+        min-width: 100%;
+        padding: 10px 0 0 10px;
+        background-color: #E8EBEE;
+
+        &::placeholder {
+            color: black;
+            opacity: 52%;
+            font-size: 16px;
+            margin: 5px 0 0 5px;
+        }
+    }
+}
+
+

@@ -1,0 +1,15 @@
+@import 'app/styles/sass/mixins.scss';
+
+.root {
+    position: relative;
+}
+
+.default {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}

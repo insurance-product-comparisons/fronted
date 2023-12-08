@@ -4,48 +4,14 @@ export default {
 	title: 'UI-KIT/TextArea',
 	component: TextArea,
 	argTypes: {
-		autoSize: {
-			type: Boolean,
-			description:
-				'Указывает, будет ли текстовое поле изменять размер в зависимости от количества введенного в него текста',
-			control: 'boolean',
-		},
-		maxLength: {
-			type: 'number',
-			description: 'Устанавливает максимальное число символов',
-			control: {
-				type: 'number',
-				min: 1,
-				max: 130,
-			},
-		},
-		color: {
-			type: 'string',
-			description: 'Задает основной цвет',
-			defaultValue: '',
-			options: ['primary', 'secondary'],
-			control: {
-				type: 'radio',
-			},
-		},
 		disabled: {
 			type: Boolean,
 			description: 'Устанавливает атрибут disabled',
 			control: 'boolean',
 		},
-		className: {
+		mode: {
 			type: 'string',
 			description: 'Задает дополнительные классы для компонента',
-			control: 'text',
-		},
-		error: {
-			type: 'string',
-			description: 'Отображает ошибку заполнения поля',
-			control: 'text',
-		},
-		hint: {
-			type: 'string',
-			description: 'Отображает подсказку для заполнения поля',
 			control: 'text',
 		},
 		label: {
@@ -54,30 +20,20 @@ export default {
 			defaultValue: 'Label',
 			control: 'text',
 		},
-		shape: {
+		placeholder: {
 			type: 'string',
-			description: 'Задает скругление',
-			defaultValue: '',
-			options: ['geometric', 'rounded', 'circular'],
-			control: {
-				type: 'radio',
-			},
-		},
-		size: {
-			type: 'string',
-			description: 'Задает размер инпута',
-			defaultValue: '',
-			options: ['small', 'medium', 'large'],
-			control: {
-				type: 'radio',
-			},
-		},
+			description: 'Задает label',
+			defaultValue: 'Label',
+			control: 'text',
+		}
 	},
 };
 
 const Template = (arg) => <TextArea {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
-	shape: 'geometric',
+	mode: 'default',
+	label: 'Textarea',
+	placeholder: 'placeholder'
 };

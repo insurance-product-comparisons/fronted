@@ -1,0 +1,19 @@
+@import 'app/styles/sass/mixins.scss';
+
+.root {
+    position: relative;
+}
+
+.type_default {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.type_footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #4F5C66;
+}
