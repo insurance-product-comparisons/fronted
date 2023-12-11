@@ -21,10 +21,7 @@ export default {
 		bgcolor: {
 			type: 'string',
 			description: 'Задает основной цвет для кнопки',
-			options: [
-				'accent',
-				'ghost'
-			],
+			options: ['accent', 'ghost'],
 			control: {
 				type: 'radio',
 			},
@@ -32,7 +29,7 @@ export default {
 		mode: {
 			type: 'string',
 			description: 'Задает дополнительный класс',
-			control: 'text'
+			control: 'text',
 		},
 		disabled: {
 			type: Boolean,
@@ -44,26 +41,26 @@ export default {
 
 const Template = (arg) => <Button {...arg} />;
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 Default.args = {
 	children: 'Click',
 	disabled: false,
 	bgcolor: 'ghost',
-	mode: 'enter'
-}
+	mode: 'enter',
+};
 
-export const SubmitForm = Template.bind({})
+export const SubmitForm = Template.bind({});
 SubmitForm.args = {
 	children: 'Submit',
 	disabled: false,
 	bgcolor: 'accent',
-	mode: 'submit-form'
-}
+	mode: 'submit-form',
+};
 
-export const MoreBtn = Template.bind({})
+export const MoreBtn = Template.bind({});
 MoreBtn.args = {
 	children: 'More',
 	disabled: false,
 	bgcolor: 'ghost',
-	mode: 'more'
-}
+	mode: 'more',
+};

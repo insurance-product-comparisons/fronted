@@ -1,20 +1,20 @@
 @import 'app/styles/sass/mixins.scss';
 
 .logo {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 
-    &.main{
-        background-image: url('/images/logo.svg');
-        width: 219px;
-        height: 51px;
-        cursor: pointer;
-    }
+	&.main {
+		background-image: url('/images/logo.svg');
+		width: 219px;
+		height: 51px;
+		cursor: pointer;
+	}
 
-    &.insurance{
-        background-image: url('/images/logo.svg');
-        width: 50px;
-        height: 50px;
-    }
+	&.insurance {
+		background-image: url('/images/logo.svg');
+		width: 50px;
+		height: 50px;
+	}
 }

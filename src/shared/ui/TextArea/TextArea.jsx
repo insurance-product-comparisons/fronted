@@ -1,21 +1,20 @@
 import React from 'react';
-import styles from './TextArea.module.scss'
-import cn from 'classnames'
+import styles from './TextArea.module.scss';
+import cn from 'classnames';
 
-function TextArea({label, name, id, placeholder, mode}) {
+function TextArea({ label, name, id, placeholder, mode }) {
 	return (
-		<div className={cn(styles.root,{[styles[mode]] : mode})}>
-			<label
-			className={cn(styles.label,{[styles[mode]] : mode})}
-			>{label}</label>
+		<div className={cn(styles.root, { [styles[mode]]: mode })}>
+			<label className={cn(styles.label, { [styles[mode]]: mode })}>
+				{label}
+			</label>
 			<textarea
 				name={name}
 				placeholder={placeholder}
-				className={cn(styles.textarea,{[styles[mode]] : mode})}
+				className={cn(styles.textarea, { [styles[mode]]: mode })}
 				id={id}
-				value=''
-				>
-			</textarea>
+				value=""
+			></textarea>
 		</div>
 	);
 }
