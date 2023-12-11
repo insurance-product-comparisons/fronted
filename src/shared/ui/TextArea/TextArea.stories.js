@@ -25,7 +25,7 @@ export default {
 			description: 'Задает label',
 			defaultValue: 'Label',
 			control: 'text',
-		}
+		},
 	},
 };
 
@@ -35,5 +35,5 @@ export const Default = Template.bind({});
 Default.args = {
 	mode: 'default',
 	label: 'Textarea',
-	placeholder: 'placeholder'
+	placeholder: 'placeholder',
 };

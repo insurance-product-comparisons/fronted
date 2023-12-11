@@ -22,5 +22,5 @@ const Template = (arg) => <ListItem {...arg} />;
 export const Default = Template.bind({});
 Default.args = {
 	children: 'Тексттекстекстекст',
-	mode: 'default'
+	mode: 'default',
 };

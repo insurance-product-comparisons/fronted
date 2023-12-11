@@ -11,15 +11,9 @@ export default {
 		},
 		variant: {
 			type: 'string',
-			description: 'Задает вариант типографики, от которого зависит размер шрифта',
-			options: [
-				'h1',
-				'h2',
-				'h3',
-				'body1',
-				'body2',
-				'body3',
-			],
+			description:
+				'Задает вариант типографики, от которого зависит размер шрифта',
+			options: ['h1', 'h2', 'h3', 'body1', 'body2', 'body3'],
 			control: {
 				type: 'select',
 			},
@@ -50,5 +44,5 @@ export const Default = () => Template.bind({});
 Default.args = {
 	variant: 'h1',
 	children: 'Я тексттексттексттексттексттекст',
-	color: 'black'
+	color: 'black',
 };

@@ -1,52 +1,51 @@
 @import 'app/styles/sass/mixins.scss';
 
 .accent {
-    color: var(--black);
-    background-color: var(--accent-color-yellow);
-    text-align: center;
-    font-size: 16px;
-    border-radius: 16px;
-    border: none;
-    padding: 0;
-    width: 100px;
-    height: 50px;
+	color: var(--black);
+	background-color: var(--accent-color-yellow);
+	text-align: center;
+	font-size: 16px;
+	border-radius: 16px;
+	border: none;
+	padding: 0;
+	width: 100px;
+	height: 50px;
 
-    &.submit-form {
-        width: 211px;
-        height: 56px;
-    }
+	&.submit-form {
+		width: 211px;
+		height: 56px;
+	}
 
-    &.count {
-        width: 157px;
-        height: 56px;
-    }
+	&.count {
+		width: 157px;
+		height: 56px;
+	}
 }
 
 .ghost {
-    color: var(--black);
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 16px;
-    border: 2px solid;
-    padding: 0;
-    width: 100px;
-    height: 50px;
+	color: var(--black);
+	background-color: transparent;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 16px;
+	border: 2px solid;
+	padding: 0;
+	width: 100px;
+	height: 50px;
 
-    &.more {
-        width: 156px;
-        height: 56px;
-    }
+	&.more {
+		width: 156px;
+		height: 56px;
+	}
 
-    &.submit-request {
-        width: 211px;
-        height: 56px;
-    }
+	&.submit-request {
+		width: 211px;
+		height: 56px;
+	}
 
-    &.enter {
-        border-radius: 12px;
-        width: 97px;
-        height: 48px;
-    }
-
+	&.enter {
+		border-radius: 12px;
+		width: 97px;
+		height: 48px;
+	}
 }
