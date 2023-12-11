@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames'
 import styles from './Typography.module.scss'
 
 const variantsMapping = {
@@ -14,10 +15,10 @@ function Typography({ variant, color, children }) {
 	const Component = variant ? variantsMapping[variant] : 'p';
 	return (
 		<Component
-		  className={
-            [styles[`typography--variant-${variant}`], 
-            styles[`typography--color-${color}`]]
-            .join(' ')}
+		className={cn({
+			[styles[`typography--variant-${variant}`]]: variant,
+			[styles[`typography--color-${color}`]]: color,
+		  })}
 		>
 			{children}
 		</Component>

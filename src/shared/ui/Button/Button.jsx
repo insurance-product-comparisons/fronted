@@ -1,11 +1,15 @@
 import React from 'react';
 import styles from './Button.module.scss'
+import cn from 'classnames'
 
 function Button({ type, children, mode, bgcolor }) {
 	return (
 		<button 
 			type={type} 
-			className={[styles[bgcolor], [styles[mode]]].join(' ')}
+			className={cn({
+				[styles[bgcolor]] : bgcolor,
+				[styles[mode]] : mode
+			})}
 		>
 			{children}
 		</button>

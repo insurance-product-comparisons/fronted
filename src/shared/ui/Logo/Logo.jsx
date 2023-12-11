@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './Logo.module.scss'
+import cn from 'classnames'
 
 function Logo({ mode }) {
 	return (
         <div 
-        className={
-            [styles['logo'], 
-            styles[mode]]
-            .join(' ')}
+        className={cn({
+			[styles.logo] : true,
+			[styles[mode]] : mode
+		})}
         ></div>
     );
 }

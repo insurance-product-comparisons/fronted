@@ -1,14 +1,14 @@
 import React from 'react';
-import styles from './ListItem.module.scss'
+import styles from './ListItem.module.scss';
+import cn from 'classnames'
 
 function ListItem({ children, mode }) {
-    const linkComponentStyle = React.useMemo(
-		() => (mode ? styles[mode] : ' '),
-		[mode]
-	);
 	return (
 		<li
-        className={[styles.root, linkComponentStyle].join(' ')}
+        className={cn({
+			[styles.root] : true,
+			[styles[mode]] : mode
+		})}
         >
             {children}
         </li>
