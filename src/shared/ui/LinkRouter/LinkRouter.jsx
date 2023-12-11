@@ -7,10 +7,7 @@ function LinkRouter({ route, text, mode, ...args }) {
 	return (
 		<Link
 			to={route}
-			className={cn({
-				[styles.root] : true,
-				[styles[mode]] : mode
-			})}
+			className={cn(styles.root,{[styles[mode]] : mode})}
 			{...args}
 		>
 			{text}

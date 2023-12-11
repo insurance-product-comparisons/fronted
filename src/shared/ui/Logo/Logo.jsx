@@ -5,10 +5,7 @@ import cn from 'classnames'
 function Logo({ mode }) {
 	return (
         <div 
-        className={cn({
-			[styles.logo] : true,
-			[styles[mode]] : mode
-		})}
+        className={cn(styles.logo,{[styles[mode]] : mode})}
         ></div>
     );
 }
