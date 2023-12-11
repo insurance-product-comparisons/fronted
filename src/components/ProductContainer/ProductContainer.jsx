@@ -1,32 +1,15 @@
 import Card from 'components/Card';
 import styles from './ProductContainer.module.scss';
 
-function ProductContainer() {
+function ProductContainer({ data, mode }) {
 	return (
-		<section className={styles.insurance}>
-			<h2 className={styles.title}>Страхование</h2>
-			<div className={styles.container}>
-				<Card
-					name="ОСАГО"
-					image="изображение"
-					information="описание вида страхования"
-				/>
-				<Card
-					name="КАСКО"
-					image="изображение"
-					information="описание вида страхования"
-				/>
-				<Card
-					name="ДМС"
-					image="изображение"
-					information="описание вида страхования"
-				/>
+		<section className={styles[mode]}>
+			<h2 className={styles[`title-${mode}`]}>Сравнивайте страховки онлайн</h2>
+			<div className={styles[`container-${mode}`]}>
+				{data.map((item, index) => (
+					<Card data={item} key={index} mode="default" />
+				))}
 			</div>
-			<p className={styles.text}>
-				Если вы не увидели в каталоге нужный вам страховой случай, то вы можете
-				Оставить заявку. В течение 2 рабочих дней мы рассмотрим ваш запрос и
-				ответим на указанный email.
-			</p>
 		</section>
 	);
 }

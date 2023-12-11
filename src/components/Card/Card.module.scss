@@ -1,0 +1,30 @@
+@import 'app/styles/sass/mixins.scss';
+
+.default {
+  background-color: var(--white);
+  border-radius: 20px;
+  max-width: 300px;
+  height: 432px;
+  padding: 36px 32px;
+}
+
+.image-default {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 212px;
+}
+
+.title-default {
+  color: var(--black);
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.text-default {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+
+

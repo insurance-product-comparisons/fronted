@@ -1,14 +1,18 @@
-.insurance {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1140px;
+@import 'app/styles/sass/mixins.scss';
+
+.default{
+	background-color: var(--grey-2);
+	margin: 0 auto;
+	padding: 0;
+	
 }
 
-.container {
-display: flex;
-justify-content: space-between;
+.container-default {
+	display: flex;
+	justify-content: space-between;
 }
 
-.title {
-margin: 0;
+.title-default {
+	margin: 0;
+	margin-bottom: 20px;
 }
