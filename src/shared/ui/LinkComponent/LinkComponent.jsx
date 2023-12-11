@@ -1,16 +1,15 @@
 import React from 'react';
 import styles from './LinkComponent.module.scss';
+import cn from 'classnames'
 
 function LinkComponent({ link, text, mode }) {
-	const linkComponentStyle = React.useMemo(
-		() => (mode ? styles[mode] : ' '),
-		[mode]
-	);
-
 	return (
 		<a
 			href={link}
-			className={[styles.root, linkComponentStyle].join(' ')}
+			className={cn({
+				[styles.root] : true,
+				[styles[mode]] : mode
+			})}
 			target="_blank"
 			rel="noopener noreferrer"
 		>

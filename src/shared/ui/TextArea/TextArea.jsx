@@ -1,20 +1,26 @@
 import React from 'react';
 import styles from './TextArea.module.scss'
+import cn from 'classnames'
 
 function TextArea({label, name, id, placeholder, mode}) {
-	const linkComponentStyle = React.useMemo(
-		() => (mode ? styles[mode] : ' '),
-		[mode]
-	);
 	return (
-		<div className={[styles.root, linkComponentStyle].join(' ')}>
+		<div className={cn({
+			[styles.root] : true,
+			[styles[mode]] : mode
+		})}>
 			<label
-			className={[styles.label, linkComponentStyle].join(' ')}
+			className={cn({
+				[styles.label] : true,
+				[styles[mode]] : mode
+			})}
 			>{label}</label>
 			<textarea
 				name={name}
 				placeholder={placeholder}
-				className={[styles.textarea, linkComponentStyle].join(' ')}
+				className={cn({
+					[styles.textarea] : true,
+					[styles[mode]] : mode
+				})}
 				id={id}
 				value=''
 				>

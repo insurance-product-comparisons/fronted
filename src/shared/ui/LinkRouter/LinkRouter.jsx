@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './LinkRouter.module.scss';
+import cn from 'classnames'
 
 function LinkRouter({ route, text, mode, ...args }) {
-	const linkComponentStyle = React.useMemo(
-		() => (mode ? styles[mode] : ' '),
-		[mode]
-	);
 	return (
 		<Link
 			to={route}
-			className={[styles.root, linkComponentStyle].join(' ')}
+			className={cn({
+				[styles.root] : true,
+				[styles[mode]] : mode
+			})}
 			{...args}
 		>
 			{text}
