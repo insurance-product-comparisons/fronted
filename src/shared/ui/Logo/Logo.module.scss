@@ -6,14 +6,14 @@
     background-size: contain;
 
     &.main{
-        background-image: url('../../../images/Logo.svg');
+        background-image: url('../../../../public/images/Logo.svg');
         width: 219px;
         height: 51px;
         cursor: pointer;
     }
 
     &.insurance{
-        background-image: url('../../../images/Logo.svg');
+        background-image: url('../../../../public/images/Logo.svg');
         width: 50px;
         height: 50px;
     }
