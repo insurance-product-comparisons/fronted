@@ -1,0 +1,5 @@
+@mixin hover {
+	transition:
+		opacity 200ms,
+		background-color 200ms;
+}

@@ -9,15 +9,6 @@ export default {
 			description: 'Задает текст для кнопки',
 			control: 'text',
 		},
-		shape: {
-			type: 'string',
-			description: 'Вариант внешнего вида кнопки',
-			defaultValue: '',
-			options: [],
-			control: {
-				type: 'radio',
-			},
-		},
 		type: {
 			type: 'string',
 			description: 'Устанавливает тип кнопки',
@@ -27,44 +18,52 @@ export default {
 				type: 'radio',
 			},
 		},
-		color: {
+		bgcolor: {
 			type: 'string',
 			description: 'Задает основной цвет для кнопки',
-			defaultValue: '',
-			options: ['primary', 'secondary'],
+			options: [
+				'accent',
+				'ghost'
+			],
 			control: {
 				type: 'radio',
 			},
 		},
-		size: {
+		mode: {
 			type: 'string',
-			description: 'Задает размер',
-			defaultValue: '',
-			options: ['small', 'medium', 'large'],
-			control: {
-				type: 'radio',
-			},
-		},
-		view: {
-			type: 'string',
-			description: 'Задает внешний вид',
-			defaultValue: '',
-			options: ['primary', 'outline', 'ghost'],
-			control: {
-				type: 'radio',
-			},
+			description: 'Задает дополнительный класс',
+			control: 'text'
 		},
 		disabled: {
 			type: Boolean,
 			description: 'Устанавливает атрибут disabled',
 			control: 'boolean',
 		},
-		className: {
-			type: 'string',
-			description: 'Задает дополнительные классы для компонента',
-			control: 'text',
-		},
 	},
 };
 
-export const Template = (arg) => <Button {...arg} />;
+const Template = (arg) => <Button {...arg} />;
+
+export const Default = Template.bind({})
+Default.args = {
+	children: 'Click',
+	disabled: false,
+	bgcolor: 'ghost',
+	mode: 'enter'
+}
+
+export const SubmitForm = Template.bind({})
+SubmitForm.args = {
+	children: 'Submit',
+	disabled: false,
+	bgcolor: 'accent',
+	mode: 'submit-form'
+}
+
+export const MoreBtn = Template.bind({})
+MoreBtn.args = {
+	children: 'More',
+	disabled: false,
+	bgcolor: 'ghost',
+	mode: 'more'
+}

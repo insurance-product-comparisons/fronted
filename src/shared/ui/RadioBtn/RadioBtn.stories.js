@@ -4,16 +4,7 @@ export default {
 	title: 'UI-KIT/RadioBtn',
 	component: RadioBtn,
 	argTypes: {
-		color: {
-			type: 'string',
-			description: 'Задает основной цвет для radio',
-			defaultValue: '',
-			options: ['primary', 'secondary'],
-			control: {
-				type: 'radio',
-			},
-		},
-		className: {
+		mode: {
 			type: 'string',
 			description: 'Задает дополнительные классы для компонента',
 			control: 'text',
@@ -29,21 +20,12 @@ export default {
 			defaultValue: 'Label',
 			control: 'text',
 		},
-		size: {
-			type: 'string',
-			description: 'Задает размер чекбокса',
-			defaultValue: '',
-			options: ['small', 'medium', 'large'],
-			control: {
-				type: 'radio',
-			},
-		},
 	},
 };
 
 const Template = (arg) => <RadioBtn {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
-	size: 'small',
+	label: 'Radio',
 };
