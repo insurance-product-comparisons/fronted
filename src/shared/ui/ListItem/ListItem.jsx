@@ -5,10 +5,7 @@ import cn from 'classnames'
 function ListItem({ children, mode }) {
 	return (
 		<li
-        className={cn({
-			[styles.root] : true,
-			[styles[mode]] : mode
-		})}
+        className={cn(styles.root,{[styles[mode]] : mode})}
         >
             {children}
         </li>

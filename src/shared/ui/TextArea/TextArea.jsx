@@ -4,23 +4,14 @@ import cn from 'classnames'
 
 function TextArea({label, name, id, placeholder, mode}) {
 	return (
-		<div className={cn({
-			[styles.root] : true,
-			[styles[mode]] : mode
-		})}>
+		<div className={cn(styles.root,{[styles[mode]] : mode})}>
 			<label
-			className={cn({
-				[styles.label] : true,
-				[styles[mode]] : mode
-			})}
+			className={cn(styles.label,{[styles[mode]] : mode})}
 			>{label}</label>
 			<textarea
 				name={name}
 				placeholder={placeholder}
-				className={cn({
-					[styles.textarea] : true,
-					[styles[mode]] : mode
-				})}
+				className={cn(styles.textarea,{[styles[mode]] : mode})}
 				id={id}
 				value=''
 				>
