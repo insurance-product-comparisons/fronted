@@ -1,18 +1,8 @@
-@import 'app/styles/sass/mixins.scss';
-
-.root {
-	position: relative;
-}
-
-.type_default {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-.type_footer {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	color: var(--grey-5);
+.default {
+	display: flex;
+	flex-direction: column;
+	padding: 24px 100px;
+	border-radius: 36px;
+	background-color: var(--white);
+	list-style: none;
 }

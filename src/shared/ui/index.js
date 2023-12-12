@@ -9,6 +9,8 @@ import Typography from './Typography';
 import LinkComponent from './LinkComponent';
 import LinkRouter from './LinkRouter';
 import AnswersItem from './AnswersItem';
+import List from './List';
+import ListItem from './ListItem';
 
 export {
 	Button,
@@ -22,4 +24,6 @@ export {
 	LinkComponent,
 	LinkRouter,
 	AnswersItem,
+	List,
+	ListItem,
 };

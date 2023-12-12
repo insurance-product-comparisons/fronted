@@ -15,7 +15,7 @@ function AnswersItem({ data, mode }) {
 	});
 
 	return (
-		<li className={styles[mode]}>
+		<div className={styles[mode]}>
 			<div className={styles[`wrapper-${mode}`]}>
 				<Typography
 					variant="body1"
@@ -29,7 +29,7 @@ function AnswersItem({ data, mode }) {
 				</div>
 			</div>
 			<div className={arrowClassName}></div>
-		</li>
+		</div>
 	);
 }
 
