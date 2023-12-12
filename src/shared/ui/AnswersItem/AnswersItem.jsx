@@ -17,10 +17,16 @@ function AnswersItem({ data, mode }) {
 	return (
 		<li className={styles[mode]}>
 			<div className={styles[`wrapper-${mode}`]}>
-				<Typography variant="body1" onClick={() => setIsOpen(!isOpen)}>
+				<Typography
+					variant="body1"
+					style={{ cursor: 'pointer' }}
+					onClick={() => setIsOpen(!isOpen)}
+				>
 					{data.title}
 				</Typography>
-				<p className={contentClassName}>{data.content}</p>
+				<div className={contentClassName}>
+					<Typography variant="body2">{data.content}</Typography>
+				</div>
 			</div>
 			<div className={arrowClassName}></div>
 		</li>
