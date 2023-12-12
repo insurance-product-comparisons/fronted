@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography } from 'shared/ui';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import styles from './Checkbox.module.scss';
 
 function Checkbox({
@@ -26,6 +27,7 @@ function Checkbox({
 				value={value}
 				id={id}
 				required
+				disabled={disabled}
 			/>
 			<span className={pseudoClassName}></span>
 			<Typography variant={typoVariant} color={typoColor}>
@@ -34,5 +36,16 @@ function Checkbox({
 		</label>
 	);
 }
+
+Checkbox.propTypes = {
+	id: PropTypes.string,
+	name: PropTypes.string,
+	value: PropTypes.string,
+	mode: PropTypes.string,
+	typoVariant: PropTypes.string,
+	typoColor: PropTypes.string,
+	label: PropTypes.string,
+	disabled: PropTypes.bool,
+};
 
 export default Checkbox;

@@ -41,13 +41,13 @@
 		-webkit-transform: rotate(45deg);
 		-ms-transform: rotate(45deg);
 		transform: rotate(45deg);
-
-		&.disable {
-			border-color: var(--grey-1);
-		}
 	}
 
 	&.disable {
 		border-color: var(--grey-1);
+
+		&::after {
+			opacity: 0;
+		}
 	}
 }
