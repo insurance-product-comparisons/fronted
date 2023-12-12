@@ -3,6 +3,7 @@ import Button from '.';
 export default {
 	title: 'UI-KIT/Button',
 	component: Button,
+	tags: ['autodocs'],
 	argTypes: {
 		children: {
 			type: 'string',
@@ -29,7 +30,8 @@ export default {
 		mode: {
 			type: 'string',
 			description: 'Задает дополнительный класс',
-			control: 'text',
+			options: ['submit-form', 'count'],
+			control: 'select',
 		},
 		disabled: {
 			type: Boolean,
@@ -41,26 +43,34 @@ export default {
 
 const Template = (arg) => <Button {...arg} />;
 
-export const Default = Template.bind({});
-Default.args = {
-	children: 'Click',
-	disabled: false,
-	bgcolor: 'ghost',
-	mode: 'enter',
-};
-
-export const SubmitForm = Template.bind({});
-SubmitForm.args = {
-	children: 'Submit',
+export const Primary = Template.bind({});
+Primary.args = {
+	children: 'Button',
 	disabled: false,
 	bgcolor: 'accent',
 	mode: 'submit-form',
 };
 
-export const MoreBtn = Template.bind({});
-MoreBtn.args = {
-	children: 'More',
+export const Secondary = Template.bind({});
+Secondary.args = {
+	children: 'Button',
 	disabled: false,
 	bgcolor: 'ghost',
-	mode: 'more',
+	mode: 'enter',
 };
+
+// export const SubmitForm = Template.bind({});
+// SubmitForm.args = {
+// 	children: 'Submit',
+// 	disabled: false,
+// 	bgcolor: 'accent',
+// 	mode: 'submit-form',
+// };
+
+// export const MoreBtn = Template.bind({});
+// MoreBtn.args = {
+// 	children: 'More',
+// 	disabled: false,
+// 	bgcolor: 'ghost',
+// 	mode: 'more',
+// };

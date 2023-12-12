@@ -1,35 +1,52 @@
 @import 'app/styles/sass/mixins.scss';
 
-.accent {
-	color: var(--black);
-	background-color: var(--accent-color-yellow);
+.root {
+	padding: 0 32px;
+	border-radius: 16px;
 	text-align: center;
 	font-size: 16px;
-	border-radius: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	cursor: pointer;
+}
+
+.accent {
 	border: none;
-	padding: 0;
-	width: 100px;
-	height: 50px;
+	color: var(--black);
+	background-color: var(--accent-color-yellow);
+	font-size: 16px;
+
+	&:hover {
+		background-color: var(--accent-yellow-hover);
+	}
+
+	&:active {
+		background-color: var(--accent-yellow-pressed);
+	}
 
 	&.submit-form {
-		width: 211px;
+		min-width: 211px;
 		height: 56px;
 	}
 
 	&.count {
-		width: 157px;
+		min-width: 157px;
 		height: 56px;
 	}
+
+	&.disable {
+		color: var(--grey-1);
+		background-color: var(--grey-3);
+		cursor: auto;
+	}
+
+	@include hover;
 }
 
 .ghost {
 	color: var(--black);
 	background-color: transparent;
-	text-align: center;
-	font-size: 16px;
-	border-radius: 16px;
 	border: 2px solid;
-	padding: 0;
 	width: 100px;
 	height: 50px;
 
