@@ -35,6 +35,7 @@ function AnswersItem({ data, mode }) {
 
 AnswersItem.propTypes = {
 	data: PropTypes.shape({
+		id: PropTypes.string,
 		title: PropTypes.string,
 		content: PropTypes.string,
 	}),
