@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import styles from './AnswersItem.module.scss';
 
 function AnswersItem({ data, mode }) {

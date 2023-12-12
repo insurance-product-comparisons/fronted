@@ -3,7 +3,9 @@
 	flex-direction: column;
 	max-width: 936px;
 	padding: 32px 0;
+	gap: 16px;
 	box-sizing: border-box;
+	border-bottom: 2px solid var(--grey-1);
 	background-color: var(--white);
 }
 
@@ -14,6 +16,11 @@
 }
 
 .checkbox:checked {
+	+ .title-default {
+		&::after {
+			transform: rotate(180deg);
+		}
+	}
 	~ .content-default {
 		max-height: 100vh;
 		padding-top: 16px;
@@ -22,6 +29,17 @@
 
 .title-default {
 	margin: 0;
+
+	&::after {
+		content: ' ';
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		margin-left: 16px;
+		background: url(/images/icon-arrow.svg);
+		background-size: cover;
+		transition: transform 350ms;
+	}
 }
 
 .content-default {
@@ -33,4 +51,11 @@
 	transition:
 		max-height 350ms,
 		padding-top 350ms;
+}
+
+.arrow-default {
+	position: relative;
+	min-width: 24px;
+	min-height: 24px;
+	align-self: flex-start;
 }
