@@ -30,7 +30,7 @@ export default {
 		mode: {
 			type: 'string',
 			description: 'Задает дополнительный класс',
-			options: ['submit-form', 'count'],
+			options: ['submit-form', 'count', 'more', 'submit-request', 'enter'],
 			control: 'select',
 		},
 		disabled: {
@@ -56,21 +56,13 @@ Secondary.args = {
 	children: 'Button',
 	disabled: false,
 	bgcolor: 'ghost',
-	mode: 'enter',
+	mode: 'more',
 };
 
-// export const SubmitForm = Template.bind({});
-// SubmitForm.args = {
-// 	children: 'Submit',
-// 	disabled: false,
-// 	bgcolor: 'accent',
-// 	mode: 'submit-form',
-// };
-
-// export const MoreBtn = Template.bind({});
-// MoreBtn.args = {
-// 	children: 'More',
-// 	disabled: false,
-// 	bgcolor: 'ghost',
-// 	mode: 'more',
-// };
+export const SecondarySmall = Template.bind({});
+SecondarySmall.args = {
+	children: 'Войти',
+	disabled: false,
+	bgcolor: 'ghost',
+	mode: 'enter',
+};

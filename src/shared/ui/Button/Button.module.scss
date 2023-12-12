@@ -1,8 +1,10 @@
 @import 'app/styles/sass/mixins.scss';
 
 .root {
+	min-width: 100px;
+	min-height: 50px;
 	padding: 0 32px;
-	border-radius: 16px;
+	border-radius: 12px;
 	text-align: center;
 	font-size: 16px;
 	font-weight: 700;
@@ -46,23 +48,37 @@
 .ghost {
 	color: var(--black);
 	background-color: transparent;
-	border: 2px solid;
-	width: 100px;
-	height: 50px;
+	border: 2px solid var(--grey);
+
+	&:hover {
+		border-color: var(--grey-5);
+	}
+
+	&:active {
+		border-color: var(--black);
+	}
 
 	&.more {
-		width: 156px;
+		min-width: 156px;
 		height: 56px;
 	}
 
 	&.submit-request {
-		width: 211px;
+		min-width: 211px;
 		height: 56px;
 	}
 
 	&.enter {
-		border-radius: 12px;
-		width: 97px;
+		min-width: 97px;
 		height: 48px;
+		padding: 0 24px;
 	}
+
+	&.disable {
+		color: var(--grey-1);
+		border-color: var(--grey-1);
+		cursor: auto;
+	}
+
+	@include hover;
 }
