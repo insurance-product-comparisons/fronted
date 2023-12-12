@@ -62,7 +62,7 @@ const arrayDefault = [
 
 export const Default = Template.bind({});
 Default.args = {
-	title: 'Вопросы и ответы',
+	title: 'Вопросы и ответы:',
 	data: arrayDefault,
 	mode: 'default',
 };

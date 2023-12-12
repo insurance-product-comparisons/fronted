@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import { AnswersItem } from 'shared/ui';
+import { AnswersItem, Typography } from 'shared/ui';
 import styles from './AnswersList.module.scss';
 
 function AnswersList({ title, data, mode }) {
 	return (
 		<div className={styles[mode]}>
-			<h2 className={styles[`title-${mode}`]}>{title}</h2>
+			<Typography variant="h4">{title}</Typography>
 			<ul className={styles[`list-${mode}`]}>
 				{data.map((item, index) => (
 					<AnswersItem key={index} data={item} mode="default" />

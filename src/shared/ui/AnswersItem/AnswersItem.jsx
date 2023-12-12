@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Typography from 'shared/ui/Typography';
+import { Typography } from 'shared/ui';
 import styles from './AnswersItem.module.scss';
 
 function AnswersItem({ data, mode }) {
