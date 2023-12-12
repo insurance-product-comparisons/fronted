@@ -1,21 +1,51 @@
 import React from 'react';
+import { Typography } from 'shared/ui';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import styles from './Checkbox.module.scss';
-import cn from 'classnames';
 
-function Checkbox({ label, id, name, mode }) {
+function Checkbox({
+	id,
+	name,
+	value,
+	mode,
+	typoVariant,
+	typoColor,
+	label,
+	disabled,
+}) {
+	const pseudoClassName = classNames(styles[`pseudo-${mode}`], {
+		[styles.disable]: disabled,
+	});
+
 	return (
-		<div className={cn(styles.root, { [styles[mode]]: mode })}>
-			<label className={cn(styles.label, { [styles[mode]]: mode })}>
-				{label}
-			</label>
+		<label className={styles[`label-${mode}`]} htmlFor={id}>
 			<input
+				className={styles.checkbox}
 				type="checkbox"
-				id={id}
 				name={name}
-				className={cn(styles.checkbox, { [styles[mode]]: mode })}
-			></input>
-		</div>
+				value={value}
+				id={id}
+				required
+				disabled={disabled}
+			/>
+			<span className={pseudoClassName}></span>
+			<Typography variant={typoVariant} color={typoColor}>
+				{label}
+			</Typography>
+		</label>
 	);
 }
+
+Checkbox.propTypes = {
+	id: PropTypes.string,
+	name: PropTypes.string,
+	value: PropTypes.string,
+	mode: PropTypes.string,
+	typoVariant: PropTypes.string,
+	typoColor: PropTypes.string,
+	label: PropTypes.string,
+	disabled: PropTypes.bool,
+};
 
 export default Checkbox;
