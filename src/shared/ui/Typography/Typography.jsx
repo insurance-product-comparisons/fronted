@@ -11,7 +11,7 @@ const variantsMapping = {
 	body3: 'p',
 };
 
-function Typography({ variant, color, children }) {
+function Typography({ variant, color, children, ...args }) {
 	const Component = variant ? variantsMapping[variant] : 'p';
 	return (
 		<Component
@@ -19,6 +19,7 @@ function Typography({ variant, color, children }) {
 				[styles[`typography--variant-${variant}`]]: variant,
 				[styles[`typography--color-${color}`]]: color,
 			})}
+			{...args}
 		>
 			{children}
 		</Component>
