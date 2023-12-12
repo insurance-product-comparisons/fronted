@@ -3,6 +3,7 @@ import Checkbox from '.';
 export default {
 	title: 'UI-KIT/Checkbox',
 	component: Checkbox,
+	tags: ['autodocs'],
 	argTypes: {
 		mode: {
 			type: 'string',
@@ -26,5 +27,10 @@ const Template = (arg) => <Checkbox {...arg} />;
 
 export const Default = Template.bind({});
 Default.args = {
-	size: 'small',
+	id: '1',
+	name: 'agree',
+	value: 'agree',
+	mode: 'default',
+	typoVariant: 'body2',
+	label: 'Я согласен на обработку персональных данных',
 };
