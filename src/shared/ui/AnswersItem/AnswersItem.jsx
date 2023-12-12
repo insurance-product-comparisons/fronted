@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import styles from './AnswersItem.module.scss';
 
 function AnswersItem({ data, mode }) {
 	return (
 		<li className={styles[mode]}>
-			<h3 className={styles[`title-${mode}`]}>{data.title}</h3>
+			<input type="checkbox" className={styles.checkbox} id={data.id} />
+			<label className={styles[`title-${mode}`]} htmlFor={data.id}>
+				{data.title}
+			</label>
 			<p className={styles[`content-${mode}`]}>{data.content}</p>
 		</li>
 	);
