@@ -3,6 +3,7 @@ import InputError from '.';
 export default {
 	title: 'UI-KIT/InputError',
 	component: InputError,
+	tags: ['autodocs'],
 	argTypes: {
 		mode: {
 			type: 'string',

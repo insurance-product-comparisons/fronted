@@ -1,12 +1,10 @@
 import cn from 'classnames';
+import PropTypes from 'prop-types';
 import styles from './Input.module.scss';
 
 function Input({
-	type,
-	label,
 	name,
 	placeholder,
-	pattern,
 	id,
 	mode,
 	submode,
@@ -22,17 +20,27 @@ function Input({
 
 	return (
 		<input
-			type={type}
+			type="text"
 			name={name}
 			placeholder={placeholder}
 			className={inputClassName}
 			id={id}
-			pattern={pattern}
 			value={value}
 			disabled={isDisabled}
 			{...args}
 		></input>
 	);
 }
+
+Input.propTypes = {
+	mode: PropTypes.string,
+	submode: PropTypes.string,
+	name: PropTypes.string,
+	placeholder: PropTypes.string,
+	id: PropTypes.string,
+	isValid: PropTypes.bool,
+	isDisabled: PropTypes.bool,
+	value: PropTypes.string,
+};
 
 export default Input;

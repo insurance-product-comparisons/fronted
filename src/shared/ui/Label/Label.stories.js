@@ -19,16 +19,6 @@ export default {
 			description: 'Текст лэйбла',
 			control: 'text',
 		},
-		typoVariant: {
-			type: 'string',
-			description: 'Шрифт типографики',
-			control: 'text',
-		},
-		typoColor: {
-			type: 'string',
-			description: 'Цвет типографики',
-			control: 'text',
-		},
 	},
 };
 
@@ -38,5 +28,4 @@ export const Default = Template.bind({});
 Default.args = {
 	mode: 'default',
 	text: 'Label',
-	typoVariant: 'body2',
 };
