@@ -3,6 +3,8 @@
 	--max-width-app: 1200px;
 	/*Ширина Меню Accordion */
 	--max-width-accordion: 1091px;
+	/*Ширина секций*/
+	--max-width-section: 1136px;
 
 	/*Переменные цветового оформления */
 	--black: #232c32;
