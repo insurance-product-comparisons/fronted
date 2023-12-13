@@ -11,6 +11,7 @@ import LinkRouter from './LinkRouter';
 import AnswersItem from './AnswersItem';
 import List from './List';
 import ListItem from './ListItem';
+import NavigationBar from 'components/NavigationBar';
 
 export {
 	Button,
@@ -26,4 +27,5 @@ export {
 	AnswersItem,
 	List,
 	ListItem,
+	NavigationBar,
 };
