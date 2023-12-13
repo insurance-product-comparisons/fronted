@@ -7,6 +7,7 @@
 
 .default {
 	color: var(--black);
+	width: fit-content;
 
 	&::after {
 		content: '';
