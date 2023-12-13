@@ -1,5 +1,3 @@
-import React from 'react';
-import { Typography } from 'shared/ui';
 import cn from 'classnames';
 import styles from './Input.module.scss';
 
@@ -12,8 +10,6 @@ function Input({
 	id,
 	mode,
 	submode,
-	typoVariant,
-	typoColor,
 	isValid,
 	isDisabled,
 	value,
@@ -25,21 +21,17 @@ function Input({
 	});
 
 	return (
-		<Typography variant={typoVariant} color={typoColor}>
-			<input
-				type={type}
-				name={name}
-				placeholder={placeholder}
-				className={inputClassName}
-				id={id}
-				pattern={pattern}
-				value={value}
-				{...args}
-			></input>
-			<span className={cn(styles.span, { [styles[mode]]: mode })}>
-				Text error
-			</span>
-		</Typography>
+		<input
+			type={type}
+			name={name}
+			placeholder={placeholder}
+			className={inputClassName}
+			id={id}
+			pattern={pattern}
+			value={value}
+			disabled={isDisabled}
+			{...args}
+		></input>
 	);
 }
 
