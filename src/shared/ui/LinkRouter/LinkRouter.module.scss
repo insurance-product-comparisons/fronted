@@ -7,6 +7,8 @@
 
 .default {
 	color: var(--black);
+   width: fit-content; 
+
 
 	&::after {
 		content: '';
@@ -19,6 +21,7 @@
 		background-color: var(--black);
 		opacity: 0;
 		@include hover;
+      
 	}
 
 	&:hover::after {

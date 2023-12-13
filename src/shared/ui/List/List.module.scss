@@ -6,3 +6,15 @@
 	background-color: var(--white);
 	list-style: none;
 }
+
+.header {
+   display: flex;
+   gap: 36px;
+}
+
+.footer {
+   max-width: 269px;
+   display: flex;
+	flex-direction: column;
+   gap: 16px;
+}
