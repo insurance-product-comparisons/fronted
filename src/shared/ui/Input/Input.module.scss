@@ -1,5 +1,32 @@
 @import 'app/styles/sass/mixins.scss';
 
-.root {
-	position: relative;
+
+
+.input-default {
+	width: 324px;
+	height: 56px;
+	padding: 16px 20px;
+	box-sizing: border-box;
+	border: 0;
+	border-radius: 12px;
+	background-color: var(--grey-2);
+
+	&:focus {
+    outline: 1px solid var(--black);
+		background-color: var(--white);
+  }
+}
+
+.input-default-error {
+	padding: 15px 19px;
+	border: 1px solid var(--red);
+	background-color: var(--white);
+
+	&:focus {
+		outline-width: 0;
+	 }
+}
+
+.input-default-disable {
+	background-color: var(--grey-3);
 }

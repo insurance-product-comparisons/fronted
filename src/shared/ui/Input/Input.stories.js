@@ -27,5 +27,9 @@ const Template = (arg) => <Input {...arg} />;
 
 export const Default = Template.bind({});
 Default.args = {
-	disabled: false,
+	mode: 'default',
+	typoVariant: 'body2',
+	value: 'Text',
+	isValid: true,
+	isDisabled: false,
 };
