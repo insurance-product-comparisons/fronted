@@ -25,29 +25,21 @@ function Input({
 	});
 
 	return (
-		<div className={cn(styles.root, { [styles[mode]]: mode })}>
-			<Typography variant={typoVariant} color={typoColor}>
-				<label
-					className={cn(styles.label, { [styles[mode]]: mode })}
-					htmlFor={name}
-				>
-					{label}
-				</label>
-				<input
-					type={type}
-					name={name}
-					placeholder={placeholder}
-					className={inputClassName}
-					id={id}
-					pattern={pattern}
-					value={value}
-					{...args}
-				></input>
-				<span className={cn(styles.span, { [styles[mode]]: mode })}>
-					Text error
-				</span>
-			</Typography>
-		</div>
+		<Typography variant={typoVariant} color={typoColor}>
+			<input
+				type={type}
+				name={name}
+				placeholder={placeholder}
+				className={inputClassName}
+				id={id}
+				pattern={pattern}
+				value={value}
+				{...args}
+			></input>
+			<span className={cn(styles.span, { [styles[mode]]: mode })}>
+				Text error
+			</span>
+		</Typography>
 	);
 }
 
