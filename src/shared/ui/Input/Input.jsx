@@ -4,6 +4,7 @@ import styles from './Input.module.scss';
 
 function Input({
 	name,
+	type,
 	placeholder,
 	id,
 	mode,
@@ -20,7 +21,7 @@ function Input({
 
 	return (
 		<input
-			type="text"
+			type={type}
 			name={name}
 			placeholder={placeholder}
 			className={inputClassName}
@@ -34,6 +35,7 @@ function Input({
 
 Input.propTypes = {
 	mode: PropTypes.string,
+	type: PropTypes.string,
 	submode: PropTypes.string,
 	name: PropTypes.string,
 	placeholder: PropTypes.string,

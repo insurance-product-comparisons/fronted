@@ -15,6 +15,11 @@ export default {
 			description: 'Задает дополнительные классы для компонента',
 			control: 'text',
 		},
+		type: {
+			type: 'string',
+			description: 'Задает тип инпута',
+			control: 'text',
+		},
 		name: {
 			type: 'string',
 			description: 'Задает имя компонента',
