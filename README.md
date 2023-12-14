@@ -4,4 +4,4 @@
 
 ## Storybook проекта
 
-[Storybook проекта на Chromatic](https://657b2afe3c0bffcfaf2eefa7-iyyigdbuum.chromatic.com){:target="\_blank"}
+[Storybook проекта на Chromatic](https://657b2afe3c0bffcfaf2eefa7-iyyigdbuum.chromatic.com)
