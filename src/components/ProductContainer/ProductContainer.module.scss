@@ -1,11 +1,10 @@
 @import 'app/styles/sass/mixins.scss';
 
-.default{
+.default {
 	background-color: var(--grey-2);
 	margin: 0 auto;
 	padding: 0;
 	max-width: 1136px;
-	
 }
 
 .container-default {

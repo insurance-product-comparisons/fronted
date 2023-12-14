@@ -1,6 +1,6 @@
 import styles from './Card.module.scss';
 import cn from 'classnames';
-// import { Typography } from 'shared/ui';
+import { Typography } from 'shared/ui';
 import { Button } from 'shared/ui';
 
 function Card({ data, mode }) {
@@ -17,16 +17,17 @@ function Card({ data, mode }) {
 				src={data.image}
 				alt="Изображение"
 			/>
-			{/* <Typography variant='h3'>{data.title}</Typography>
-			<Typography variant='body2'>{data.text}</Typography> */}
-			<h2 className={cn({ [styles[`title-${mode}`]]: mode })}>{data.title}</h2>
-			<p className={cn({ [styles[`text-${mode}`]]: mode })}>{data.text}</p>
+			<div className={cn({ [styles[`title-${mode}`]]: mode })}>
+				<Typography variant="h3">{data.title}</Typography>
+			</div>
+			<Typography variant="body2">{data.text}</Typography>
 			<div className={cn({ [styles[`button-${mode}`]]: mode })}>
 				<Button
 					type="button"
 					children="Рассчитать"
-					mode="default"
+					mode="accent"
 					bgcolor="bgcolor"
+					disabled="disabled"
 				/>
 			</div>
 		</section>
