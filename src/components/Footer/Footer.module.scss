@@ -1,17 +1,17 @@
 .root {
-  padding: 48px 0 96px;
-  box-sizing: border-box;
-  background-color: var(--white);
+	padding: 48px 0 96px;
+	box-sizing: border-box;
+	background-color: var(--white);
 }
 
 .columns {
-  display: flex;
-  gap: 20px;
+	display: flex;
+	gap: 20px;
 }
 
 .column {
-  display: flex;
-  flex-direction: column;
-  width: 269px;
-  gap: 24px;
+	display: flex;
+	flex-direction: column;
+	width: 269px;
+	gap: 24px;
 }
