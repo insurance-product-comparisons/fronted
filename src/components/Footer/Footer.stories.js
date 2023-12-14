@@ -1,8 +1,10 @@
-import Footer from '.';
+import { Footer } from 'components';
+import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {
 	title: 'Components/Footer',
 	component: Footer,
+	decorators: [withRouter],
 	argTypes: {
 		Logo: {
 			description: 'Логотип',
@@ -36,4 +38,4 @@ export default {
 
 const Template = (arg) => <Footer {...arg} />;
 
-export const DefaultFooter = () => Template.bind({});
+export const Default = Template.bind({});

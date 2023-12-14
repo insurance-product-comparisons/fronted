@@ -49,7 +49,7 @@ export default {
 
 const Template = (arg) => <Card {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	title: 'Название страховой компании',
 };

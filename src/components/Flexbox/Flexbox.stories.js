@@ -27,7 +27,7 @@ export default {
 
 const Template = (arg) => <Flexbox {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	justifyContent: 'center',
 };
