@@ -1,6 +1,5 @@
 import styles from './Layout.module.scss';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import { Header, Footer } from 'components';
 
 export function Layout({ children }) {
 	return (

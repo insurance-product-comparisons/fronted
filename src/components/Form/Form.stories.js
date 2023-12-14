@@ -45,27 +45,27 @@ export default {
 
 const Template = (arg) => <Form {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	children: 'Форма',
 };
 
-export const OsagoFrom = () => Template.bind({});
+export const OsagoFrom = Template.bind({});
 OsagoFrom.args = {
 	children: 'Форма ОСАГО',
 };
 
-export const DmsFrom = () => Template.bind({});
+export const DmsFrom = Template.bind({});
 DmsFrom.args = {
 	children: 'Форма ДМС',
 };
 
-export const KaskoFrom = () => Template.bind({});
+export const KaskoFrom = Template.bind({});
 KaskoFrom.args = {
 	children: 'Форма KACKO',
 };
 
-export const ConsultFrom = () => Template.bind({});
+export const ConsultFrom = Template.bind({});
 ConsultFrom.args = {
 	children: 'Форма заявки на консультацию',
 };

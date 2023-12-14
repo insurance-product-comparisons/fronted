@@ -41,7 +41,7 @@ export default {
 
 const Template = (arg) => <Box {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	color: 'primary',
 };

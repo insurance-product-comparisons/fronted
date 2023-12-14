@@ -36,4 +36,4 @@ export default {
 
 const Template = (arg) => <Footer {...arg} />;
 
-export const DefaultFooter = () => Template.bind({});
+export const Default = Template.bind({});

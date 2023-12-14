@@ -21,4 +21,4 @@ export default {
 
 const Template = (arg) => <Layout {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
