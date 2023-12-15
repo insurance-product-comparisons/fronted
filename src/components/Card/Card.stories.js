@@ -1,5 +1,5 @@
-import Card from '../Card/Card';
-import osago from '../../shared/store/osago.svg';
+import Card from '.';
+import osago from '../../images/osago.svg';
 
 export default {
 	title: 'Components/Card',

@@ -10,8 +10,8 @@ function ProductContainer({ data, mode }) {
 				<Typography variant="h2">Сравнивайте страховки онлайн</Typography>
 			</div>
 			<div className={cn({ [styles[`container-${mode}`]]: mode })}>
-				{data.map((item, index) => (
-					<Card data={item} key={index} mode="default" />
+				{data.map((item, id) => (
+					<Card data={item} key={id} mode="default" />
 				))}
 			</div>
 		</section>

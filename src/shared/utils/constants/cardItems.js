@@ -1,6 +1,6 @@
-import osago from '../../store/osago.svg';
-import kasko from '../../store/kasko.svg';
-import dmc from '../../store/dmc.svg';
+import osago from './../../../../src/images/osago.svg';
+import kasko from './../../../../src/images/kasko.svg';
+import dmc from './../../../../src/images/dmc.svg';
 
 const items = [
 	{

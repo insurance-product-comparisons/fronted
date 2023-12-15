@@ -22,13 +22,9 @@ function Card({ data, mode }) {
 			</div>
 			<Typography variant="body2">{data.text}</Typography>
 			<div className={cn({ [styles[`button-${mode}`]]: mode })}>
-				<Button
-					type="button"
-					children="Рассчитать"
-					mode="accent"
-					bgcolor="bgcolor"
-					disabled="disabled"
-				/>
+				<Button type="button" mode="accent" bgcolor="bgcolor" disabled="false">
+					Рассчитать
+				</Button>
 			</div>
 		</section>
 	);
