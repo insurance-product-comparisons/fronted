@@ -1,11 +1,15 @@
 .root {
+	background-color: var(--white);
+}
+
+.menu {
 	max-width: 1136px;
 	display: flex;
+	margin: 0 auto;
 	align-items: center;
 	gap: 80px;
 	justify-content: space-between;
 	padding: 12px 0;
-	background-color: var(--white);
 }
 
 .buttons {
