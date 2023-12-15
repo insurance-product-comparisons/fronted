@@ -29,5 +29,5 @@ export {
 	Section,
 	ProductContainer,
 	ConsultForm,
-  InsuranceCompanies
+	InsuranceCompanies,
 };
