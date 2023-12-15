@@ -1,5 +1,3 @@
-@import 'app/styles/sass/mixins.scss';
-
 .root {
 	position: relative;
 	text-decoration: none;
@@ -8,21 +6,12 @@
 .default {
 	color: var(--black);
 	width: fit-content;
+}
 
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: -3px;
-		left: 0;
-		display: block;
-		width: 100%;
-		height: 1px;
-		background-color: var(--black);
-		opacity: 0;
-		@include hover;
-	}
+.header {
+	color: var(--black);
 
-	&:hover::after {
-		opacity: 1;
+	&:hover {
+		opacity: 0.8;
 	}
 }

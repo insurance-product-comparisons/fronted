@@ -1,29 +1,17 @@
-import Header from '.';
+import { Header } from './Header';
+import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {
 	title: 'Components/Header',
 	component: Header,
+	decorators: [withRouter],
 	argTypes: {
-		Logo: {
-			type: Image,
-			description: 'Логотип',
-			control: {
-				type: 'file',
-				accept: '.png',
-			},
-		},
-		BacgroundColor: {
+		mode: {
 			type: 'string',
-			description: 'Цвет фона',
-			defaultValue: '',
+			description: 'Размер логотипа',
 			control: {
-				type: 'color',
+				type: 'radio',
 			},
-		},
-		maxHeight: {
-			type: 'string',
-			description: 'Высота шапки сайта',
-			control: 'text',
 		},
 	},
 };

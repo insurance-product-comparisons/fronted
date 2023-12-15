@@ -5,7 +5,9 @@ export default {
 	title: 'Components/NavigationBar',
 	component: NavigationBar,
 	decorators: [withRouter],
-	tags: ['autodocs'],
+	parameters: {
+		tags: ['autodocs'],
+	},
 	argTypes: {
 		mode: {
 			type: 'string',
@@ -46,8 +48,8 @@ const arrLinks = [
 	{ id: 4, route: '/', text: 'Страховая компания' },
 ];
 
-export const Header = Template.bind({});
-Header.args = {
+export const Default = Template.bind({});
+Default.args = {
 	data: arrLinks,
 	mode: 'header',
 	variant: 'body1',

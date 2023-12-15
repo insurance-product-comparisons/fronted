@@ -1,5 +1,5 @@
 import { withRouter } from 'storybook-addon-react-router-v6';
-import LinkRouter from '.';
+import LinkRouter from './LinkRouter';
 
 export default {
 	title: 'UI-KIT/LinkRouter',
