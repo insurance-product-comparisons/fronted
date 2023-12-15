@@ -1,48 +1,35 @@
 import Card from '.';
+import osago from '../../images/osago.svg';
 
 export default {
 	title: 'Components/Card',
 	component: Card,
 	argTypes: {
-		title: {
-			type: 'string',
-			description: 'Задает название карточки',
-			control: 'text',
-		},
-		rate: {
-			type: 'number',
-			description: 'Устанавливает количество звезд рейтинга',
-			control: {
-				type: 'number',
-				min: 1,
-				max: 5,
+		data: {
+			type: 'object',
+			control: { control: 'object' },
+			name: 'Входящие данные',
+			description: 'Объект с данными карточки',
+			image: {
+				type: 'image',
+				control: {
+					type: 'radio',
+				},
+			},
+			title: {
+				type: 'text',
+			},
+			text: {
+				type: 'text',
 			},
 		},
-		color: {
+		mode: {
 			type: 'string',
-			description: 'Задает основной цвет',
-			options: ['primary', 'secondary'],
-			control: {
-				type: 'radio',
-			},
-		},
-		textColor: {
-			type: 'string',
-			description: 'Задает цвет текста',
-			options: ['primary', 'secondary'],
+			description: 'Селектор стиля компонента.',
+			options: ['default'],
 			control: {
 				type: 'radio',
 			},
-		},
-		height: {
-			type: 'string',
-			description: 'Задает высоту карточки',
-			control: 'text',
-		},
-		width: {
-			type: 'string',
-			description: 'Задает ширину карточки',
-			control: 'text',
 		},
 	},
 };
@@ -50,6 +37,13 @@ export default {
 const Template = (arg) => <Card {...arg} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
-	title: 'Название страховой компании',
+	data: {
+		image: osago,
+		title: 'ОСАГО',
+		text: 'Электронный полис с онлайн-калькулятором и скидками (КБМ) за безаварийность.',
+	},
+
+	mode: 'default',
 };
