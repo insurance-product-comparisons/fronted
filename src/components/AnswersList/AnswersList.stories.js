@@ -1,4 +1,4 @@
-import AnswersList from '.';
+import { AnswersList } from 'components';
 
 export default {
 	title: 'Components/AnswersList',
