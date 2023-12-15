@@ -1,42 +1,49 @@
 @import 'app/styles/sass/mixins.scss';
 
 .typography--variant-h1 {
+	margin: 0;
 	font-size: 52px;
 	font-weight: 700;
 	line-height: 64px;
 }
 
 .typography--variant-h2 {
+	margin: 0;
 	font-size: 36px;
 	font-weight: 700;
 	line-height: 44px;
 }
 
 .typography--variant-h3 {
+	margin: 0;
 	font-size: 32px;
 	font-weight: 700;
 	line-height: 40px;
 }
 
-.typography--variant-h3 {
-	font-size: 32px;
+.typography--variant-h4 {
+	margin: 0;
+	font-size: 28px;
 	font-weight: 700;
-	line-height: 40px;
+	line-height: 34px;
 }
 
 .typography--variant-body1 {
+	margin: 0;
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 24px;
 }
 
 .typography--variant-body2 {
+	margin: 0;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 20px;
 }
 
 .typography--variant-body3 {
+	margin: 0;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 20px;

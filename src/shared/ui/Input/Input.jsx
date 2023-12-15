@@ -1,28 +1,48 @@
-import React from 'react';
-import styles from './Input.module.scss';
 import cn from 'classnames';
+import PropTypes from 'prop-types';
+import styles from './Input.module.scss';
 
-function Input({ type, label, name, placeholder, pattern, id, mode }) {
+function Input({
+	name,
+	type,
+	placeholder,
+	id,
+	mode,
+	submode,
+	isValid,
+	isDisabled,
+	value,
+	...args
+}) {
+	const inputClassName = cn(styles[`input-${mode}`], styles[submode], {
+		[styles[`input-${mode}-error`]]: !isValid,
+		[styles[`input-${mode}-disable`]]: isDisabled,
+	});
+
 	return (
-		<div className={cn(styles.root, { [styles[mode]]: mode })}>
-			<label
-				className={cn(styles.label, { [styles[mode]]: mode })}
-				htmlFor={name}
-			>
-				{label}
-			</label>
-			<input
-				type={type}
-				name={name}
-				placeholder={placeholder}
-				className={cn(styles.input, { [styles[mode]]: mode })}
-				id={id}
-				pattern={pattern}
-				value=""
-			></input>
-			<span className={cn(styles.span, { [styles[mode]]: mode })}></span>
-		</div>
+		<input
+			type={type}
+			name={name}
+			placeholder={placeholder}
+			className={inputClassName}
+			id={id}
+			value={value}
+			disabled={isDisabled}
+			{...args}
+		></input>
 	);
 }
+
+Input.propTypes = {
+	mode: PropTypes.string,
+	type: PropTypes.string,
+	submode: PropTypes.string,
+	name: PropTypes.string,
+	placeholder: PropTypes.string,
+	id: PropTypes.string,
+	isValid: PropTypes.bool,
+	isDisabled: PropTypes.bool,
+	value: PropTypes.string,
+};
 
 export default Input;

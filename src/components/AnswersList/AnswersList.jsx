@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
-import { AnswersItem } from 'shared/ui';
+import { AnswersItem, Typography, List, ListItem } from 'shared/ui';
 import styles from './AnswersList.module.scss';
 
 function AnswersList({ title, data, mode }) {
 	return (
 		<div className={styles[mode]}>
-			<h2 className={styles[`title-${mode}`]}>{title}</h2>
-			<ul className={styles[`list-${mode}`]}>
+			<Typography variant="h4">{title}</Typography>
+			<List mode="default">
 				{data.map((item, index) => (
-					<AnswersItem key={index} data={item} mode="default" />
+					<ListItem key={index} mode="default">
+						<AnswersItem key={index} data={item} mode="default" />
+					</ListItem>
 				))}
-			</ul>
+			</List>
 		</div>
 	);
 }

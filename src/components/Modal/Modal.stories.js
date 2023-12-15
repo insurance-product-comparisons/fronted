@@ -34,7 +34,7 @@ export default {
 
 const Template = (arg) => <Modal {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	maxWidth: '450px',
 };
