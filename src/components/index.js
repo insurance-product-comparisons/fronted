@@ -6,5 +6,18 @@ import Form from './Form';
 import Header from './Header';
 import Layout from './Layout';
 import Modal from './Modal';
+import Section from './Section';
+import InsuranceCompanies from './InsuranceCompanies';
 
-export { Box, Card, Flexbox, Footer, Form, Header, Layout, Modal };
+export {
+	Box,
+	Card,
+	Flexbox,
+	Footer,
+	Form,
+	Header,
+	Layout,
+	Modal,
+	Section,
+	InsuranceCompanies,
+};
