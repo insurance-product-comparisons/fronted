@@ -1,4 +1,4 @@
-import List from '.';
+import List from './List';
 
 export default {
 	title: 'UI-KIT/List',

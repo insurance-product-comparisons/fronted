@@ -1,0 +1,86 @@
+.root {
+	max-width: 1136px;
+	display: flex;
+	align-items: center;
+	gap: 80px;
+	justify-content: space-between;
+	padding: 12px 0;
+	background-color: var(--white);
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.button-search {
+	width: 24px;
+	height: 24px;
+	position: relative;
+	border: none;
+	background: var(--white);
+	background-image: url(/images/icon_search.svg);
+	padding: 0;
+	z-index: 5;
+	margin-left: 55px;
+
+	&:hover {
+		opacity: 0.8;
+		cursor: pointer;
+	}
+}
+
+.icon-close {
+	display: none;
+	width: 18px;
+	height: 18px;
+	border: none;
+	background-color: var(--grey2);
+	background-image: url(/images/icon_close.svg);
+	background-size: cover;
+	padding: 8px;
+	z-index: 5;
+	position: absolute;
+	top: 20px;
+	right: 11px;
+
+	&:hover {
+		opacity: 0.8;
+		cursor: pointer;
+	}
+}
+
+.header-search {
+	gap: 12px;
+}
+
+.search-block {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin: 0 auto;
+	height: 56px;
+	margin-right: 12px;
+}
+
+.search-input {
+	display: flex;
+	align-items: center;
+	width: 792px;
+}
+
+.icon-search {
+	background-image: url(/images/icon_search.svg);
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	z-index: 100;
+	top: 26%;
+	left: 16px;
+}
+
+.header-search .icon-close {
+	display: block;
+	margin-right: 12px;
+}

@@ -1,4 +1,4 @@
-import Typography from '.';
+import Typography from './Typography';
 
 export default {
 	title: 'UI-KIT/Typography',
