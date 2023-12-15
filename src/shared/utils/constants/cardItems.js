@@ -1,8 +1,8 @@
-import osago from './../../../../src/images/osago.svg';
-import kasko from './../../../../src/images/kasko.svg';
-import dmc from './../../../../src/images/dmc.svg';
+import osago from 'images/osago.svg';
+import kasko from 'images/kasko.svg';
+import dmc from 'images/dmc.svg';
 
-const items = [
+const cardItems = [
 	{
 		image: osago,
 		title: 'ОСАГО',
@@ -20,4 +20,4 @@ const items = [
 	},
 ];
 
-export default items;
+export default cardItems;

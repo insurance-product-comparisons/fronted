@@ -1,5 +1,5 @@
-import ProductContainer from '.';
-import cardItems from '../../../src/shared/utils/constants/cardItems';
+import { ProductContainer } from 'components';
+import cardItems from 'shared/utils/constants/cardItems';
 
 export default {
 	title: 'Components/ProductContainer',

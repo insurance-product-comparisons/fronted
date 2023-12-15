@@ -10,6 +10,7 @@ import Modal from './Modal';
 import NavigationBar from './NavigationBar';
 import Rating from './Rating';
 import Section from './Section';
+import ProductContainer from './ProductContainer';
 
 export {
 	AnswersList,
@@ -24,4 +25,5 @@ export {
 	NavigationBar,
 	Rating,
 	Section,
+	ProductContainer,
 };
