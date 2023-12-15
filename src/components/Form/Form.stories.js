@@ -1,4 +1,4 @@
-import Form from '.';
+import { Form } from 'components';
 
 export default {
 	title: 'Components/Form',
@@ -19,4 +19,3 @@ export const Default = Template.bind({});
 Default.args = {
 	children: 'Форма',
 };
-

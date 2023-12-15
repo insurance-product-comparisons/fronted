@@ -14,6 +14,7 @@ import Logo from './Logo';
 import Label from './Label';
 import Input from './Input';
 import InputError from './InputError';
+import PhoneInput from './PhoneInput';
 
 export {
 	Button,
@@ -32,4 +33,5 @@ export {
 	Label,
 	Input,
 	InputError,
+	PhoneInput,
 };

@@ -1,14 +1,11 @@
 import styles from './Form.module.scss';
 import cn from 'classnames';
 
-function Form({ children, type, onSubmit, ...props }) {
+function Form({ children, type, ...props }) {
 	return (
 		<div className={styles.root}>
 			<div className={cn(styles.container, { [styles[type]]: type })}>
-				<form
-					className={cn(styles.form, { [styles[type]]: type })}
-					onSubmit={props.handleSubmit(onSubmit)}
-				>
+				<form className={cn(styles.form, { [styles[type]]: type })} {...props}>
 					{children}
 				</form>
 				<div className={cn(styles.pic, { [styles[type]]: type })}></div>
