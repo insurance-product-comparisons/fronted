@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/insurance-product-comparisons/frontend/static/css/main.2a1dba10.css",
+    "main.js": "/insurance-product-comparisons/frontend/static/js/main.d6987ebd.js",
+    "static/js/787.0101eb82.chunk.js": "/insurance-product-comparisons/frontend/static/js/787.0101eb82.chunk.js",
+    "static/media/kasko.svg": "/insurance-product-comparisons/frontend/static/media/kasko.57748b7b69889e061254207c99936518.svg",
+    "static/media/dmc.svg": "/insurance-product-comparisons/frontend/static/media/dmc.e7fe0e1bbe96ffa31da6bfd3506e3c66.svg",
+    "static/media/osago.svg": "/insurance-product-comparisons/frontend/static/media/osago.c526b9acb505b04f029ad1b55b5d6059.svg",
+    "static/media/consult_form.png": "/insurance-product-comparisons/frontend/static/media/consult_form.bdc398debcb311f55f33.png",
+    "static/media/rating-star.svg": "/insurance-product-comparisons/frontend/static/media/rating-star.7a2119f50c3427a35e25.svg",
+    "static/media/logo.svg": "/insurance-product-comparisons/frontend/static/media/logo.7b563c09a55389a40cbb.svg",
+    "index.html": "/insurance-product-comparisons/frontend/index.html",
+    "static/media/icon-arrow.svg": "/insurance-product-comparisons/frontend/static/media/icon-arrow.be0dcb11f5bcbd925454.svg",
+    "static/media/icon_search.svg": "/insurance-product-comparisons/frontend/static/media/icon_search.07329ba2908a77e5c3c1.svg",
+    "static/media/icon_close.svg": "/insurance-product-comparisons/frontend/static/media/icon_close.50cf16b0bc0bf82fab12.svg",
+    "main.2a1dba10.css.map": "/insurance-product-comparisons/frontend/static/css/main.2a1dba10.css.map",
+    "main.d6987ebd.js.map": "/insurance-product-comparisons/frontend/static/js/main.d6987ebd.js.map",
+    "787.0101eb82.chunk.js.map": "/insurance-product-comparisons/frontend/static/js/787.0101eb82.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a1dba10.css",
+    "static/js/main.d6987ebd.js"
+  ]
+}
