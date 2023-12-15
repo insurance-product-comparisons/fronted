@@ -21,3 +21,11 @@
 		padding: 24px 0 32px;
 	}
 }
+
+.container {
+	display: flex;
+	max-width: 558px;
+	padding-bottom: 32px;
+	flex-direction: column;
+	gap: 24px;
+}
