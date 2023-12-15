@@ -1,0 +1,18 @@
+@import 'app/styles/sass/mixins.scss';
+
+.default {
+	background-color: var(--grey-2);
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1136px;
+}
+
+.container-default {
+	display: flex;
+	justify-content: space-between;
+}
+
+.title-default {
+	margin: 0;
+	margin-bottom: 20px;
+}
