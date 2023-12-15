@@ -1,24 +1,24 @@
 @import 'app/styles/sass/mixins.scss';
 
 .default {
-		border-radius: 12px;
-		border: 1px solid var(--grey-2);
-		color: var(--black);
-		min-width: 100%;
-		padding: 16px 20px;
-		background-color: var(--grey-2);
+	border-radius: 12px;
+	border: 1px solid var(--grey-2);
+	color: var(--black);
+	min-width: 100%;
+	padding: 16px 20px;
+	background-color: var(--grey-2);
 
-		&:focus {
-			outline: none;
-			background-color: var(--white);
-			border: 1px solid var(--black);
-		}
-	
-		&:disabled {
-			background-color: var(--grey-3);
-		}
-
-		&.consult-form {
-			height: 148px;
-		}
+	&:focus {
+		outline: none;
+		background-color: var(--white);
+		border: 1px solid var(--black);
 	}
+
+	&:disabled {
+		background-color: var(--grey-3);
+	}
+
+	&.consult-form {
+		height: 148px;
+	}
+}
