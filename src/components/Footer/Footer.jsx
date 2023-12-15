@@ -30,37 +30,39 @@ function Footer() {
 						<Typography variant="body1" color="grey5">
 							Контакты
 						</Typography>
-						<Typography variant="body2" color="grey5">
-							<List mode="footer">
-								{footerContacts.map((contact) => (
-									<ListItem key={contact.id}>
+
+						<List mode="footer">
+							{footerContacts.map((contact) => (
+								<ListItem key={contact.id}>
+									<Typography variant="body2" color="grey5">
 										<LinkComponent
 											link={contact.link}
 											text={contact.text}
 											mode="footer"
 										/>
-									</ListItem>
-								))}
-							</List>
-						</Typography>
+									</Typography>
+								</ListItem>
+							))}
+						</List>
 					</div>
 					<div className={styles.column}>
 						<Typography variant="body1" color="grey5">
 							Документы
 						</Typography>
-						<Typography variant="body2" color="grey5">
-							<List mode="footer">
-								{footerDocuments.map((document) => (
-									<ListItem key={document.id}>
+
+						<List mode="footer">
+							{footerDocuments.map((document) => (
+								<ListItem key={document.id}>
+									<Typography variant="body2" color="grey5">
 										<LinkComponent
 											link={document.link}
 											text={document.text}
 											mode="footer"
 										/>
-									</ListItem>
-								))}
-							</List>
-						</Typography>
+									</Typography>
+								</ListItem>
+							))}
+						</List>
 					</div>
 				</div>
 			</Section>

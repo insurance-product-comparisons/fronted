@@ -1,4 +1,4 @@
-import Form from 'components/Form';
+import { Form } from 'components';
 import cn from 'classnames';
 import {
 	Input,
@@ -8,53 +8,41 @@ import {
 	Label,
 	Button,
 	LinkComponent,
+	PhoneInput,
 } from 'shared/ui';
 import styles from './ConsultForm.module.scss';
-import PhoneInput from 'shared/ui/PhoneInput/PhoneInput';
-import { useRef } from 'react';
-import { useForm } from 'react-hook-form';
 
 function ConsultForm() {
-	const innerRef = useRef(null);
-	const { register, handleSubmit } = useForm();
-	const onSubmit = (data) => console.log(data);
-
 	return (
-		<Form type="consult-form" onSubmit={onSubmit} handleSubmit={handleSubmit}>
+		<Form type="consult-form">
 			<div className={cn(styles.box, styles.inputs)}>
 				<div className={cn(styles.box, styles.input)}>
 					<Label mode="default" inputId="nameConsult" text="Имя*" />
 					<Input
-						{...register('nameConsult')}
 						name="nameConsult"
 						id="nameConsult"
 						type="text"
 						mode="default"
 						isValid={true}
-						ref={innerRef}
 						required={true}
 					/>
 				</div>
 				<div className={cn(styles.box, styles.input)}>
 					<Label mode="default" inputId="surnameConsult" text="Фамилия*" />
 					<Input
-						{...register('surnameConsult')}
 						name="surnameConsult"
 						type="text"
 						id="surnameConsult"
 						mode="default"
 						isValid={true}
-						ref={innerRef}
 						required={true}
 					/>
 				</div>
 				<div className={cn(styles.box, styles.input)}>
 					<Label mode="default" inputId="telConsult" text="Номер телефона*" />
 					<PhoneInput
-						{...register('telConsult')}
 						mode="default"
 						isValid={true}
-						ref={innerRef}
 						name="telConsult"
 						id="telConsult"
 					/>
@@ -66,12 +54,10 @@ function ConsultForm() {
 						text="Ситуация страхования*"
 					/>
 					<TextArea
-						{...register('isuranceCase')}
 						name="isuranceCase"
 						type="text"
 						id="isuranceCase"
 						mode="consult-form"
-						ref={innerRef}
 						required={true}
 					/>
 				</div>
@@ -83,7 +69,6 @@ function ConsultForm() {
 				/>
 				<div className={cn(styles.box, styles.checkbox)}>
 					<Checkbox
-						{...register('personalData')}
 						id="personalData"
 						name="personalData"
 						mode="default"

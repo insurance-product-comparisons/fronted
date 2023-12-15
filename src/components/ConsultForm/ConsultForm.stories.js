@@ -1,13 +1,12 @@
-import ConsultFrom from '.';
+import { ConsultForm } from 'components';
 
 export default {
-	title: 'Components/ConsultFrom',
-	component: ConsultFrom,
-	tags: ['autodocs'],
-	argTypes: {},
+	title: 'Components/ConsultForm',
+	component: ConsultForm,
 };
 
-const Template = (arg) => <ConsultFrom {...arg} />;
+const Template = (arg) => <ConsultForm {...arg} />;
 
 export const Default = Template.bind({});
+
 Default.args = {};

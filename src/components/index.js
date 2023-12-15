@@ -11,6 +11,7 @@ import NavigationBar from './NavigationBar';
 import Rating from './Rating';
 import Section from './Section';
 import ProductContainer from './ProductContainer';
+import ConsultForm from './ConsultForm';
 
 export {
 	AnswersList,
@@ -26,4 +27,5 @@ export {
 	Rating,
 	Section,
 	ProductContainer,
+	ConsultForm,
 };
