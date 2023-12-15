@@ -1,22 +1,17 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styles from './TextArea.module.scss';
 import cn from 'classnames';
 
-function TextArea({ label, name, id, placeholder, mode }) {
+const TextArea = forwardRef(({ name, id, mode, ...props }, ref) => {
 	return (
-		<div className={cn(styles.root, { [styles[mode]]: mode })}>
-			<label className={cn(styles.label, { [styles[mode]]: mode })}>
-				{label}
-			</label>
-			<textarea
-				name={name}
-				placeholder={placeholder}
-				className={cn(styles.textarea, { [styles[mode]]: mode })}
-				id={id}
-				value=""
-			></textarea>
-		</div>
+		<textarea
+			{...props}
+			name={name}
+			className={cn(styles.default, { [styles[mode]]: mode })}
+			id={id}
+			ref={ref}
+		></textarea>
 	);
-}
+});
 
 export default TextArea;

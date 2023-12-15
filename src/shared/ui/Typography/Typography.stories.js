@@ -3,6 +3,7 @@ import Typography from './Typography';
 export default {
 	title: 'UI-KIT/Typography',
 	component: Typography,
+	tags: ['autodocs'],
 	argTypes: {
 		children: {
 			type: 'string',
@@ -40,9 +41,9 @@ export default {
 
 const Template = (arg) => <Typography {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	variant: 'h1',
-	children: 'Я тексттексттексттексттексттекст',
+	children: 'Съешь ещё этих мягких французских булок, да выпей же чаю',
 	color: 'black',
 };

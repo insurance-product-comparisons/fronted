@@ -3,6 +3,7 @@ import TextArea from '.';
 export default {
 	title: 'UI-KIT/TextArea',
 	component: TextArea,
+	tags: ['autodocs'],
 	argTypes: {
 		disabled: {
 			type: Boolean,
@@ -14,18 +15,17 @@ export default {
 			description: 'Задает дополнительные классы для компонента',
 			control: 'text',
 		},
-		label: {
+		name: {
 			type: 'string',
-			description: 'Задает label',
-			defaultValue: 'Label',
+			description: 'Задает имя компонента',
 			control: 'text',
 		},
-		placeholder: {
+		id: {
 			type: 'string',
-			description: 'Задает label',
-			defaultValue: 'Label',
+			description: 'Задает id для инпута',
 			control: 'text',
 		},
+		register: {},
 	},
 };
 
@@ -34,6 +34,4 @@ const Template = (arg) => <TextArea {...arg} />;
 export const Default = Template.bind({});
 Default.args = {
 	mode: 'default',
-	label: 'Textarea',
-	placeholder: 'placeholder',
 };
