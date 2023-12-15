@@ -12,6 +12,7 @@ import Rating from './Rating';
 import Section from './Section';
 import ProductContainer from './ProductContainer';
 import ConsultForm from './ConsultForm';
+import InsuranceCompanies from './InsuranceCompanies';
 
 export {
 	AnswersList,
@@ -28,4 +29,5 @@ export {
 	Section,
 	ProductContainer,
 	ConsultForm,
+  InsuranceCompanies
 };
