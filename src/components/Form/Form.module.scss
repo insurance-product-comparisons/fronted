@@ -1,0 +1,42 @@
+.root {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--white);
+	border-radius: 36px;
+	min-width: 100%;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	&.consult-form {
+		padding: 64px 0;
+		min-width: 936px;
+		justify-content: space-between;
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+
+	&.consult-form {
+		min-width: 458px;
+	}
+}
+
+.pic {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	&.consult-form {
+		background-image: url('/images/consult_form.png');
+		width: 381px;
+		height: 357px;
+	}
+}

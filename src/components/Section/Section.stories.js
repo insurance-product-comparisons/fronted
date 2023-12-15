@@ -1,5 +1,5 @@
 import { Typography } from 'shared/ui';
-import Section from '.';
+import { Section } from 'components';
 
 export default {
 	title: 'Components/Section',
@@ -15,8 +15,8 @@ export default {
 
 const Template = (arg) => <Section {...arg} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const DefaultSection = Template.bind({});
+DefaultSection.args = {
 	children: (
 		<>
 			<Typography variant="h2" children="Заголовок секции" color="black" />

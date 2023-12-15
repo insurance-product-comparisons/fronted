@@ -1,31 +1,24 @@
 @import 'app/styles/sass/mixins.scss';
 
-.root {
-	position: relative;
-}
-
 .default {
-	display: flex;
-	flex-direction: column;
+	border-radius: 12px;
+	border: 1px solid var(--grey-2);
+	color: var(--black);
+	min-width: 100%;
+	padding: 16px 20px;
+	background-color: var(--grey-2);
 
-	.label {
-		font-size: 16px;
-		padding-bottom: 5px;
+	&:focus {
+		outline: none;
+		background-color: var(--white);
+		border: 1px solid var(--black);
 	}
 
-	.textarea {
-		border-radius: 12px;
-		border: none;
-		color: var(--black);
-		min-width: 100%;
-		padding: 10px 0 0 10px;
-		background-color: var(--grey-2);
+	&:disabled {
+		background-color: var(--grey-3);
+	}
 
-		&::placeholder {
-			color: var(--black);
-			opacity: 52%;
-			font-size: 16px;
-			margin: 5px 0 0 5px;
-		}
+	&.consult-form {
+		height: 148px;
 	}
 }

@@ -1,6 +1,5 @@
 import Button from './Button';
 import Checkbox from './Checkbox';
-import Input from './Input';
 import Preloader from './Preloader';
 import RadioBtn from './RadioBtn';
 import TextArea from './TextArea';
@@ -11,12 +10,15 @@ import LinkRouter from './LinkRouter';
 import AnswersItem from './AnswersItem';
 import List from './List';
 import ListItem from './ListItem';
-import NavigationBar from 'components/NavigationBar';
+import Logo from './Logo';
+import Label from './Label';
+import Input from './Input';
+import InputError from './InputError';
+import PhoneInput from './PhoneInput';
 
 export {
 	Button,
 	Checkbox,
-	Input,
 	Preloader,
 	RadioBtn,
 	TextArea,
@@ -27,5 +29,9 @@ export {
 	AnswersItem,
 	List,
 	ListItem,
-	NavigationBar,
+	Logo,
+	Label,
+	Input,
+	InputError,
+	PhoneInput,
 };

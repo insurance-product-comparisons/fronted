@@ -11,8 +11,9 @@ function Input({
 	submode,
 	isValid,
 	isDisabled,
-	value,
-	...args
+	required,
+	register,
+	...props
 }) {
 	const inputClassName = cn(styles[`input-${mode}`], styles[submode], {
 		[styles[`input-${mode}-error`]]: !isValid,
@@ -26,9 +27,9 @@ function Input({
 			placeholder={placeholder}
 			className={inputClassName}
 			id={id}
-			value={value}
 			disabled={isDisabled}
-			{...args}
+			required={required}
+			{...props}
 		></input>
 	);
 }

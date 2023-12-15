@@ -1,4 +1,3 @@
-import React from 'react';
 import { Typography } from 'shared/ui';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -13,6 +12,7 @@ function Checkbox({
 	typoColor,
 	label,
 	disabled,
+	...props
 }) {
 	const pseudoClassName = classNames(styles[`pseudo-${mode}`], {
 		[styles.disable]: disabled,
@@ -28,6 +28,7 @@ function Checkbox({
 				id={id}
 				required
 				disabled={disabled}
+				{...props}
 			/>
 			<span className={pseudoClassName}></span>
 			<Typography variant={typoVariant} color={typoColor}>

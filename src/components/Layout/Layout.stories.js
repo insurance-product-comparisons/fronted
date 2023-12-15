@@ -1,7 +1,10 @@
-import Layout from '.';
+import { Layout } from 'components';
+import { withRouter } from 'storybook-addon-react-router-v6';
+
 export default {
 	title: 'Components/Layout',
 	component: Layout,
+	decorators: [withRouter],
 	argTypes: {
 		maxWidth: {
 			type: 'string',
@@ -21,4 +24,4 @@ export default {
 
 const Template = (arg) => <Layout {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});

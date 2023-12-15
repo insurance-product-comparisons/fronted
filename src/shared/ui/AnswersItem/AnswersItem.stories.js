@@ -1,4 +1,4 @@
-import AnswersItem from '.';
+import { AnswersItem } from 'shared/ui';
 
 export default {
 	title: 'UI-KIT/AnswersItem',

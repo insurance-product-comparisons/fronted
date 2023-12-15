@@ -1,4 +1,4 @@
-import Main from '.';
+import { Main } from 'pages';
 
 export default {
 	title: 'Pages/Main',
