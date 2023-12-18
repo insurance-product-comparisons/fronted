@@ -5,6 +5,8 @@ import { NavigationBar, Section } from 'components';
 import Input from 'shared/ui/Input';
 import { useState } from 'react';
 import cn from 'classnames';
+import { HEADER } from 'shared/utils/constants/modes';
+import { HEADER_LINKS } from 'shared/store/links';
 
 export function Header() {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -28,14 +30,6 @@ export function Header() {
 		setSearchValue(event.target.value);
 	};
 
-	// массив ссылок в header
-	const arrLinks = [
-		{ id: 1, route: '/', text: 'ОСАГО' },
-		{ id: 2, route: '/', text: 'КАСКО' },
-		{ id: 3, route: '/', text: 'ДМС' },
-		{ id: 4, route: '/', text: 'Страховым компаниям' },
-	];
-
 	return (
 		<header className={styles.root}>
 			<Section>
@@ -44,8 +38,8 @@ export function Header() {
 
 					{!isSearchOpen && (
 						<NavigationBar
-							data={arrLinks}
-							mode="header"
+							data={HEADER_LINKS}
+							mode={HEADER}
 							variant="body1"
 							color="black"
 						/>
@@ -68,7 +62,6 @@ export function Header() {
 										type="search"
 										placeholder="Поиск по сайту"
 										id="search"
-										mode="default"
 										submode="header"
 										isValid={true}
 										isDisabled={false}
