@@ -4,15 +4,14 @@ import { DEFAULT } from 'shared/utils/constants/modes';
 import { Section } from 'components';
 import styles from './AnswersList.module.scss';
 
-function AnswersList({ title, data, mode }) {
-	const componentMode = mode ? mode : DEFAULT;
+function AnswersList({ title, data, mode = DEFAULT }) {
 	return (
 		<Section>
-			<div className={styles[componentMode]}>
+			<div className={styles[mode]}>
 				<Typography variant="h4">{title}</Typography>
-				<List mode={componentMode}>
+				<List mode={mode}>
 					{data.map((item, index) => (
-						<ListItem key={index} mode={componentMode}>
+						<ListItem key={index} mode={mode}>
 							<AnswersItem data={item} />
 						</ListItem>
 					))}
