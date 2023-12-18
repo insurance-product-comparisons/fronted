@@ -47,14 +47,12 @@ export function Header() {
 
 					<div className={styles['buttons']}>
 						<div className={styles['search-block']}>
-							{!isSearchOpen && (
+							{!isSearchOpen ? (
 								<button
 									className={styles['button-search']}
 									onClick={openSearch}
 								></button>
-							)}
-
-							{isSearchOpen && (
+							) : (
 								<div className={styles['search-input']}>
 									<div className={styles['icon-search']}></div>
 									<Input
