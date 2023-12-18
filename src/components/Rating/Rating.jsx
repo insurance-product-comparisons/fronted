@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Rating.module.scss';
-// import cn from 'classnames';
 
 function Rating({ rating }) {
 	return (
