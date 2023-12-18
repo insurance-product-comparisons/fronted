@@ -32,11 +32,7 @@ function Main() {
 					modeButton={'submit-request'}
 					disabled={false}
 				/>
-				<AnswersList
-					title="Вопросы и ответы"
-					data={answersMain}
-					mode="default"
-				/>
+				<AnswersList title="Вопросы и ответы" data={answersMain} />
 			</main>
 		</>
 	);
