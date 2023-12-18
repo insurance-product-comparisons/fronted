@@ -1,0 +1,26 @@
+.select-component-container {
+	width: 324px;
+}
+
+.select-component-container .select-component {
+	&__control {
+		height: 56px;
+		padding: 16px 20px;
+		box-sizing: border-box;
+		border: 0;
+		border-radius: 12px;
+		background-color: var(--grey-2);
+
+	&__input-container {
+		&:focus ~ .select-component {
+			outline: 1px solid var(--black);
+			background-color: var(--white);
+		}
+	}
+
+		&:focus {
+			outline: 1px solid var(--black);
+			background-color: var(--white);
+		}
+	}
+}
