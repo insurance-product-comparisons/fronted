@@ -26,7 +26,7 @@ function PhoneInput({
 			id={id}
 			mask="+7(999)-999-99-99"
 			className={inputClassName}
-			alwaysShowMask={true}
+			alwaysShowMask
 		></ReactInputMask>
 	);
 }
