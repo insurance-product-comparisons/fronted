@@ -11,12 +11,12 @@
 		border-radius: 12px;
 		background-color: var(--grey-2);
 
-	&__input-container {
-		&:focus ~ .select-component {
-			outline: 1px solid var(--black);
-			background-color: var(--white);
+		&__input-container {
+			&:focus ~ .select-component {
+				outline: 1px solid var(--black);
+				background-color: var(--white);
+			}
 		}
-	}
 
 		&:focus {
 			outline: 1px solid var(--black);
