@@ -11,7 +11,7 @@ function AnswersList({ title, data, mode }) {
 				<List mode="default">
 					{data.map((item, index) => (
 						<ListItem key={index} mode="default">
-							<AnswersItem key={index} data={item} mode="default" />
+							<AnswersItem data={item} mode="default" />
 						</ListItem>
 					))}
 				</List>
