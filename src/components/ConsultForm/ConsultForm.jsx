@@ -1,16 +1,14 @@
 import { Form, Section } from 'components';
 import cn from 'classnames';
 import {
-	Input,
-	TextArea,
 	Typography,
 	Checkbox,
-	Label,
 	Button,
 	LinkComponent,
-	PhoneInput,
+	FormInput,
 } from 'shared/ui';
 import styles from './ConsultForm.module.scss';
+import { DEFAULT } from 'shared/utils/constants/modes.js';
 
 function ConsultForm() {
 	return (
@@ -25,51 +23,44 @@ function ConsultForm() {
 
 			<Form type="consult-form">
 				<div className={cn(styles.box, styles.inputs)}>
-					<div className={cn(styles.box, styles.input)}>
-						<Label mode="default" inputId="nameConsult" text="Имя*" />
-						<Input
-							name="nameConsult"
-							id="nameConsult"
-							type="text"
-							mode="default"
-							isValid={true}
-							required={true}
-						/>
-					</div>
-					<div className={cn(styles.box, styles.input)}>
-						<Label mode="default" inputId="surnameConsult" text="Фамилия*" />
-						<Input
-							name="surnameConsult"
-							type="text"
-							id="surnameConsult"
-							mode="default"
-							isValid={true}
-							required={true}
-						/>
-					</div>
-					<div className={cn(styles.box, styles.input)}>
-						<Label mode="default" inputId="telConsult" text="Номер телефона*" />
-						<PhoneInput
-							mode="default"
-							isValid={true}
-							name="telConsult"
-							id="telConsult"
-						/>
-					</div>
-					<div className={cn(styles.box, styles.input)}>
-						<Label
-							mode="default"
-							inputId="isuranceCase"
-							text="Ситуация страхования*"
-						/>
-						<TextArea
-							name="isuranceCase"
-							type="text"
-							id="isuranceCase"
-							mode="consult-form"
-							required={true}
-						/>
-					</div>
+					<FormInput
+						inputId="nameConsult"
+						textLabel="Имя*"
+						name="nameConsult"
+						id="nameConsult"
+						type="text"
+						isValid
+						required
+					/>
+					<FormInput
+						inputId="surnameConsult"
+						textLabel="Фамилия*"
+						name="surnameConsult"
+						id="surnameConsult"
+						type="text"
+						isValid
+						required
+					/>
+					<FormInput
+						phone
+						inputId="telConsult"
+						textLabel="Номер телефона*"
+						name="telConsult"
+						id="telConsult"
+						isValid
+						required
+					/>
+					<FormInput
+						textarea
+						inputId="isuranceCase"
+						textLabel="Ситуация страхования*"
+						name="isuranceCase"
+						id="isuranceCase"
+						type="text"
+						mode="consult-form"
+						isValid
+						required
+					/>
 				</div>
 				<div className={cn(styles.box, styles.info)}>
 					<Typography
@@ -80,9 +71,7 @@ function ConsultForm() {
 						<Checkbox
 							id="personalData"
 							name="personalData"
-							mode="default"
-							typoVariant=""
-							typoColor=""
+							mode={DEFAULT}
 							label="Я согласен на обработку&nbsp;"
 						/>
 						<LinkComponent link="#" text="персональных данных" mode="bold" />

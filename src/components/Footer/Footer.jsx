@@ -5,6 +5,7 @@ import {
 	footerContacts,
 	footerDocuments,
 } from 'shared/store/links';
+import { FOOTER } from 'shared/utils/constants/modes';
 import styles from './Footer.module.scss';
 
 function Footer() {
@@ -21,7 +22,7 @@ function Footer() {
 						</Typography>
 						<NavigationBar
 							data={footerNavigation}
-							mode="footer"
+							mode={FOOTER}
 							variant="body2"
 							color="grey5"
 						/>
@@ -31,14 +32,14 @@ function Footer() {
 							Контакты
 						</Typography>
 
-						<List mode="footer">
+						<List mode={FOOTER}>
 							{footerContacts.map((contact) => (
 								<ListItem key={contact.id}>
 									<Typography variant="body2" color="grey5">
 										<LinkComponent
 											link={contact.link}
 											text={contact.text}
-											mode="footer"
+											mode={FOOTER}
 										/>
 									</Typography>
 								</ListItem>
@@ -50,14 +51,14 @@ function Footer() {
 							Документы
 						</Typography>
 
-						<List mode="footer">
+						<List mode={FOOTER}>
 							{footerDocuments.map((document) => (
 								<ListItem key={document.id}>
 									<Typography variant="body2" color="grey5">
 										<LinkComponent
 											link={document.link}
 											text={document.text}
-											mode="footer"
+											mode={FOOTER}
 										/>
 									</Typography>
 								</ListItem>

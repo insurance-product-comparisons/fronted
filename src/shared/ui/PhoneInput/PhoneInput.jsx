@@ -1,6 +1,7 @@
 import ReactInputMask from 'react-input-mask';
 import styles from './PhoneInput.module.scss';
 import cn from 'classnames';
+import { DEFAULT } from 'shared/utils/constants/modes.js';
 
 function PhoneInput({
 	mode,
@@ -11,9 +12,11 @@ function PhoneInput({
 	id,
 	...props
 }) {
-	const inputClassName = cn(styles[`input-${mode}`], styles[submode], {
-		[styles[`input-${mode}-error`]]: !isValid,
-		[styles[`input-${mode}-disable`]]: isDisabled,
+	const modeComponent = mode ? mode : DEFAULT;
+
+	const inputClassName = cn(styles[`input-${modeComponent}`], styles[submode], {
+		[styles[`input-${modeComponent}-error`]]: !isValid,
+		[styles[`input-${modeComponent}-disable`]]: isDisabled,
 	});
 
 	return (
@@ -23,7 +26,7 @@ function PhoneInput({
 			id={id}
 			mask="+7(999)-999-99-99"
 			className={inputClassName}
-			alwaysShowMask={true}
+			alwaysShowMask
 		></ReactInputMask>
 	);
 }
