@@ -21,3 +21,11 @@ export const footerDocuments = [
 	{ id: 2, link: '/', text: 'Политика конфеденциальности' },
 	{ id: 3, link: '/', text: 'Иллюстрации Storyset' },
 ];
+
+// массив ссылок в header
+export const HEADER_LINKS = [
+	{ id: 1, route: '/', text: 'ОСАГО' },
+	{ id: 2, route: '/', text: 'КАСКО' },
+	{ id: 3, route: '/', text: 'ДМС' },
+	{ id: 4, route: '/', text: 'Страховым компаниям' },
+];
