@@ -1,5 +1,5 @@
 import { ProductContainer } from 'components';
-import cardItems from 'shared/utils/constants/cardItems';
+import CARD_ITEMS from 'shared/utils/constants/CARD_ITEMS';
 
 export default {
 	title: 'Components/ProductContainer',
@@ -33,6 +33,6 @@ const Template = (arg) => <ProductContainer {...arg} />;
 export const Default = Template.bind({});
 
 Default.args = {
-	data: cardItems,
+	data: CARD_ITEMS,
 	mode: 'default',
 };

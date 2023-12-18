@@ -4,7 +4,7 @@ import {
 	AnswersList,
 	InsuranceCompanies,
 } from 'components';
-import cardItems from 'shared/utils/constants/cardItems';
+import CARD_ITEMS from 'shared/utils/constants/CARD_ITEMS';
 import { answersMain } from 'shared/store/answersMain';
 import styles from './Main.module.scss';
 
@@ -12,7 +12,7 @@ function Main() {
 	return (
 		<>
 			<main className={styles.root}>
-				<ProductContainer data={cardItems} mode="default" />
+				<ProductContainer data={CARD_ITEMS} mode="default" />
 				<InsuranceCompanies
 					title={'Страховым компаниям'}
 					description={
