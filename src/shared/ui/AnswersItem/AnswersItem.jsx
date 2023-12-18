@@ -20,7 +20,7 @@ function AnswersItem({ data, mode }) {
 				<Typography
 					variant="body1"
 					style={{ cursor: 'pointer' }}
-					onClick={() => setIsOpen(!isOpen)}
+					onClick={() => setIsOpen((prev) => !prev)}
 				>
 					{data.title}
 				</Typography>
