@@ -13,6 +13,7 @@ import Section from './Section';
 import ProductContainer from './ProductContainer';
 import ConsultForm from './ConsultForm';
 import InsuranceCompanies from './InsuranceCompanies';
+import OsagoForm from './OsagoForm';
 
 export {
 	AnswersList,
@@ -30,4 +31,5 @@ export {
 	ProductContainer,
 	ConsultForm,
 	InsuranceCompanies,
+	OsagoForm,
 };

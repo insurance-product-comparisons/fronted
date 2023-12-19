@@ -3,6 +3,7 @@ import InputError from '../InputError';
 import Label from '../Label';
 import PhoneInput from '../PhoneInput';
 import TextArea from '../TextArea';
+import SelectComponent from '../SelectComponent';
 import styles from './FormInput.module.scss';
 
 function FormInput({
@@ -17,6 +18,9 @@ function FormInput({
 	type,
 	phone,
 	textarea,
+	select,
+	options,
+	submode,
 }) {
 	return (
 		<div className={styles.box}>
@@ -36,6 +40,8 @@ function FormInput({
 				/>
 			) : textarea ? (
 				<TextArea name={name} id={id} mode={mode} />
+			) : select ? (
+				<SelectComponent mode={mode} options={options} submode={submode} />
 			) : (
 				<Input mode={mode} name={name} id={id} type={type} isValid required />
 			)}
