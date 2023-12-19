@@ -1,12 +1,12 @@
-import styles from './Header.module.scss';
 import Logo from 'shared/ui/Logo';
 import Button from 'shared/ui/Button';
 import { NavigationBar, Section } from 'components';
 import Input from 'shared/ui/Input';
 import { useState } from 'react';
 import cn from 'classnames';
-import { HEADER } from 'shared/utils/constants/modes';
+import { HEADER, MAIN, ENTER } from 'shared/utils/constants/modes';
 import { HEADER_LINKS } from 'shared/store/links';
+import styles from './Header.module.scss';
 
 export function Header() {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -34,7 +34,7 @@ export function Header() {
 		<header className={styles.root}>
 			<Section>
 				<div className={headerClass}>
-					<Logo mode="main" />
+					<Logo mode={MAIN} />
 
 					{!isSearchOpen && (
 						<NavigationBar
@@ -60,7 +60,7 @@ export function Header() {
 										type="search"
 										placeholder="Поиск по сайту"
 										id="search"
-										submode="header"
+										submode={HEADER}
 										isValid={true}
 										isDisabled={false}
 										value={searchValue}
@@ -76,7 +76,7 @@ export function Header() {
 						<Button
 							type="Button"
 							bgcolor="ghost"
-							mode="enter"
+							mode={ENTER}
 							disabled={false}
 							onClick
 						>

@@ -1,9 +1,9 @@
-import styles from './Card.module.scss';
 import cn from 'classnames';
-import { Typography } from 'shared/ui';
-import { Button } from 'shared/ui';
+import { Typography, Button } from 'shared/ui';
+import { DEFAULT } from 'shared/utils/constants/modes';
+import styles from './Card.module.scss';
 
-function Card({ data, mode }) {
+function Card({ data, mode = DEFAULT }) {
 	return (
 		<section
 			className={cn({

@@ -1,6 +1,7 @@
 import useBreadcrumbs from 'use-react-router-breadcrumbs';
 import { crumbs } from 'shared/store/breadcrumbs';
 import { LinkRouter, Typography } from 'shared/ui';
+import { BREADCRUMBS } from 'shared/utils/constants/modes';
 import styles from './Breadcrumbs.module.scss';
 
 function Breadcrumbs() {
@@ -11,7 +12,7 @@ function Breadcrumbs() {
 				<LinkRouter
 					key={match.pathname}
 					route={match.pathname}
-					mode={'breadscrumbs'}
+					mode={BREADCRUMBS}
 					text={
 						<Typography
 							variant={'body2'}
