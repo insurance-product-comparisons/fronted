@@ -1,21 +1,41 @@
 import React from 'react';
 import styles from './RadioBtn.module.scss';
+import { DEFAULT } from 'shared/utils/constants/modes.js';
 import cn from 'classnames';
+import Typography from '../Typography';
 
-function RadioBtn({ label, placeholder, id, name, mode }) {
+function RadioBtn({
+	label,
+	id,
+	name,
+	mode = DEFAULT,
+	value,
+	typoVariant,
+	typoColor,
+	disabled,
+	...props
+}) {
+	const pseudoClassName = cn(styles[`pseudo-${mode}`], {
+		[styles.disable]: disabled,
+	});
+
 	return (
-		<div className={cn(styles.root, { [styles[mode]]: mode })}>
-			<label className={cn(styles.label, { [styles[mode]]: mode })}>
-				{label}
-			</label>
+		<label className={styles[`label-${mode}`]} htmlFor={id}>
 			<input
+				className={styles.radio}
 				type="radio"
-				label={label}
-				id={id}
 				name={name}
-				className={cn(styles.input, { [styles[mode]]: mode })}
+				id={id}
+				value={value}
+				required
+				disabled={disabled}
+				{...props}
 			/>
-		</div>
+			<span className={pseudoClassName}></span>
+			<Typography variant={typoVariant} color={typoColor}>
+				{label}
+			</Typography>
+		</label>
 	);
 }
 

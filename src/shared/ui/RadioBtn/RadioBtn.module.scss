@@ -1,5 +1,52 @@
 @import 'app/styles/sass/mixins.scss';
 
-.root {
+
+.label-default {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+
+.radio {
+	position: absolute;
+	display: none;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+
+	&:checked + .pseudo-default::after {
+		display: block;
+	}
+}
+
+.pseudo-default {
 	position: relative;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border: 3px solid var(--black);
+	border-radius: 50%;
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&::after {
+		content: '';
+		display: none;
+    	position: absolute;
+    	left: 4px; 
+		top: 4px;
+    	background-color: var(--black);
+    	width: 14px; 
+		height: 14px;
+ 		border-radius: 50%;
+	}
+
+	&.disable {
+		border-color: var(--grey-1);
+
+		&::after {
+			opacity: 0;
+		}
+	}
 }
