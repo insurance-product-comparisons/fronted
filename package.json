@@ -1,7 +1,6 @@
 {
 	"name": "insurance-product-comparisons",
 	"version": "0.1.0",
-	"homepage": "https://insurance-product-comparisons.github.io/fronted/",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.17.0",
@@ -17,6 +16,7 @@
 		"react-select": "^5.8.0",
 		"sass": "^1.69.5",
 		"storybook-addon-react-router-v6": "^2.0.10",
+		"use-react-router-breadcrumbs": "^4.0.1",
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
