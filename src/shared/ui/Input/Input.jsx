@@ -1,13 +1,14 @@
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './Input.module.scss';
+import { DEFAULT } from 'shared/utils/constants/modes.js';
 
 function Input({
 	name,
 	type,
 	placeholder,
 	id,
-	mode,
+	mode = DEFAULT,
 	submode,
 	isValid,
 	isDisabled,

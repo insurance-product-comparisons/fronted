@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import styles from './Label.module.scss';
+import { DEFAULT } from 'shared/utils/constants/modes.js';
 
-function Label({ mode, inputId, text }) {
+function Label({ labelMode = DEFAULT, inputId, textLabel }) {
 	return (
-		<label className={styles[mode]} htmlFor={inputId}>
-			{text}
+		<label className={styles[labelMode]} htmlFor={inputId}>
+			{textLabel}
 		</label>
 	);
 }

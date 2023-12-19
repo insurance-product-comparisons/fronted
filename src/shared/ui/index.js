@@ -16,6 +16,7 @@ import Input from './Input';
 import InputError from './InputError';
 import PhoneInput from './PhoneInput';
 import SelectComponent from './SelectComponent';
+import FormInput from './FormInput';
 
 export {
 	Button,
@@ -36,4 +37,5 @@ export {
 	InputError,
 	PhoneInput,
 	SelectComponent,
+	FormInput,
 };
