@@ -1,5 +1,3 @@
-@import 'app/styles/sass/mixins.scss';
-
 .root {
 	position: relative;
 	text-decoration: none;
@@ -7,21 +5,34 @@
 
 .default {
 	color: var(--black);
+	width: fit-content;
+}
+
+.header {
+	color: var(--black);
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.breadscrumbs {
+	display: flex;
+	align-items: center;
+
+	&:hover {
+		opacity: 0.8;
+	}
 
 	&::after {
 		content: '';
-		position: absolute;
-		bottom: -3px;
-		left: 0;
 		display: block;
-		width: 100%;
-		height: 1px;
-		background-color: var(--black);
-		opacity: 0;
-		@include hover;
+		width: 24px;
+		height: 24px;
+		background-image: url(/images/icon_more.svg);
 	}
 
-	&:hover::after {
-		opacity: 1;
+	&:last-of-type::after {
+		display: none;
 	}
 }

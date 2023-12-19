@@ -16,10 +16,10 @@ const Template = (arg) => <Logo {...arg} />;
 
 export const Default = Template.bind({});
 Default.args = {
-	mode: 'main'
+	mode: 'main',
 };
 
 export const InsuranceLogo = Template.bind({});
 InsuranceLogo.args = {
-	mode: 'insurance'
+	mode: 'insurance',
 };

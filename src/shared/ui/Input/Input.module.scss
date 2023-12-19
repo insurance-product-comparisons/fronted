@@ -1,5 +1,66 @@
-@import 'app/styles/sass/mixins.scss';
+.input-default {
+	width: 324px;
+	height: 56px;
+	padding: 16px 20px;
+	box-sizing: border-box;
+	border: 0;
+	border-radius: 12px;
+	background-color: var(--grey-2);
 
-.root {
-    position: relative;
+	&:focus {
+		outline: 1px solid var(--black);
+		background-color: var(--white);
+	}
+}
+
+.input-default-error {
+	padding: 15px 19px;
+	border: 1px solid var(--red);
+	background-color: var(--white);
+
+	&:focus {
+		outline-width: 0;
+	}
+}
+
+.input-default-disable {
+	padding: 16px 20px;
+	background-color: var(--grey-3);
+	border: 0;
+}
+
+.header {
+	height: 56px;
+	width: 797px;
+	outline: none;
+	background: transparent;
+	padding-left: 48px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	background-color: var(--grey-2);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:focus {
+		z-index: 1;
+		background-color: var(--grey-2);
+		outline: none;
+	}
+
+	&::placeholder {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 0em;
+		text-align: left;
+		word-spacing: 2px;
+	}
 }

@@ -1,8 +1,9 @@
-import Typography from '.';
+import Typography from './Typography';
 
 export default {
 	title: 'UI-KIT/Typography',
 	component: Typography,
+	tags: ['autodocs'],
 	argTypes: {
 		children: {
 			type: 'string',
@@ -11,15 +12,9 @@ export default {
 		},
 		variant: {
 			type: 'string',
-			description: 'Задает вариант типографики, от которого зависит размер шрифта',
-			options: [
-				'h1',
-				'h2',
-				'h3',
-				'body1',
-				'body2',
-				'body3',
-			],
+			description:
+				'Задает вариант типографики, от которого зависит размер шрифта',
+			options: ['h1', 'h2', 'h3', 'body1', 'body2', 'body3'],
 			control: {
 				type: 'select',
 			},
@@ -46,9 +41,9 @@ export default {
 
 const Template = (arg) => <Typography {...arg} />;
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 Default.args = {
 	variant: 'h1',
-	children: 'Я тексттексттексттексттексттекст',
-	color: 'black'
+	children: 'Съешь ещё этих мягких французских булок, да выпей же чаю',
+	color: 'black',
 };

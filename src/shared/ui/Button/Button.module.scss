@@ -1,52 +1,85 @@
 @import 'app/styles/sass/mixins.scss';
 
+.root {
+	min-width: 100px;
+	min-height: 50px;
+	padding: 0 32px;
+	border-radius: 12px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px;
+	cursor: pointer;
+}
+
 .accent {
-    color: var(--black);
-    background-color: var(--accent-color-yellow);
-    text-align: center;
-    font-size: 16px;
-    border-radius: 16px;
-    border: none;
-    padding: 0;
-    width: 100px;
-    height: 50px;
+	border: none;
+	color: var(--black);
+	background-color: var(--accent-color-yellow);
+	font-size: 16px;
 
-    &.submit-form {
-        width: 211px;
-        height: 56px;
-    }
+	&:hover {
+		background-color: var(--accent-yellow-hover);
+	}
 
-    &.count {
-        width: 157px;
-        height: 56px;
-    }
+	&:active {
+		background-color: var(--accent-yellow-pressed);
+	}
+
+	&.submit-form {
+		min-width: 211px;
+		height: 56px;
+		align-self: flex-start;
+	}
+
+	&.count {
+		min-width: 157px;
+		height: 56px;
+	}
+
+	&.disable {
+		color: var(--grey-1);
+		background-color: var(--grey-3);
+		cursor: auto;
+	}
+
+	@include hover;
 }
 
 .ghost {
-    color: var(--black);
-    background-color: transparent;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 16px;
-    border: 2px solid;
-    padding: 0;
-    width: 100px;
-    height: 50px;
+	color: var(--black);
+	background-color: transparent;
+	border: 2px solid var(--grey);
 
-    &.more {
-        width: 156px;
-        height: 56px;
-    }
+	&:hover {
+		border-color: var(--grey-5);
+	}
 
-    &.submit-request {
-        width: 211px;
-        height: 56px;
-    }
+	&:active {
+		border-color: var(--black);
+	}
 
-    &.enter {
-        border-radius: 12px;
-        width: 97px;
-        height: 48px;
-    }
+	&.more {
+		min-width: 156px;
+		height: 56px;
+	}
 
+	&.submit-request {
+		min-width: 211px;
+		height: 56px;
+	}
+
+	&.enter {
+		min-width: 97px;
+		height: 48px;
+		padding: 0 24px;
+	}
+
+	&.disable {
+		color: var(--grey-1);
+		border-color: var(--grey-1);
+		cursor: auto;
+	}
+
+	@include hover;
 }

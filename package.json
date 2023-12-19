@@ -9,13 +9,19 @@
 		"classnames": "^2.3.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-hook-form": "^7.49.2",
+		"react-input-mask": "^2.0.4",
 		"react-router-dom": "^6.20.0",
 		"react-scripts": "5.0.1",
+		"react-select": "^5.8.0",
 		"sass": "^1.69.5",
 		"storybook-addon-react-router-v6": "^2.0.10",
+		"use-react-router-breadcrumbs": "^4.0.1",
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"lint": "eslint . --ext .js,.jsx .",
@@ -26,7 +32,8 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
+		"build-storybook": "storybook build",
+		"chromatic": "npx chromatic --project-token=chpt_a043b6b5ae7f29a"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -89,10 +96,12 @@
 		"@storybook/react-webpack5": "^7.6.2",
 		"@storybook/testing-library": "^0.2.2",
 		"babel-plugin-named-exports-order": "^0.0.2",
+		"chromatic": "^10.1.0",
 		"commitizen": "^4.3.0",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-storybook": "^0.6.15",
+		"gh-pages": "^6.1.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^15.1.0",
 		"prettier": "^3.1.0",

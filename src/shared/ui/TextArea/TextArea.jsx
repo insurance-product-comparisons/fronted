@@ -1,22 +1,15 @@
-import React from 'react';
-import styles from './TextArea.module.scss'
-import cn from 'classnames'
+import { DEFAULT } from 'shared/utils/constants/modes.js';
+import cn from 'classnames';
+import styles from './TextArea.module.scss';
 
-function TextArea({label, name, id, placeholder, mode}) {
+function TextArea({ name, id, mode = DEFAULT, ...props }) {
 	return (
-		<div className={cn(styles.root,{[styles[mode]] : mode})}>
-			<label
-			className={cn(styles.label,{[styles[mode]] : mode})}
-			>{label}</label>
-			<textarea
-				name={name}
-				placeholder={placeholder}
-				className={cn(styles.textarea,{[styles[mode]] : mode})}
-				id={id}
-				value=''
-				>
-			</textarea>
-		</div>
+		<textarea
+			{...props}
+			name={name}
+			className={cn(styles.default, { [styles[mode]]: mode })}
+			id={id}
+		></textarea>
 	);
 }
 
