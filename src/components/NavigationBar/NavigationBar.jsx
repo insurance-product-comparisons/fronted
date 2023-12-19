@@ -6,8 +6,6 @@ import { ListItem } from 'shared/ui';
 import { DEFAULT } from 'shared/utils/constants/modes';
 
 function NavigationBar({ data, mode = DEFAULT, variant, color }) {
-	// const modeComponent = mode ? mode : DEFAULT;
-
 	const linkItems = data.map((item) => (
 		<ListItem key={item.id}>
 			<LinkRouter
