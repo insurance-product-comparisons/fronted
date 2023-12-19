@@ -5,23 +5,22 @@ import { Typography } from 'shared/ui';
 import { DEFAULT } from 'shared/utils/constants/modes';
 import styles from './AnswersItem.module.scss';
 
-function AnswersItem({ data, mode }) {
+function AnswersItem({ data, mode = DEFAULT }) {
 	const [isOpen, setIsOpen] = React.useState(false);
-	const componentMode = mode ? mode : DEFAULT;
 
-	const componentClassName = classNames(styles[componentMode], {
+	const componentClassName = classNames(styles[mode], {
 		[styles.open]: isOpen,
 	});
-	const contentClassName = classNames(styles[`content-${componentMode}`], {
+	const contentClassName = classNames(styles[`content-${mode}`], {
 		[styles.open]: isOpen,
 	});
-	const arrowClassName = classNames(styles[`arrow-${componentMode}`], {
+	const arrowClassName = classNames(styles[`arrow-${mode}`], {
 		[styles.rotate]: isOpen,
 	});
 
 	return (
 		<div className={componentClassName}>
-			<div className={styles[`wrapper-${componentMode}`]}>
+			<div className={styles[`wrapper-${mode}`]}>
 				<Typography
 					variant="body1"
 					style={{ cursor: 'pointer' }}

@@ -1,8 +1,4 @@
-import Input from '../Input';
-import InputError from '../InputError';
-import Label from '../Label';
-import PhoneInput from '../PhoneInput';
-import TextArea from '../TextArea';
+import { Input, InputError, Label, PhoneInput, TextArea } from 'shared/ui';
 import styles from './FormInput.module.scss';
 
 function FormInput({

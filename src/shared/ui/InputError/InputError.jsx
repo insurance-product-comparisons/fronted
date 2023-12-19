@@ -1,13 +1,9 @@
 import PropTypes from 'prop-types';
-import styles from './InputError.module.scss';
 import { DEFAULT } from 'shared/utils/constants/modes.js';
+import styles from './InputError.module.scss';
 
-function InputError({ errorMode, errorMessage, isVisible }) {
-	const modeComponent = errorMode ? errorMode : DEFAULT;
-
-	return (
-		<span className={styles[modeComponent]}>{isVisible && errorMessage}</span>
-	);
+function InputError({ errorMode = DEFAULT, errorMessage, isVisible }) {
+	return <span className={styles[errorMode]}>{isVisible && errorMessage}</span>;
 }
 
 InputError.propTypes = {

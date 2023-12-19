@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './LinkRouter.module.scss';
 import cn from 'classnames';
+import { DEFAULT } from 'shared/utils/constants/modes';
+import styles from './LinkRouter.module.scss';
 
-function LinkRouter({ route, text, mode, ...args }) {
+function LinkRouter({ route, text, mode = DEFAULT, ...args }) {
 	return (
 		<Link
 			to={route}

@@ -12,7 +12,7 @@ function Main() {
 	return (
 		<>
 			<main className={styles.root}>
-				<ProductContainer data={CARD_ITEMS} mode="default" />
+				<ProductContainer data={CARD_ITEMS} />
 				<InsuranceCompanies
 					title={'Страховым компаниям'}
 					description={
