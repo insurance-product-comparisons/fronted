@@ -1,6 +1,5 @@
 @import 'app/styles/sass/mixins.scss';
 
-
 .label-default {
 	display: flex;
 	gap: 15px;
@@ -33,13 +32,13 @@
 	&::after {
 		content: '';
 		display: none;
-    	position: absolute;
-    	left: 4px; 
+		position: absolute;
+		left: 4px;
 		top: 4px;
-    	background-color: var(--black);
-    	width: 14px; 
+		background-color: var(--black);
+		width: 14px;
 		height: 14px;
- 		border-radius: 50%;
+		border-radius: 50%;
 	}
 
 	&.disable {
