@@ -1,6 +1,7 @@
 {
 	"name": "insurance-product-comparisons",
 	"version": "0.1.0",
+	"homepage": "https://insurance-product-comparisons.github.io/fronted/",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.17.0",
@@ -19,6 +20,8 @@
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"lint": "eslint . --ext .js,.jsx .",
@@ -98,6 +101,7 @@
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-storybook": "^0.6.15",
+		"gh-pages": "^6.1.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^15.1.0",
 		"prettier": "^3.1.0",
