@@ -1,75 +1,43 @@
 import React from 'react';
-// import { DEFAULT } from 'shared/utils/constants/modes';
-import { SelectOption } from 'shared/ui';
+import PropTypes from 'prop-types';
+import { DEFAULT } from 'shared/utils/constants/modes';
+import classNames from 'classnames';
+import Select from 'react-select';
 import styles from './SelectComponent.module.scss';
 
-const options = [
-	{ value: 'chocolate', label: 'Chocolate' },
-	{ value: 'strawberry', label: 'Strawberry' },
-	{ value: 'vanilla', label: 'Vanilla' },
-];
-
-function SelectComponent({
-	onClose,
-	mode,
-	status,
-	selected,
-	onChange,
-	placeholder,
-}) {
-	const [isOpen, setIsOpen] = React.useState(false);
-	const placeholderRef = React.useRef(null);
-
-	function handlePlaceholderClick() {
-		setIsOpen((prev) => !prev);
-	}
-
-	function handleOptionClick(value) {
-		setIsOpen(false);
-		onChange(value);
-	}
-
-	React.useEffect(() => {
-		const placeholderEl = placeholderRef.current;
-		if (!placeholderEl) return;
-
-		function handleClick(event) {
-			if (event.key === 'Enter') {
-				setIsOpen((prev) => !prev);
-			}
-		}
-
-		placeholderEl.addEventListener('keydown', handleClick);
-
-		return () => {
-			placeholderEl.removeEventListener('keydown', handleClick);
-		};
-	}, []);
+function SelectComponent({ options, mode = DEFAULT, placeholder }) {
+	const selectClassNames = {
+		container: (state) => classNames(styles[mode]),
+		control: ({ isDisabled, isFocused }) =>
+			classNames(styles[`control-${mode}`], isFocused && styles.focused),
+		valueContainer: (state) => classNames(styles[`value-container-${mode}`]),
+		input: (state) => classNames(styles[`input-${mode}`]),
+		indicatorSeparator: (state) => classNames(styles[`separator-${mode}`]),
+		indicatorsContainer: (state) => classNames(styles[`indicator-${mode}`]),
+		dropdownIndicator: ({ isFocused }) =>
+			classNames(styles[`arrow-${mode}`], isFocused && styles.focused),
+		option: ({ isDisabled, isFocused, isSelected }) =>
+			classNames(styles[`option-${mode}`], isSelected && styles.selected),
+	};
 
 	return (
-		<div className={styles.wrapper} data-is-active={isOpen} data-mode={mode}>
-			<div className={styles.arrow}></div>
-			<div
-				className={styles.placeholder}
-				data-status={status}
-				data-selected={!!selected?.value}
-				ref={placeholderRef}
-			>
-				{selected?.title || placeholder}
-			</div>
-			{isOpen && (
-				<ul className={styles.select}>
-					{options.map((option, index) => (
-						<SelectOption
-							key={index}
-							option={option}
-							onClick={handleOptionClick}
-						/>
-					))}
-				</ul>
-			)}
-		</div>
+		<Select
+			classNames={selectClassNames}
+			options={options}
+			placeholder={placeholder}
+		/>
 	);
 }
+
+Select.propTypes = {
+	options: PropTypes.arrayOf(
+		PropTypes.shape({
+			value: PropTypes.string,
+			label: PropTypes.string,
+		})
+	),
+	mode: PropTypes.string,
+	placeholder: PropTypes.string,
+};
 
 export default SelectComponent;

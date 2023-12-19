@@ -1,26 +1,72 @@
-.select-component-container {
-	width: 324px;
+.default {
+	width: 324px !important;
+	height: 56px !important;
 }
 
-.select-component-container .select-component {
-	&__control {
-		height: 56px;
-		padding: 16px 20px;
-		box-sizing: border-box;
-		border: 0;
-		border-radius: 12px;
-		background-color: var(--grey-2);
+.control-default {
+	padding: 16px 20px !important;
+	box-sizing: border-box !important;
+	border: 0 !important;
+	border-radius: 12px !important;
+	background-color: var(--grey-2) !important;
 
-		&__input-container {
-			&:focus ~ .select-component {
-				outline: 1px solid var(--black);
-				background-color: var(--white);
-			}
-		}
+	&.focused {
+		outline: 1px solid var(--black) !important;
+		background-color: var(--white) !important;
+	}
+}
 
-		&:focus {
-			outline: 1px solid var(--black);
-			background-color: var(--white);
-		}
+.value-container-default {
+	padding: 0 !important;
+	font-size: 16px !important;
+	font-weight: 400 !important;
+	line-height: 20px !important;
+	color: var(--black) !important;
+}
+
+.input-default {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.separator-default {
+	width: 0 !important;
+}
+
+.indicator-default {
+	width: 24px !important;
+	height: 24px !important;
+	padding: 0 !important;
+
+	&.focused {
+		width: 24px !important;
+		height: 24px !important;
+		padding: 0 !important;
+	}
+}
+
+.arrow-default {
+	padding: 0 !important;
+	fill: var(--black);
+	transition: transform 300ms !important;
+
+	&.focused {
+		width: 24px !important;
+		height: 24px !important;
+		padding: 0 !important;
+		transform: rotate(-180deg);
+	}
+}
+
+.option-default {
+	background-color: var(--white) !important;
+
+	&:hover {
+		background-color: var(--grey-3) !important;
+	}
+
+	&.selected {
+		color: var(--black) !important;
+		background-color: var(--grey-1) !important;
 	}
 }
