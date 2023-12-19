@@ -1,9 +1,10 @@
-import Card from 'components/Card';
+import { Card } from 'components';
 import { Typography } from 'shared/ui';
-import styles from './ProductContainer.module.scss';
 import cn from 'classnames';
+import { DEFAULT } from 'shared/utils/constants/modes';
+import styles from './ProductContainer.module.scss';
 
-function ProductContainer({ data, mode }) {
+function ProductContainer({ data, mode = DEFAULT }) {
 	return (
 		<section className={cn({ [styles[mode]]: mode })}>
 			<div className={cn({ [styles[`title-${mode}`]]: mode })}>
@@ -11,7 +12,7 @@ function ProductContainer({ data, mode }) {
 			</div>
 			<div className={cn({ [styles[`container-${mode}`]]: mode })}>
 				{data.map((item, id) => (
-					<Card data={item} key={id} mode="default" />
+					<Card data={item} key={id} />
 				))}
 			</div>
 		</section>

@@ -1,5 +1,6 @@
 import { Typography } from 'shared/ui';
 import classNames from 'classnames';
+import { DEFAULT } from 'shared/utils/constants/modes';
 import PropTypes from 'prop-types';
 import styles from './Checkbox.module.scss';
 
@@ -7,7 +8,7 @@ function Checkbox({
 	id,
 	name,
 	value,
-	mode,
+	mode = DEFAULT,
 	typoVariant,
 	typoColor,
 	label,

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import styles from './Label.module.scss';
 import { DEFAULT } from 'shared/utils/constants/modes.js';
+import styles from './Label.module.scss';
 
 function Label({ labelMode = DEFAULT, inputId, textLabel }) {
 	return (
