@@ -14,6 +14,7 @@ import ProductContainer from './ProductContainer';
 import ConsultForm from './ConsultForm';
 import InsuranceCompanies from './InsuranceCompanies';
 import OsagoForm from './OsagoForm';
+import Breadcrumbs from './Breadcrumbs';
 
 export {
 	AnswersList,
@@ -32,4 +33,5 @@ export {
 	ConsultForm,
 	InsuranceCompanies,
 	OsagoForm,
+	Breadcrumbs,
 };
