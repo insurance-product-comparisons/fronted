@@ -8,7 +8,7 @@ function Input({
 	type,
 	placeholder,
 	id,
-	mode,
+	mode = DEFAULT,
 	submode,
 	isValid,
 	isDisabled,
@@ -16,11 +16,9 @@ function Input({
 	register,
 	...props
 }) {
-	const modeComponent = mode ? mode : DEFAULT;
-
-	const inputClassName = cn(styles[`input-${modeComponent}`], styles[submode], {
-		[styles[`input-${modeComponent}-error`]]: !isValid,
-		[styles[`input-${modeComponent}-disable`]]: isDisabled,
+	const inputClassName = cn(styles[`input-${mode}`], styles[submode], {
+		[styles[`input-${mode}-error`]]: !isValid,
+		[styles[`input-${mode}-disable`]]: isDisabled,
 	});
 
 	return (
