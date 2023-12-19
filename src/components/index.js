@@ -1,7 +1,5 @@
 import AnswersList from './AnswersList';
-import Box from './Box';
 import Card from './Card';
-import Flexbox from './Flexbox';
 import Footer from './Footer';
 import Form from './Form';
 import Header from './Header';
@@ -15,12 +13,11 @@ import ConsultForm from './ConsultForm';
 import InsuranceCompanies from './InsuranceCompanies';
 import CardStages from './CardStages';
 import StagesContainer from './StagesContainer';
+import Breadcrumbs from './Breadcrumbs';
 
 export {
 	AnswersList,
-	Box,
 	Card,
-	Flexbox,
 	Footer,
 	Form,
 	Header,
@@ -34,4 +31,5 @@ export {
 	InsuranceCompanies,
 	CardStages,
 	StagesContainer,
+	Breadcrumbs,
 };

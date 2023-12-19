@@ -1,9 +1,9 @@
 import { Section, NavigationBar } from 'components';
 import { Logo, Typography, List, ListItem, LinkComponent } from 'shared/ui';
 import {
-	footerNavigation,
-	footerContacts,
-	footerDocuments,
+	FOOTER_NAVIGATION,
+	FOOTER_CONTACTS,
+	FOOTER_DOCUMENTS,
 } from 'shared/store/links';
 import { FOOTER } from 'shared/utils/constants/modes';
 import styles from './Footer.module.scss';
@@ -21,7 +21,7 @@ function Footer() {
 							Меню
 						</Typography>
 						<NavigationBar
-							data={footerNavigation}
+							data={FOOTER_NAVIGATION}
 							mode={FOOTER}
 							variant="body2"
 							color="grey5"
@@ -33,7 +33,7 @@ function Footer() {
 						</Typography>
 
 						<List mode={FOOTER}>
-							{footerContacts.map((contact) => (
+							{FOOTER_CONTACTS.map((contact) => (
 								<ListItem key={contact.id}>
 									<Typography variant="body2" color="grey5">
 										<LinkComponent
@@ -52,13 +52,13 @@ function Footer() {
 						</Typography>
 
 						<List mode={FOOTER}>
-							{footerDocuments.map((document) => (
+							{FOOTER_DOCUMENTS.map((document) => (
 								<ListItem key={document.id}>
 									<Typography variant="body2" color="grey5">
 										<LinkComponent
 											link={document.link}
 											text={document.text}
-											mode={FOOTER}
+											mode={'footer'}
 										/>
 									</Typography>
 								</ListItem>

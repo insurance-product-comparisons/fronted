@@ -1,6 +1,8 @@
 import React from 'react';
 import cn from 'classnames';
+import { VARIANTS_MAPPING } from 'shared/utils/constants/typography_var';
 import styles from './Typography.module.scss';
+
 
 const VARIANTS_MAPPING = {
 	h1: 'h1',
