@@ -13,6 +13,7 @@ import Section from './Section';
 import ProductContainer from './ProductContainer';
 import ConsultForm from './ConsultForm';
 import InsuranceCompanies from './InsuranceCompanies';
+import Breadcrumbs from './Breadcrumbs';
 
 export {
 	AnswersList,
@@ -30,4 +31,5 @@ export {
 	ProductContainer,
 	ConsultForm,
 	InsuranceCompanies,
+	Breadcrumbs,
 };
