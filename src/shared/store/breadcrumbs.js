@@ -1,4 +1,4 @@
-export const crumbs = [
+export const CRUMBS = [
 	{
 		path: '/',
 		breadcrumb: 'Главная',

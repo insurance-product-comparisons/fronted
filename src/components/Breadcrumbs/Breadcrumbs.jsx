@@ -1,11 +1,11 @@
 import useBreadcrumbs from 'use-react-router-breadcrumbs';
-import { crumbs } from 'shared/store/breadcrumbs';
+import { CRUMBS } from 'shared/store/breadcrumbs';
 import { LinkRouter, Typography } from 'shared/ui';
 import { BREADCRUMBS } from 'shared/utils/constants/modes';
 import styles from './Breadcrumbs.module.scss';
 
 function Breadcrumbs() {
-	const breadcrumbs = useBreadcrumbs(crumbs);
+	const breadcrumbs = useBreadcrumbs(CRUMBS);
 	return (
 		<div className={styles.root}>
 			{breadcrumbs.map(({ match, breadcrumb }) => (

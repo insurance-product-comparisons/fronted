@@ -5,7 +5,7 @@ import {
 	InsuranceCompanies,
 } from 'components';
 import CARD_ITEMS from 'shared/utils/constants/CARD_ITEMS';
-import { answersMain } from 'shared/store/answersMain';
+import { ANSWERS_MAIN } from 'shared/store/answersMain';
 import styles from './Main.module.scss';
 
 function Main() {
@@ -32,7 +32,7 @@ function Main() {
 					modeButton={'submit-request'}
 					disabled={false}
 				/>
-				<AnswersList title="Вопросы и ответы" data={answersMain} />
+				<AnswersList title="Вопросы и ответы" data={ANSWERS_MAIN} />
 			</main>
 		</>
 	);
