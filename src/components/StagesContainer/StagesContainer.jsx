@@ -1,7 +1,7 @@
 import CardStages from 'components/CardStages/CardStages';
-import styles from './StagesContainer.module.scss';
 import { DEFAULT } from 'shared/utils/constants/modes';
-const { default: Section } = require('components/Section');
+import Section from 'components/Section';
+import styles from './StagesContainer.module.scss';
 
 function StagesContainer({ data, mode = DEFAULT }) {
 	return (
