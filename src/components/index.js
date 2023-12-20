@@ -11,6 +11,8 @@ import Section from './Section';
 import ProductContainer from './ProductContainer';
 import ConsultForm from './ConsultForm';
 import InsuranceCompanies from './InsuranceCompanies';
+import CardStages from './CardStages';
+import StagesContainer from './StagesContainer';
 import OsagoForm from './OsagoForm';
 import Breadcrumbs from './Breadcrumbs';
 
@@ -32,6 +34,8 @@ export {
 	ProductContainer,
 	ConsultForm,
 	InsuranceCompanies,
+	CardStages,
+	StagesContainer,
 	OsagoForm,
 	Breadcrumbs,
 	KaskoForm,
