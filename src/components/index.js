@@ -11,6 +11,7 @@ import Section from './Section';
 import ProductContainer from './ProductContainer';
 import ConsultForm from './ConsultForm';
 import InsuranceCompanies from './InsuranceCompanies';
+import OsagoForm from './OsagoForm';
 import Breadcrumbs from './Breadcrumbs';
 
 export {
@@ -27,5 +28,6 @@ export {
 	ProductContainer,
 	ConsultForm,
 	InsuranceCompanies,
+	OsagoForm,
 	Breadcrumbs,
 };
