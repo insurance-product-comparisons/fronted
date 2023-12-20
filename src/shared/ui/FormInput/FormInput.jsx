@@ -39,13 +39,22 @@ function FormInput({
 					type={type}
 					isValid
 					required
+					submode={submode}
 				/>
 			) : textarea ? (
 				<TextArea name={name} id={id} mode={mode} />
 			) : select ? (
 				<SelectComponent mode={mode} options={options} submode={submode} />
 			) : (
-				<Input mode={mode} name={name} id={id} type={type} isValid required />
+				<Input
+					mode={mode}
+					name={name}
+					id={id}
+					type={type}
+					submode={submode}
+					isValid
+					required
+				/>
 			)}
 			<InputError
 				errorMode={errorMode}
