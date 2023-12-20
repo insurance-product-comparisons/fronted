@@ -22,9 +22,9 @@ function PhoneInput({
 			{...props}
 			name={name}
 			id={id}
-			mask="+7(999)-999-99-99"
+			mask="+7(999)9999999"
+			placeholder="+7 ("
 			className={inputClassName}
-			alwaysShowMask
 		></ReactInputMask>
 	);
 }
