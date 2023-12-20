@@ -13,24 +13,35 @@
 	&.osago-form {
 		max-width: 943px;
 	}
+
+	&.unusual-case-form {
+		min-width: 100%;
+		margin: auto;
+	}
 }
 
 .container {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	padding: 64px 0;
 
 	&.consult-form {
-		padding: 64px 0;
 		min-width: 936px;
 		justify-content: space-between;
 	}
 
 	&.osago-form {
-		padding: 64px 0;
 		min-width: 747px;
 		gap: 20px;
 		align-items: flex-start;
+	}
+
+	&.unusual-case-form {
+		max-width: 936px;
+		gap: 20px;
+		justify-content: center;
+		align-items: flex-end;
 	}
 }
 
@@ -45,6 +56,10 @@
 	&.osago-form {
 		min-width: 362px;
 		gap: 20px;
+	}
+
+	&.unusual-case-form {
+		min-width: 554px;
 	}
 }
 
@@ -63,5 +78,11 @@
 		background-image: url('/images/osago_form.svg');
 		width: 365px;
 		height: 242px;
+	}
+
+	&.unusual-case-form {
+		background-image: url('/images/unusualcase_form.svg');
+		width: 362px;
+		height: 352px;
 	}
 }
