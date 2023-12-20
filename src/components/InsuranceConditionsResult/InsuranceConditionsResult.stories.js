@@ -16,7 +16,7 @@ export default {
 
 const Template = (arg) => <InsuranceConditionsResult {...arg} />;
 
-const arrayDefault = {
+const ARRAY_DEFAULT = {
 	id: '1',
 	company: 'СберСтрахование',
 	rating: 5,
@@ -35,5 +35,5 @@ const arrayDefault = {
 export const Default = Template.bind({});
 
 Default.args = {
-	data: arrayDefault,
+	data: ARRAY_DEFAULT,
 };
