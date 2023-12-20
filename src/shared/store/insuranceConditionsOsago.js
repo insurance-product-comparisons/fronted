@@ -1,4 +1,4 @@
-export const insuranceConditionsOsago = [
+export const INSURANCE_CONDITIONS_OSAGO = [
 	{
 		id: '1',
 		company: 'СберСтрахование',
