@@ -1,6 +1,7 @@
 {
 	"name": "insurance-product-comparisons",
 	"version": "0.1.0",
+	"homepage": "https://insurance-product-comparisons.github.io/fronted/",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.17.0",

@@ -1,9 +1,11 @@
 import { ProductContainer } from 'components';
+import { withRouter } from 'storybook-addon-react-router-v6';
 import CARD_ITEMS from 'shared/utils/constants/CARD_ITEMS';
 
 export default {
 	title: 'Components/ProductContainer',
 	component: ProductContainer,
+	decorators: [withRouter],
 	argTypes: {
 		data: {
 			type: 'array',

@@ -1,4 +1,4 @@
-import FormInput from '.';
+import { FormInput } from 'shared/ui';
 
 export default {
 	title: 'UI-KIT/FormInput',
