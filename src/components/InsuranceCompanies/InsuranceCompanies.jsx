@@ -1,9 +1,7 @@
 import React from 'react';
-import styles from './InsuranceCompanies.module.scss';
-
 import { Typography, Button } from 'shared/ui';
-
 import { Section } from 'components';
+import styles from './InsuranceCompanies.module.scss';
 
 function InsuranceCompanies({
 	title,

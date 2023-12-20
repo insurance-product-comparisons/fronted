@@ -15,6 +15,7 @@ import Label from './Label';
 import Input from './Input';
 import InputError from './InputError';
 import PhoneInput from './PhoneInput';
+import SelectComponent from './SelectComponent';
 import FormInput from './FormInput';
 
 export {
@@ -35,5 +36,6 @@ export {
 	Input,
 	InputError,
 	PhoneInput,
+	SelectComponent,
 	FormInput,
 };

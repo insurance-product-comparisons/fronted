@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './LinkComponent.module.scss';
 import cn from 'classnames';
+import styles from './LinkComponent.module.scss';
 
 function LinkComponent({ link, text, mode }) {
 	return (

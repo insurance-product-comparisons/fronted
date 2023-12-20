@@ -1,7 +1,7 @@
 import ReactInputMask from 'react-input-mask';
-import styles from './PhoneInput.module.scss';
 import cn from 'classnames';
 import { DEFAULT } from 'shared/utils/constants/modes.js';
+import styles from './PhoneInput.module.scss';
 
 function PhoneInput({
 	mode = DEFAULT,

@@ -1,4 +1,4 @@
-export const footerNavigation = [
+export const FOOTER_NAVIGATION = [
 	{ id: 1, route: '/', text: 'ОСАГО' },
 	{ id: 2, route: '/', text: 'КАСКО' },
 	{ id: 3, route: '/', text: 'ДМС' },
@@ -6,7 +6,7 @@ export const footerNavigation = [
 	{ id: 5, route: '/', text: 'О проекте' },
 ];
 
-export const footerContacts = [
+export const FOOTER_CONTACTS = [
 	{ id: 1, link: '/', text: 'Почта проекта' },
 	{ id: 2, link: '/', text: 'GitHub' },
 	{
@@ -16,7 +16,7 @@ export const footerContacts = [
 	},
 ];
 
-export const footerDocuments = [
+export const FOOTER_DOCUMENTS = [
 	{ id: 1, link: '/', text: 'Пользовательское соглашение' },
 	{ id: 2, link: '/', text: 'Политика конфеденциальности' },
 	{ id: 3, link: '/', text: 'Иллюстрации Storyset' },

@@ -18,7 +18,7 @@ function RadioBtn({
 	const pseudoClassName = cn(styles[`pseudo-${mode}`], {
 		[styles.disable]: disabled,
 	});
-
+  
 	return (
 		<label className={styles[`label-${mode}`]} htmlFor={id}>
 			<input
