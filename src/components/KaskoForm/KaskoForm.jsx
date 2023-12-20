@@ -1,8 +1,7 @@
-import styles from './KaskoFrom.module.scss';
-
 import Section from 'components/Section';
 import Form from 'components/Form';
 import { Button, FormInput } from 'shared/ui';
+import styles from './KaskoFrom.module.scss';
 
 function KaskoForm() {
 	return (

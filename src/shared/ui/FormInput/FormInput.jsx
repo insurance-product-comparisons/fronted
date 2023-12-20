@@ -1,4 +1,11 @@
-import { Input, InputError, Label, PhoneInput, TextArea, SelectComponent } from 'shared/ui';
+import {
+	Input,
+	InputError,
+	Label,
+	PhoneInput,
+	TextArea,
+	SelectComponent,
+} from 'shared/ui';
 import styles from './FormInput.module.scss';
 
 function FormInput({
