@@ -23,6 +23,7 @@ function FormInput({
 	select,
 	options,
 	submode,
+	placeholder = '',
 }) {
 	return (
 		<div className={styles.box}>
@@ -44,7 +45,12 @@ function FormInput({
 			) : textarea ? (
 				<TextArea name={name} id={id} mode={mode} />
 			) : select ? (
-				<SelectComponent mode={mode} options={options} submode={submode} />
+				<SelectComponent
+					mode={mode}
+					options={options}
+					submode={submode}
+					placeholder={placeholder}
+				/>
 			) : (
 				<Input
 					mode={mode}
