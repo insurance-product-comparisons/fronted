@@ -1,5 +1,13 @@
-import { Breadcrumbs, Section, OsagoForm, AnswersList } from 'components';
+import {
+	Breadcrumbs,
+	Section,
+	OsagoForm,
+	AnswersList,
+	StagesContainer,
+} from 'components';
+import { Typography } from 'shared/ui';
 import { ANSWERS_OSAGO } from 'shared/store/answers';
+import CARD_STAGES from 'shared/utils/constants/cardStages';
 import styles from './Osago.module.scss';
 
 function Osago() {
@@ -7,6 +15,12 @@ function Osago() {
 		<main className={styles.root}>
 			<Section>
 				<Breadcrumbs />
+			</Section>
+			<Section>
+				<Typography variant={'h2'}>Страхование ОСАГО</Typography>
+			</Section>
+			<Section>
+				<StagesContainer data={CARD_STAGES} />
 			</Section>
 			<Section>
 				<OsagoForm />
