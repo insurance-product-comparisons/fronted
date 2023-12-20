@@ -1,6 +1,6 @@
-import styles from './CardStages.module.scss';
 import { Typography } from 'shared/ui';
 import { DEFAULT } from 'shared/utils/constants/modes';
+import styles from './CardStages.module.scss';
 
 function CardStages({ data, mode = DEFAULT }) {
 	return (
