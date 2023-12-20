@@ -15,7 +15,7 @@ export default {
 
 const Template = (arg) => <ResultCard {...arg} />;
 
-const arrayDefault = [
+const ARRAY_DEFAULT = [
 	{
 		id: '1',
 		company: 'СберСтрахование',
@@ -50,5 +50,5 @@ const arrayDefault = [
 export const Default = Template.bind({});
 
 Default.args = {
-	data: arrayDefault,
+	data: ARRAY_DEFAULT,
 };
