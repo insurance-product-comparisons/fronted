@@ -5,7 +5,7 @@ import {
 	InsuranceCompanies,
 } from 'components';
 import CARD_ITEMS from 'shared/utils/constants/CARD_ITEMS';
-import { ANSWERS_MAIN } from 'shared/store/answersMain';
+import { ANSWERS_MAIN } from 'shared/store/answers';
 import styles from './Main.module.scss';
 
 function Main() {

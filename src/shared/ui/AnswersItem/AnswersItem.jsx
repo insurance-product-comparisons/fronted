@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Typography } from 'shared/ui';
-import { DEFAULT } from 'shared/utils/constants/modes';
+import { Typography, List, ListItem } from 'shared/ui';
+import { DEFAULT, ANSWER } from 'shared/utils/constants/modes';
 import styles from './AnswersItem.module.scss';
 
 function AnswersItem({ data, mode = DEFAULT }) {
@@ -29,7 +29,17 @@ function AnswersItem({ data, mode = DEFAULT }) {
 					{data.title}
 				</Typography>
 				<div className={contentClassName}>
-					<Typography variant="body2">{data.content}</Typography>
+					{typeof data.content === 'string' ? (
+						<Typography variant="body2">{data.content}</Typography>
+					) : (
+						<List mode={ANSWER}>
+							{data.content.map((item, i) => (
+								<ListItem key={i}>
+									<Typography variant="body2">{item} </Typography>
+								</ListItem>
+							))}
+						</List>
+					)}
 				</div>
 			</div>
 			<div className={arrowClassName}></div>
@@ -41,7 +51,7 @@ AnswersItem.propTypes = {
 	data: PropTypes.shape({
 		id: PropTypes.string,
 		title: PropTypes.string,
-		content: PropTypes.string,
+		content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 	}),
 	mode: PropTypes.string,
 };

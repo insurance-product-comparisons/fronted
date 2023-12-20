@@ -1,5 +1,5 @@
 import { AnswersList } from 'components';
-import { ANSWERS_MAIN } from 'shared/store/answersMain';
+import { ANSWERS_MAIN } from 'shared/store/answers';
 
 export default {
 	title: 'Components/AnswersList',

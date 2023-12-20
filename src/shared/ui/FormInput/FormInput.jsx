@@ -1,4 +1,11 @@
-import { Input, InputError, Label, PhoneInput, TextArea, SelectComponent } from 'shared/ui';
+import {
+	Input,
+	InputError,
+	Label,
+	PhoneInput,
+	TextArea,
+	SelectComponent,
+} from 'shared/ui';
 import styles from './FormInput.module.scss';
 
 function FormInput({
@@ -16,6 +23,7 @@ function FormInput({
 	select,
 	options,
 	submode,
+	placeholder = '',
 }) {
 	return (
 		<div className={styles.box}>
@@ -36,7 +44,12 @@ function FormInput({
 			) : textarea ? (
 				<TextArea name={name} id={id} mode={mode} />
 			) : select ? (
-				<SelectComponent mode={mode} options={options} submode={submode} />
+				<SelectComponent
+					mode={mode}
+					options={options}
+					submode={submode}
+					placeholder={placeholder}
+				/>
 			) : (
 				<Input mode={mode} name={name} id={id} type={type} isValid required />
 			)}
