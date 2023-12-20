@@ -41,7 +41,7 @@ export default {
 
 const Template = (args) => <NavigationBar {...args} />;
 
-const arrLinks = [
+const ARR_LINKS = [
 	{ id: 1, route: '/', text: 'ОСАГО' },
 	{ id: 2, route: '/', text: 'КАСКО' },
 	{ id: 3, route: '/', text: 'ДМС' },
@@ -50,7 +50,7 @@ const arrLinks = [
 
 export const Default = Template.bind({});
 Default.args = {
-	data: arrLinks,
+	data: ARR_LINKS,
 	mode: 'header',
 	variant: 'body1',
 	color: 'black',
@@ -58,7 +58,7 @@ Default.args = {
 
 export const Footer = Template.bind({});
 Footer.args = {
-	data: arrLinks,
+	data: ARR_LINKS,
 	mode: 'footer',
 	variant: 'body2',
 	color: 'grey5',

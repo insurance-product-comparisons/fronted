@@ -3,7 +3,6 @@ import { Layout } from 'components';
 import { Main, Osago, Kasko, Dms, Request, NotFound } from 'pages';
 
 function App() {
-	/* @TODO: Создаем глобальные стейты приложения */
 	return (
 		<Layout>
 			<Routes>

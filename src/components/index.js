@@ -1,7 +1,5 @@
 import AnswersList from './AnswersList';
-import Box from './Box';
 import Card from './Card';
-import Flexbox from './Flexbox';
 import Footer from './Footer';
 import Form from './Form';
 import Header from './Header';
@@ -13,14 +11,20 @@ import Section from './Section';
 import ProductContainer from './ProductContainer';
 import ConsultForm from './ConsultForm';
 import InsuranceCompanies from './InsuranceCompanies';
+import CardStages from './CardStages';
+import StagesContainer from './StagesContainer';
+import OsagoForm from './OsagoForm';
+import Breadcrumbs from './Breadcrumbs';
+
+import KaskoForm from './KaskoForm';
+
+import UnusualCaseForm from './UnusualCaseForm';
 import ResultCard from './ResultCard';
 import InsuranceConditionsResult from './InsuranceConditionsResult';
 
 export {
 	AnswersList,
-	Box,
 	Card,
-	Flexbox,
 	Footer,
 	Form,
 	Header,
@@ -32,6 +36,12 @@ export {
 	ProductContainer,
 	ConsultForm,
 	InsuranceCompanies,
-	ResultCard,
+	CardStages,
+	StagesContainer,
+	OsagoForm,
+	Breadcrumbs,
+	KaskoForm,
+	UnusualCaseForm,
+  ResultCard,
 	InsuranceConditionsResult,
 };

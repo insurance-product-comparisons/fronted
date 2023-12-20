@@ -5,18 +5,49 @@
 	justify-content: center;
 	background-color: var(--white);
 	border-radius: 36px;
-	min-width: 100%;
+
+	&.consult-form {
+		min-width: 100%;
+	}
+
+	&.osago-form {
+		max-width: 943px;
+	}
+
+	&.unusual-case-form {
+		min-width: 100%;
+		margin: auto;
+	}
 }
 
 .container {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	padding: 64px 0;
 
 	&.consult-form {
+		min-width: 936px;
+		justify-content: space-between;
+	}
+
+	&.osago-form {
+		min-width: 747px;
+		gap: 20px;
+		align-items: flex-start;
+	}
+
+	&.kasko-form {
 		padding: 64px 0;
 		min-width: 936px;
 		justify-content: space-between;
+	}
+
+	&.unusual-case-form {
+		max-width: 936px;
+		gap: 20px;
+		justify-content: center;
+		align-items: flex-end;
 	}
 }
 
@@ -26,6 +57,20 @@
 
 	&.consult-form {
 		min-width: 458px;
+	}
+
+	&.osago-form {
+		min-width: 362px;
+		gap: 20px;
+	}
+
+	&.kasko-form {
+		max-width: 551px;
+		gap: 5px;
+	}
+
+	&.unusual-case-form {
+		min-width: 554px;
 	}
 }
 
@@ -38,5 +83,23 @@
 		background-image: url('/images/consult_form.svg');
 		width: 366px;
 		height: 368px;
+	}
+
+	&.osago-form {
+		background-image: url('/images/osago_form.svg');
+		width: 365px;
+		height: 242px;
+	}
+
+	&.kasko-form {
+		background-image: url('/images/kasko_form.svg');
+		width: 362px;
+		height: 288px;
+	}
+
+	&.unusual-case-form {
+		background-image: url('/images/unusualcase_form.svg');
+		width: 362px;
+		height: 352px;
 	}
 }
