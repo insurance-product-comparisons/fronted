@@ -13,7 +13,11 @@ import ConsultForm from './ConsultForm';
 import InsuranceCompanies from './InsuranceCompanies';
 import OsagoForm from './OsagoForm';
 import Breadcrumbs from './Breadcrumbs';
+
 import KaskoForm from './KaskoForm';
+
+import UnusualCaseForm from './UnusualCaseForm';
+
 
 export {
 	AnswersList,
@@ -31,5 +35,9 @@ export {
 	InsuranceCompanies,
 	OsagoForm,
 	Breadcrumbs,
+
 	KaskoForm,
+
+	UnusualCaseForm,
+
 };
