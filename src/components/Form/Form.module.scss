@@ -32,6 +32,12 @@
 		gap: 20px;
 		align-items: flex-start;
 	}
+
+   &.kasko-form {
+      padding: 64px 0;
+      min-width: 936px;
+      justify-content: space-between;
+   }
 }
 
 .form {
@@ -46,6 +52,11 @@
 		min-width: 362px;
 		gap: 20px;
 	}
+
+   &.kasko-form {
+      max-width: 551px;
+      gap: 5px;
+   }
 }
 
 .pic {
@@ -64,4 +75,10 @@
 		width: 365px;
 		height: 242px;
 	}
+
+   &.kasko-form {
+      background-image: url('/images/kasko_form.svg');
+      width: 362px;
+      height: 288px;      
+   }
 }
