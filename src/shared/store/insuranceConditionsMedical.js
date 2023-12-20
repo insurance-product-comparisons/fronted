@@ -1,4 +1,4 @@
-export const insuranceConditionsMedical = [
+export const INSURANCE_CONDITIONS_MEDICAL = [
 	{
 		id: '1',
 		company: 'СберСтрахование',
