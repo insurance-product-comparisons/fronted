@@ -19,6 +19,8 @@ import Breadcrumbs from './Breadcrumbs';
 import KaskoForm from './KaskoForm';
 
 import UnusualCaseForm from './UnusualCaseForm';
+import ResultCard from './ResultCard';
+import InsuranceConditionsResult from './InsuranceConditionsResult';
 
 export {
 	AnswersList,
@@ -40,4 +42,6 @@ export {
 	Breadcrumbs,
 	KaskoForm,
 	UnusualCaseForm,
+  ResultCard,
+	InsuranceConditionsResult,
 };
