@@ -13,6 +13,8 @@ import Section from './Section';
 import ProductContainer from './ProductContainer';
 import ConsultForm from './ConsultForm';
 import InsuranceCompanies from './InsuranceCompanies';
+import ResultCard from './ResultCard';
+import InsuranceConditionsResult from './InsuranceConditionsResult';
 
 export {
 	AnswersList,
@@ -30,4 +32,6 @@ export {
 	ProductContainer,
 	ConsultForm,
 	InsuranceCompanies,
+	ResultCard,
+	InsuranceConditionsResult,
 };

@@ -37,6 +37,11 @@
 		height: 56px;
 	}
 
+	&.result {
+		min-width: 197px;
+		height: 56px;
+	}
+
 	&.disable {
 		color: var(--grey-1);
 		background-color: var(--grey-3);
