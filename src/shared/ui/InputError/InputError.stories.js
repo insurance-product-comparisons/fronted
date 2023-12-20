@@ -27,7 +27,7 @@ const Template = (arg) => <InputError {...arg} />;
 
 export const Default = Template.bind({});
 Default.args = {
-	mode: 'default',
-	text: 'Error',
+	errorMode: 'default',
+	errorMessage: 'Error',
 	isVisible: true,
 };

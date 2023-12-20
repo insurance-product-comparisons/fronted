@@ -26,6 +26,6 @@ const Template = (arg) => <Label {...arg} />;
 
 export const Default = Template.bind({});
 Default.args = {
-	mode: 'default',
-	text: 'Label',
+	labelMode: 'default',
+	textLabel: 'Label',
 };

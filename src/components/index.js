@@ -1,7 +1,5 @@
 import AnswersList from './AnswersList';
-import Box from './Box';
 import Card from './Card';
-import Flexbox from './Flexbox';
 import Footer from './Footer';
 import Form from './Form';
 import Header from './Header';
@@ -18,9 +16,7 @@ import Breadcrumbs from './Breadcrumbs';
 
 export {
 	AnswersList,
-	Box,
 	Card,
-	Flexbox,
 	Footer,
 	Form,
 	Header,

@@ -8,7 +8,6 @@ import {
 	FormInput,
 } from 'shared/ui';
 import styles from './ConsultForm.module.scss';
-import { DEFAULT } from 'shared/utils/constants/modes.js';
 
 function ConsultForm() {
 	return (
@@ -71,7 +70,6 @@ function ConsultForm() {
 						<Checkbox
 							id="personalData"
 							name="personalData"
-							mode={DEFAULT}
 							label="Я согласен на обработку&nbsp;"
 						/>
 						<LinkComponent link="#" text="персональных данных" mode="bold" />

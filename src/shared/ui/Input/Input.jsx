@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './Input.module.scss';
 import { DEFAULT } from 'shared/utils/constants/modes.js';
+import styles from './Input.module.scss';
 
 function Input({
 	name,

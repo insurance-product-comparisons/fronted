@@ -1,4 +1,4 @@
-export const answersMain = [
+export const ANSWERS_MAIN = [
 	{
 		id: '123',
 		title: 'Что вы делаете, чтобы защитить данные клиентов?',
