@@ -1,9 +1,10 @@
 import React from 'react';
-import styles from './ResultCard.module.scss';
 
 import { Button, Logo, Typography } from 'shared/ui';
 
 import { Rating, InsuranceConditionsResult } from 'components';
+
+import styles from './ResultCard.module.scss';
 
 function ResultCard({ data }) {
 	return data.map((data) => (
