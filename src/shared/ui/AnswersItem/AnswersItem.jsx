@@ -14,7 +14,7 @@ function AnswersItem({ data, mode = DEFAULT }) {
 	const contentClassName = classNames(styles[`content-${mode}`], {
 		[styles.open]: isOpen,
 	});
-	const arrowClassName = classNames(styles[`arrow-${mode}`], {
+	const titleClassName = classNames(styles.title, {
 		[styles.rotate]: isOpen,
 	});
 
@@ -26,7 +26,7 @@ function AnswersItem({ data, mode = DEFAULT }) {
 					style={{ cursor: 'pointer' }}
 					onClick={() => setIsOpen((prev) => !prev)}
 				>
-					{data.title}
+					<span className={titleClassName}>{data.title}</span>
 				</Typography>
 				<div className={contentClassName}>
 					{typeof data.content === 'string' ? (
@@ -42,7 +42,6 @@ function AnswersItem({ data, mode = DEFAULT }) {
 					)}
 				</div>
 			</div>
-			<div className={arrowClassName}></div>
 		</div>
 	);
 }

@@ -9,13 +9,15 @@ function AnswersList({ title, data, mode = DEFAULT }) {
 		<Section>
 			<div className={styles[mode]}>
 				<Typography variant="h4">{title}</Typography>
-				<List mode={mode}>
-					{data.map((item, index) => (
-						<ListItem key={index} mode={mode}>
-							<AnswersItem data={item} />
-						</ListItem>
-					))}
-				</List>
+				<div className={styles.wrapper}>
+					<List mode={mode}>
+						{data.map((item, index) => (
+							<ListItem key={index} mode={mode}>
+								<AnswersItem data={item} />
+							</ListItem>
+						))}
+					</List>
+				</div>
 			</div>
 		</Section>
 	);
