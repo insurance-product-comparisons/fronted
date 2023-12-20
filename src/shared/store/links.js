@@ -1,5 +1,5 @@
 export const FOOTER_NAVIGATION = [
-	{ id: 1, route: '/', text: 'ОСАГО' },
+	{ id: 1, route: '/osago', text: 'ОСАГО' },
 	{ id: 2, route: '/', text: 'КАСКО' },
 	{ id: 3, route: '/', text: 'ДМС' },
 	{ id: 4, route: '/', text: 'Страховым компаниям' },
@@ -24,7 +24,7 @@ export const FOOTER_DOCUMENTS = [
 
 // массив ссылок в header
 export const HEADER_LINKS = [
-	{ id: 1, route: '/', text: 'ОСАГО' },
+	{ id: 1, route: '/osago', text: 'ОСАГО' },
 	{ id: 2, route: '/', text: 'КАСКО' },
 	{ id: 3, route: '/', text: 'ДМС' },
 	{ id: 4, route: '/', text: 'Страховым компаниям' },
