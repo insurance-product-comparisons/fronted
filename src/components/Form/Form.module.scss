@@ -37,12 +37,20 @@
 		align-items: flex-start;
 	}
 
+
+   &.kasko-form {
+      padding: 64px 0;
+      min-width: 936px;
+      justify-content: space-between;
+   }
+
 	&.unusual-case-form {
 		max-width: 936px;
 		gap: 20px;
 		justify-content: center;
 		align-items: flex-end;
 	}
+
 }
 
 .form {
@@ -58,9 +66,16 @@
 		gap: 20px;
 	}
 
+
+   &.kasko-form {
+      max-width: 551px;
+      gap: 5px;
+   }
+
 	&.unusual-case-form {
 		min-width: 554px;
 	}
+
 }
 
 .pic {
@@ -80,9 +95,17 @@
 		height: 242px;
 	}
 
+
+   &.kasko-form {
+      background-image: url('/images/kasko_form.svg');
+      width: 362px;
+      height: 288px;      
+   }
+
 	&.unusual-case-form {
 		background-image: url('/images/unusualcase_form.svg');
 		width: 362px;
 		height: 352px;
 	}
+
 }
