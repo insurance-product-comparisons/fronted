@@ -12,8 +12,6 @@ import styles from './Footer.module.scss';
 function Footer() {
 	let location = useLocation();
 
-	console.log(location.pathname);
-
 	return (
 		<>
 			{location.pathname === '/404' ? null : (

@@ -42,6 +42,6 @@ export {
 	Breadcrumbs,
 	KaskoForm,
 	UnusualCaseForm,
-  ResultCard,
+	ResultCard,
 	InsuranceConditionsResult,
 };

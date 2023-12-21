@@ -11,7 +11,7 @@ export default {
 	decorators: [withRouter],
 	parameters: {
 		reactRouter: reactRouterParameters({
-			routing: { path: '*' },
+			routing: { path: '/404' },
 		}),
 	},
 };
