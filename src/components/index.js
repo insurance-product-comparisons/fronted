@@ -24,7 +24,6 @@ import InsuranceConditionsResult from './InsuranceConditionsResult';
 import SuccessfulRequest from './SuccessfulRequest';
 import ResultCardContainer from './ResultCardContainer';
 
-
 export {
 	AnswersList,
 	Card,
@@ -49,5 +48,5 @@ export {
 	InsuranceConditionsResult,
 	SuccessfulRequest,
 	DmcForm,
-  ResultCardContainer,
+	ResultCardContainer,
 };
