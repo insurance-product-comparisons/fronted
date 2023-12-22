@@ -75,3 +75,12 @@
 	flex-direction: column;
 	padding-left: 0px;
 }
+
+.result {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 16px;
+}

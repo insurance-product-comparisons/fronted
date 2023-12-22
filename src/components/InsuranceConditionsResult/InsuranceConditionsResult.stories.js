@@ -16,17 +16,13 @@ export default {
 
 const Template = (arg) => <InsuranceConditionsResult {...arg} />;
 
-const ARRAY_DEFAULT = {
+const OBJECT_DEFAULT = {
 	id: '1',
 	company: 'СберСтрахование',
 	rating: 5,
 	franchise: {
 		name: 'Франшиза',
 		sum: '15 000 ₽',
-	},
-	insuranceAmount: {
-		name: 'Страховая сумма',
-		sum: '800 000 ₽',
 	},
 	period: { name: 'Срок', value: '1 год' },
 	price: { name: 'Цена', value: '10 000 ₽' },
@@ -35,5 +31,5 @@ const ARRAY_DEFAULT = {
 export const Default = Template.bind({});
 
 Default.args = {
-	data: ARRAY_DEFAULT,
+	data: OBJECT_DEFAULT,
 };

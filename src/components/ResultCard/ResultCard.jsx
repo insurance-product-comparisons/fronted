@@ -7,7 +7,7 @@ import { Rating, InsuranceConditionsResult } from 'components';
 import styles from './ResultCard.module.scss';
 
 function ResultCard({ data }) {
-	return data.map((data) => (
+	return (
 		<div className={styles.container} key={data.id}>
 			<div className={styles['container-company']}>
 				<Logo mode={'result'}></Logo>
@@ -16,15 +16,7 @@ function ResultCard({ data }) {
 					<Rating rating={data.rating}></Rating>
 				</div>
 			</div>
-			<div
-				className={
-					!data.franchise && !data.insuranceAmount
-						? styles['container-conditions']
-						: ''
-				}
-			>
-				<InsuranceConditionsResult data={data}></InsuranceConditionsResult>
-			</div>
+			<InsuranceConditionsResult data={data}></InsuranceConditionsResult>
 			<div className={styles['container-button']}>
 				<Button type="button" bgcolor="ghost" mode="more">
 					Подробнее
@@ -34,7 +26,7 @@ function ResultCard({ data }) {
 				</Button>
 			</div>
 		</div>
-	));
+	);
 }
 
 export default ResultCard;

@@ -21,6 +21,7 @@ import DmcForm from './DmcForm';
 import UnusualCaseForm from './UnusualCaseForm';
 import ResultCard from './ResultCard';
 import InsuranceConditionsResult from './InsuranceConditionsResult';
+import ResultCardContainer from './ResultCardContainer';
 
 export {
 	AnswersList,
@@ -45,4 +46,5 @@ export {
 	ResultCard,
 	InsuranceConditionsResult,
 	DmcForm,
+  ResultCardContainer,
 };
