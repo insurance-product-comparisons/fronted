@@ -1,4 +1,7 @@
+import React, { createRef } from 'react';
 import { Form, Section } from 'components';
+import { InputError } from 'shared/ui';
+import { useForm, Controller } from 'react-hook-form';
 import cn from 'classnames';
 import {
 	Typography,
@@ -9,7 +12,31 @@ import {
 } from 'shared/ui';
 import styles from './ConsultForm.module.scss';
 
+const defaultValues = {
+	telConsult: '',
+	isuranceCase: '',
+	personalData: false,
+};
+
 function ConsultForm() {
+	const {
+		register,
+		handleSubmit,
+		control,
+		reset,
+		formState: { errors, isValid },
+	} = useForm({
+		mode: 'onChange',
+		defaultValues,
+	});
+
+	const inputRef = createRef(null);
+	const textareaRef = createRef(null);
+
+	function handleFormSubmit(data) {
+		console.log(data);
+		reset();
+	}
 	return (
 		<Section>
 			<div className={styles.container}>
@@ -20,7 +47,7 @@ function ConsultForm() {
 				</Typography>
 			</div>
 
-			<Form type="consult-form">
+			<Form type="consult-form" onSubmit={handleSubmit(handleFormSubmit)}>
 				<div className={cn(styles.box, styles.inputs)}>
 					<FormInput
 						inputId="nameConsult"
@@ -28,8 +55,24 @@ function ConsultForm() {
 						name="nameConsult"
 						id="nameConsult"
 						type="text"
-						isValid
-						required
+						maxLength={256}
+						register={register}
+						errors={errors?.nameConsult}
+						validation={{
+							required: 'Поле обязательно к заполнению',
+							minLength: {
+								value: 2,
+								message: 'Минимальная длина имени 2 символа',
+							},
+							maxLength: {
+								value: 256,
+								message: 'Имя не должно быть длинее 256 символов',
+							},
+							pattern: {
+								value: /^[a-zA-Zа-яА-Я -]+(?:[ _-][a-zA-Zа-яА-Я]+)*$/,
+								message: 'Имя не должно содержать специальные символы',
+							},
+						}}
 					/>
 					<FormInput
 						inputId="surnameConsult"
@@ -37,28 +80,66 @@ function ConsultForm() {
 						name="surnameConsult"
 						id="surnameConsult"
 						type="text"
-						isValid
-						required
+						maxLength={256}
+						register={register}
+						errors={errors?.surnameConsult}
+						validation={{
+							required: 'Поле обязательно к заполнению',
+							minLength: {
+								value: 2,
+								message: 'Минимальная фамилии 2 символа',
+							},
+							maxLength: {
+								value: 256,
+								message: 'Фамилия не должна быть длинее 256 символов',
+							},
+						}}
 					/>
-					<FormInput
-						phone
-						inputId="telConsult"
-						textLabel="Номер телефона*"
+					<Controller
+						render={({ field }) => (
+							<FormInput
+								phone
+								textLabel="Номер телефона*"
+								id="telConsult"
+								errors={errors?.telConsult}
+								ref={inputRef}
+								{...field}
+							/>
+						)}
+						control={control}
 						name="telConsult"
-						id="telConsult"
-						isValid
-						required
+						rules={{
+							required: 'Поле обязательно к заполнению',
+							pattern: {
+								value: /^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d\- ]{7,10}$/,
+								message: 'Введите корректный номер телефона',
+							},
+						}}
 					/>
-					<FormInput
-						textarea
-						inputId="isuranceCase"
-						textLabel="Ситуация страхования*"
+					<Controller
+						render={({ field }) => (
+							<FormInput
+								textarea
+								textLabel="Ситуация страхования*"
+								name="isuranceCase"
+								id="isuranceCase"
+								type="text"
+								mode="consult-form"
+								maxLength={500}
+								errors={errors?.isuranceCase}
+								ref={textareaRef}
+								{...field}
+							/>
+						)}
+						control={control}
 						name="isuranceCase"
-						id="isuranceCase"
-						type="text"
-						mode="consult-form"
-						isValid
-						required
+						rules={{
+							required: 'Поле обязательно к заполнению',
+							maxLength: {
+								value: 500,
+								message: 'Описание ситуации не должно превышать 500 символов',
+							},
+						}}
 					/>
 				</div>
 				<div className={cn(styles.box, styles.info)}>
@@ -66,13 +147,23 @@ function ConsultForm() {
 						variant="body2"
 						children="* — обязательные поля для заполнения"
 					/>
-					<div className={cn(styles.box, styles.checkbox)}>
-						<Checkbox
-							id="personalData"
-							name="personalData"
-							label="Я согласен на обработку&nbsp;"
-						/>
-						<LinkComponent link="#" text="персональных данных" mode="bold" />
+					<div>
+						<div className={cn(styles.box, styles.checkbox)}>
+							<Checkbox
+								id="personalData"
+								name="personalData"
+								label="Я согласен на обработку&nbsp;"
+								register={register}
+								validation={{
+									required: 'Поле обязательно к заполнению',
+									value: true,
+								}}
+							/>
+							<LinkComponent link="#" text="персональных данных" mode="bold" />
+						</div>
+						<InputError>
+							{errors?.personalData && errors?.personalData.message}
+						</InputError>
 					</div>
 				</div>
 				<Button
@@ -80,6 +171,7 @@ function ConsultForm() {
 					type="submit"
 					bgcolor="accent"
 					mode="submit-form"
+					disabled={!isValid}
 				/>
 			</Form>
 		</Section>
