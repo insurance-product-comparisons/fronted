@@ -37,7 +37,7 @@ function Footer() {
 									Контакты
 								</Typography>
 
-								<List mode={FOOTER}>
+								<List listmode={FOOTER}>
 									{FOOTER_CONTACTS.map((contact) => (
 										<ListItem key={contact.id}>
 											<Typography variant="body2" color="grey5">
@@ -56,7 +56,7 @@ function Footer() {
 									Документы
 								</Typography>
 
-								<List mode={FOOTER}>
+								<List listmode={FOOTER}>
 									{FOOTER_DOCUMENTS.map((document) => (
 										<ListItem key={document.id}>
 											<Typography variant="body2" color="grey5">

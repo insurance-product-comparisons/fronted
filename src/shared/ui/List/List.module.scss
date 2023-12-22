@@ -66,6 +66,21 @@
 .answer {
 	display: flex;
 	flex-direction: column;
-	padding-left: 15px;
+	padding-left: 20px;
 	list-style: disc;
+}
+
+.paragraph {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0px;
+}
+
+.result {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 16px;
 }

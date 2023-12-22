@@ -4,13 +4,20 @@ import styles from './Rating.module.scss';
 import { Typography } from 'shared/ui';
 
 function Rating({ rating }) {
-	const ratingValue = rating >= 0 ? rating : 0;
+	const fullRating = rating >= 4.8 ? 5 : Math.floor(rating);
+
+	const renderStar = (id) =>
+		id < fullRating ? (
+			<div key={id} className={styles.star}></div>
+		) : (
+			<div key={id} className={styles['null-star']}></div>
+		);
 
 	return (
 		<div className={styles.container}>
 			<div className={styles['container-star']}>
-				{[...Array(ratingValue)].map((_, id) => {
-					return <div key={id} className={styles.star}></div>;
+				{[...Array(5)].map((_, id) => {
+					return renderStar(id);
 				})}
 			</div>
 			<Typography variant={'body2'}>{rating}</Typography>

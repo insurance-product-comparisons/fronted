@@ -18,7 +18,7 @@ function NavigationBar({ data, mode = DEFAULT, variant, color }) {
 		</ListItem>
 	));
 
-	return <List children={linkItems} mode={mode} />;
+	return <List children={linkItems} listmode={mode} />;
 }
 
 export default NavigationBar;
