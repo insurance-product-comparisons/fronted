@@ -15,7 +15,6 @@ import CardStages from './CardStages';
 import StagesContainer from './StagesContainer';
 import OsagoForm from './OsagoForm';
 import Breadcrumbs from './Breadcrumbs';
-
 import KaskoForm from './KaskoForm';
 import DmcForm from './DmcForm';
 import UnusualCaseForm from './UnusualCaseForm';
@@ -23,7 +22,6 @@ import ResultCard from './ResultCard';
 import InsuranceConditionsResult from './InsuranceConditionsResult';
 import SuccessfulRequest from './SuccessfulRequest';
 import ResultCardContainer from './ResultCardContainer';
-
 
 export {
 	AnswersList,
@@ -49,5 +47,5 @@ export {
 	InsuranceConditionsResult,
 	SuccessfulRequest,
 	DmcForm,
-  ResultCardContainer,
+	ResultCardContainer,
 };
