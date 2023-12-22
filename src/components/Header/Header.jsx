@@ -6,11 +6,14 @@ import { useState } from 'react';
 import cn from 'classnames';
 import { HEADER, MAIN, ENTER } from 'shared/utils/constants/modes';
 import { HEADER_LINKS } from 'shared/store/links';
+import { useForm } from 'react-hook-form';
 import styles from './Header.module.scss';
 
 export function Header() {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [searchValue, setSearchValue] = useState('');
+
+	const { register } = useForm();
 
 	const headerClass = cn(styles.menu, {
 		[styles['header-search']]: isSearchOpen,
@@ -57,7 +60,7 @@ export function Header() {
 									<div className={styles['icon-search']}></div>
 									<Input
 										name="search"
-										type="search"
+										type="text"
 										placeholder="Поиск по сайту"
 										id="search"
 										submode={HEADER}
@@ -65,6 +68,7 @@ export function Header() {
 										isDisabled={false}
 										value={searchValue}
 										onChange={handleInputChange}
+										register={register}
 									/>
 									<button
 										className={styles['icon-close']}
