@@ -21,6 +21,7 @@ import KaskoForm from './KaskoForm';
 import UnusualCaseForm from './UnusualCaseForm';
 import ResultCard from './ResultCard';
 import InsuranceConditionsResult from './InsuranceConditionsResult';
+import SuccessfulRequest from './SuccessfulRequest';
 
 export {
 	AnswersList,
@@ -44,4 +45,5 @@ export {
 	UnusualCaseForm,
 	ResultCard,
 	InsuranceConditionsResult,
+	SuccessfulRequest,
 };
