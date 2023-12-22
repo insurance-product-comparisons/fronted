@@ -66,6 +66,12 @@
 .answer {
 	display: flex;
 	flex-direction: column;
-	padding-left: 15px;
+	padding-left: 20px;
 	list-style: disc;
+}
+
+.paragraph {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0px;
 }
