@@ -21,7 +21,9 @@ import DmcForm from './DmcForm';
 import UnusualCaseForm from './UnusualCaseForm';
 import ResultCard from './ResultCard';
 import InsuranceConditionsResult from './InsuranceConditionsResult';
+import SuccessfulRequest from './SuccessfulRequest';
 import ResultCardContainer from './ResultCardContainer';
+
 
 export {
 	AnswersList,
@@ -45,6 +47,7 @@ export {
 	UnusualCaseForm,
 	ResultCard,
 	InsuranceConditionsResult,
+	SuccessfulRequest,
 	DmcForm,
   ResultCardContainer,
 };
