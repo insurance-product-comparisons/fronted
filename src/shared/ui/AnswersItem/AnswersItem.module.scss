@@ -1,6 +1,6 @@
 .default {
 	display: flex;
-	padding: 32px 0 16px;
+	padding: 32px 0;
 	gap: 16px;
 	box-sizing: border-box;
 	background-color: var(--white);
@@ -36,12 +36,10 @@
 .content-default {
 	max-height: 0;
 	margin: 0;
-	padding-top: 16px;
+	padding: 0;
 	text-align: justify;
 	overflow: hidden;
-	transition:
-		max-height 350ms,
-		padding-top 350ms;
+	transition: all 0.35s;
 
 	&.open {
 		max-height: 100vh;

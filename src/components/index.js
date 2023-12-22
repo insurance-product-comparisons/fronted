@@ -17,7 +17,7 @@ import OsagoForm from './OsagoForm';
 import Breadcrumbs from './Breadcrumbs';
 
 import KaskoForm from './KaskoForm';
-
+import DmcForm from './DmcForm';
 import UnusualCaseForm from './UnusualCaseForm';
 import ResultCard from './ResultCard';
 import InsuranceConditionsResult from './InsuranceConditionsResult';
@@ -45,5 +45,6 @@ export {
 	UnusualCaseForm,
 	ResultCard,
 	InsuranceConditionsResult,
-	ResultCardContainer,
+	DmcForm,
+  ResultCardContainer,
 };

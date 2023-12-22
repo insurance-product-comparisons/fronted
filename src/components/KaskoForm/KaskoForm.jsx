@@ -1,11 +1,10 @@
-import Section from 'components/Section';
 import Form from 'components/Form';
 import { Button, FormInput } from 'shared/ui';
 import styles from './KaskoFrom.module.scss';
 
 function KaskoForm() {
 	return (
-		<Section>
+		<div className={styles.wrapper}>
 			<Form type="kasko-form">
 				<div className={styles.flexInput}>
 					<FormInput
@@ -32,7 +31,7 @@ function KaskoForm() {
 					/>
 				</div>
 			</Form>
-		</Section>
+		</div>
 	);
 }
 

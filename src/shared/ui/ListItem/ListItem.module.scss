@@ -1,0 +1,8 @@
+.paragraph {
+	display: inline;
+	padding-top: 15px;
+}
+
+.paragraph:first-child {
+	padding: 0;
+}

@@ -8,12 +8,12 @@ function AnswersList({ title, data, mode = DEFAULT }) {
 	return (
 		<Section>
 			<div className={styles[mode]}>
-				<Typography variant="h4">{title}</Typography>
+				<Typography variant="h3">{title}</Typography>
 				<div className={styles.wrapper}>
 					<List mode={mode}>
 						{data.map((item, index) => (
 							<ListItem key={index} mode={mode}>
-								<AnswersItem data={item} />
+								<AnswersItem data={item} mode={mode} listmode={data.listmode} />
 							</ListItem>
 						))}
 					</List>
@@ -29,7 +29,11 @@ AnswersList.propTypes = {
 		PropTypes.shape({
 			id: PropTypes.string,
 			title: PropTypes.string,
-			content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+			content: PropTypes.oneOfType([
+				PropTypes.string,
+				PropTypes.array,
+				PropTypes.object,
+			]),
 		})
 	),
 	mode: PropTypes.string,

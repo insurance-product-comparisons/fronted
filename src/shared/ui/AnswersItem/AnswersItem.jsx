@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Typography, List, ListItem } from 'shared/ui';
-import { DEFAULT, ANSWER } from 'shared/utils/constants/modes';
+import { DEFAULT } from 'shared/utils/constants/modes';
 import styles from './AnswersItem.module.scss';
 
 function AnswersItem({ data, mode = DEFAULT }) {
@@ -29,16 +29,21 @@ function AnswersItem({ data, mode = DEFAULT }) {
 					<span className={titleClassName}>{data.title}</span>
 				</Typography>
 				<div className={contentClassName}>
-					{typeof data.content === 'string' ? (
-						<Typography variant="body2">{data.content}</Typography>
+					{typeof data.content === 'object' ? (
+						<div>
+							<Typography variant="body2" padding="answerlist-title">
+								{data.content.title}
+							</Typography>
+							<List listmode={data.listmode}>
+								{data.content.array?.map((item, i) => (
+									<ListItem key={i} mode={data.listmode}>
+										<Typography variant="body2">{item} </Typography>
+									</ListItem>
+								))}
+							</List>
+						</div>
 					) : (
-						<List mode={ANSWER}>
-							{data.content.map((item, i) => (
-								<ListItem key={i}>
-									<Typography variant="body2">{item} </Typography>
-								</ListItem>
-							))}
-						</List>
+						<Typography variant="body2">{data.content}</Typography>
 					)}
 				</div>
 			</div>
@@ -50,7 +55,11 @@ AnswersItem.propTypes = {
 	data: PropTypes.shape({
 		id: PropTypes.string,
 		title: PropTypes.string,
-		content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+		content: PropTypes.oneOfType([
+			PropTypes.string,
+			PropTypes.array,
+			PropTypes.object,
+		]),
 	}),
 	mode: PropTypes.string,
 };
