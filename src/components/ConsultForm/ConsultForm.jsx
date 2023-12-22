@@ -1,5 +1,6 @@
 import React, { createRef } from 'react';
 import { Form, Section } from 'components';
+import { InputError } from 'shared/ui';
 import { useForm, Controller } from 'react-hook-form';
 import cn from 'classnames';
 import {
@@ -14,6 +15,7 @@ import styles from './ConsultForm.module.scss';
 const defaultValues = {
 	telConsult: '',
 	isuranceCase: '',
+	personalData: false,
 };
 
 function ConsultForm() {
@@ -21,7 +23,8 @@ function ConsultForm() {
 		register,
 		handleSubmit,
 		control,
-		formState: { errors },
+		reset,
+		formState: { errors, isValid },
 	} = useForm({
 		mode: 'onChange',
 		defaultValues,
@@ -32,6 +35,7 @@ function ConsultForm() {
 
 	function handleFormSubmit(data) {
 		console.log(data);
+		reset();
 	}
 	return (
 		<Section>
@@ -51,17 +55,22 @@ function ConsultForm() {
 						name="nameConsult"
 						id="nameConsult"
 						type="text"
+						maxLength={256}
 						register={register}
 						errors={errors?.nameConsult}
 						validation={{
 							required: 'Поле обязательно к заполнению',
 							minLength: {
 								value: 2,
-								message: 'Минимальная длина',
+								message: 'Минимальная длина имени 2 символа',
 							},
 							maxLength: {
-								value: 10,
-								message: 'Максимальная длина',
+								value: 256,
+								message: 'Имя не должно быть длинее 256 символов',
+							},
+							pattern: {
+								value: /^[a-zA-Zа-яА-Я -]+(?:[ _-][a-zA-Zа-яА-Я]+)*$/,
+								message: 'Имя не должно содержать специальные символы',
 							},
 						}}
 					/>
@@ -71,17 +80,18 @@ function ConsultForm() {
 						name="surnameConsult"
 						id="surnameConsult"
 						type="text"
+						maxLength={256}
 						register={register}
 						errors={errors?.surnameConsult}
 						validation={{
 							required: 'Поле обязательно к заполнению',
 							minLength: {
 								value: 2,
-								message: 'Минимальная длина',
+								message: 'Минимальная фамилии 2 символа',
 							},
 							maxLength: {
-								value: 10,
-								message: 'Максимальная длина',
+								value: 256,
+								message: 'Фамилия не должна быть длинее 256 символов',
 							},
 						}}
 					/>
@@ -102,7 +112,7 @@ function ConsultForm() {
 							required: 'Поле обязательно к заполнению',
 							pattern: {
 								value: /^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d\- ]{7,10}$/,
-								message: 'Введите номер телефона',
+								message: 'Введите корректный номер телефона',
 							},
 						}}
 					/>
@@ -115,6 +125,7 @@ function ConsultForm() {
 								id="isuranceCase"
 								type="text"
 								mode="consult-form"
+								maxLength={500}
 								errors={errors?.isuranceCase}
 								ref={textareaRef}
 								{...field}
@@ -122,7 +133,13 @@ function ConsultForm() {
 						)}
 						control={control}
 						name="isuranceCase"
-						rules={{ required: 'Поле обязательно к заполнению' }}
+						rules={{
+							required: 'Поле обязательно к заполнению',
+							maxLength: {
+								value: 500,
+								message: 'Описание ситуации не должно превышать 500 символов',
+							},
+						}}
 					/>
 				</div>
 				<div className={cn(styles.box, styles.info)}>
@@ -130,13 +147,23 @@ function ConsultForm() {
 						variant="body2"
 						children="* — обязательные поля для заполнения"
 					/>
-					<div className={cn(styles.box, styles.checkbox)}>
-						<Checkbox
-							id="personalData"
-							name="personalData"
-							label="Я согласен на обработку&nbsp;"
-						/>
-						<LinkComponent link="#" text="персональных данных" mode="bold" />
+					<div>
+						<div className={cn(styles.box, styles.checkbox)}>
+							<Checkbox
+								id="personalData"
+								name="personalData"
+								label="Я согласен на обработку&nbsp;"
+								register={register}
+								validation={{
+									required: 'Поле обязательно к заполнению',
+									value: true,
+								}}
+							/>
+							<LinkComponent link="#" text="персональных данных" mode="bold" />
+						</div>
+						<InputError>
+							{errors?.personalData && errors?.personalData.message}
+						</InputError>
 					</div>
 				</div>
 				<Button
@@ -144,6 +171,7 @@ function ConsultForm() {
 					type="submit"
 					bgcolor="accent"
 					mode="submit-form"
+					disabled={!isValid}
 				/>
 			</Form>
 		</Section>

@@ -1,6 +1,7 @@
 import { DEFAULT } from 'shared/utils/constants/modes.js';
 import classNames from 'classnames';
 import { forwardRef } from 'react';
+import { Typography } from 'shared/ui';
 import styles from './TextArea.module.scss';
 
 const TextArea = forwardRef(function TextArea(

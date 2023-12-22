@@ -6,6 +6,10 @@
 	padding: 16px 20px;
 	background-color: var(--grey-2);
 	resize: none;
+	font-family: 'Inter', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
 
 	&:focus {
 		outline: none;

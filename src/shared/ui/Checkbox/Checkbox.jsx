@@ -13,6 +13,8 @@ function Checkbox({
 	typoColor,
 	label,
 	disabled,
+	register,
+	validation,
 	...props
 }) {
 	const pseudoClassName = classNames(styles[`pseudo-${mode}`], {
@@ -27,8 +29,8 @@ function Checkbox({
 				name={name}
 				value={value}
 				id={id}
-				required
 				disabled={disabled}
+				{...register(name, validation)}
 				{...props}
 			/>
 			<span className={pseudoClassName}></span>
