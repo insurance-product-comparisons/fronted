@@ -7,7 +7,7 @@ import { ResultCard, Section } from 'components';
 function ResultCardContainer({ data }) {
 	return (
 		<Section>
-			<List mode="result">
+			<List listmode="result">
 				{data.map(
 					(card) => (
 						<ListItem key={card.id}>
