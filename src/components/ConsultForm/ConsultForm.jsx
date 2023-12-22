@@ -51,10 +51,19 @@ function ConsultForm() {
 						name="nameConsult"
 						id="nameConsult"
 						type="text"
-						isValid
-						required
 						register={register}
 						errors={errors?.nameConsult}
+						validation={{
+							required: 'Поле обязательно к заполнению',
+							minLength: {
+								value: 2,
+								message: 'Минимальная длина',
+							},
+							maxLength: {
+								value: 10,
+								message: 'Максимальная длина',
+							},
+						}}
 					/>
 					<FormInput
 						inputId="surnameConsult"
@@ -62,10 +71,19 @@ function ConsultForm() {
 						name="surnameConsult"
 						id="surnameConsult"
 						type="text"
-						isValid
-						required
 						register={register}
 						errors={errors?.surnameConsult}
+						validation={{
+							required: 'Поле обязательно к заполнению',
+							minLength: {
+								value: 2,
+								message: 'Минимальная длина',
+							},
+							maxLength: {
+								value: 10,
+								message: 'Максимальная длина',
+							},
+						}}
 					/>
 					<Controller
 						render={({ field }) => (
@@ -73,32 +91,38 @@ function ConsultForm() {
 								phone
 								textLabel="Номер телефона*"
 								id="telConsult"
-								isValid
-								required
+								errors={errors?.telConsult}
 								ref={inputRef}
 								{...field}
 							/>
 						)}
 						control={control}
 						name="telConsult"
+						rules={{
+							required: 'Поле обязательно к заполнению',
+							pattern: {
+								value: /^((8|\+7)[- ]?)?(\(?\d{3}\)?[- ]?)?[\d\- ]{7,10}$/,
+								message: 'Введите номер телефона',
+							},
+						}}
 					/>
 					<Controller
 						render={({ field }) => (
 							<FormInput
 								textarea
-								inputId="isuranceCase"
 								textLabel="Ситуация страхования*"
 								name="isuranceCase"
 								id="isuranceCase"
 								type="text"
 								mode="consult-form"
-								required
+								errors={errors?.isuranceCase}
 								ref={textareaRef}
 								{...field}
 							/>
 						)}
 						control={control}
 						name="isuranceCase"
+						rules={{ required: 'Поле обязательно к заполнению' }}
 					/>
 				</div>
 				<div className={cn(styles.box, styles.info)}>

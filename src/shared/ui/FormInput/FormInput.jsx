@@ -48,21 +48,26 @@ const FormInput = forwardRef(function FormInput(
 					name={name}
 					id={id}
 					type={type}
-					isValid
-					required
+					isValid={!errors}
 					submode={submode}
 					ref={ref}
 					{...rest}
 				/>
 			) : textarea ? (
-				<TextArea name={name} id={id} mode={mode} ref={ref} {...rest} />
+				<TextArea
+					name={name}
+					id={id}
+					mode={mode}
+					ref={ref}
+					isValid={!errors}
+					{...rest}
+				/>
 			) : select ? (
 				<SelectComponent
 					mode={mode}
 					options={options}
 					submode={submode}
 					placeholder={placeholder}
-					{...register(name, validation)}
 				/>
 			) : (
 				<Input
@@ -71,13 +76,13 @@ const FormInput = forwardRef(function FormInput(
 					id={id}
 					type={type}
 					submode={submode}
-					isValid
-					required
 					register={register}
-					errors={errors}
+					validation={validation}
+					isValid={!errors}
+					{...rest}
 				/>
 			)}
-			<InputError errorMode={errorMode} errorMessage={errorMessage} isVisible>
+			<InputError errorMode={errorMode} errorMessage={errorMessage}>
 				{errors && errors.message}
 			</InputError>
 		</div>
