@@ -76,6 +76,13 @@
 	padding-left: 0px;
 }
 
+.numbered-list {
+   display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+	list-style-type: decimal;
+}
+
 .result {
 	display: flex;
 	flex-direction: column;

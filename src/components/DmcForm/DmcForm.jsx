@@ -1,11 +1,10 @@
-import Section from 'components/Section';
 import Form from 'components/Form';
 import { Button, FormInput } from 'shared/ui';
 import styles from './DmcForm.module.scss';
 
 function DmcForm() {
 	return (
-		<Section>
+		<div className={styles.root}>
 			<Form type="dmc-form">
 				<FormInput select textLabel="Возраст" submode="select-dmc-short" />
 				<FormInput
@@ -25,7 +24,7 @@ function DmcForm() {
 					/>
 				</div>
 			</Form>
-		</Section>
+		</div>
 	);
 }
 
