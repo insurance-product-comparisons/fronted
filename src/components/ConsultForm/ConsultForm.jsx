@@ -1,4 +1,6 @@
+import React, { createRef } from 'react';
 import { Form, Section } from 'components';
+import { useForm, Controller } from 'react-hook-form';
 import cn from 'classnames';
 import {
 	Typography,
@@ -9,7 +11,28 @@ import {
 } from 'shared/ui';
 import styles from './ConsultForm.module.scss';
 
+const defaultValues = {
+	telConsult: '',
+	isuranceCase: '',
+};
+
 function ConsultForm() {
+	const {
+		register,
+		handleSubmit,
+		control,
+		formState: { errors },
+	} = useForm({
+		mode: 'onChange',
+		defaultValues,
+	});
+
+	const inputRef = createRef(null);
+	const textareaRef = createRef(null);
+
+	function handleFormSubmit(data) {
+		console.log(data);
+	}
 	return (
 		<Section>
 			<div className={styles.container}>
@@ -20,7 +43,7 @@ function ConsultForm() {
 				</Typography>
 			</div>
 
-			<Form type="consult-form">
+			<Form type="consult-form" onSubmit={handleSubmit(handleFormSubmit)}>
 				<div className={cn(styles.box, styles.inputs)}>
 					<FormInput
 						inputId="nameConsult"
@@ -30,6 +53,8 @@ function ConsultForm() {
 						type="text"
 						isValid
 						required
+						register={register}
+						errors={errors?.nameConsult}
 					/>
 					<FormInput
 						inputId="surnameConsult"
@@ -39,26 +64,41 @@ function ConsultForm() {
 						type="text"
 						isValid
 						required
+						register={register}
+						errors={errors?.surnameConsult}
 					/>
-					<FormInput
-						phone
-						inputId="telConsult"
-						textLabel="Номер телефона*"
+					<Controller
+						render={({ field }) => (
+							<FormInput
+								phone
+								textLabel="Номер телефона*"
+								id="telConsult"
+								isValid
+								required
+								ref={inputRef}
+								{...field}
+							/>
+						)}
+						control={control}
 						name="telConsult"
-						id="telConsult"
-						isValid
-						required
 					/>
-					<FormInput
-						textarea
-						inputId="isuranceCase"
-						textLabel="Ситуация страхования*"
+					<Controller
+						render={({ field }) => (
+							<FormInput
+								textarea
+								inputId="isuranceCase"
+								textLabel="Ситуация страхования*"
+								name="isuranceCase"
+								id="isuranceCase"
+								type="text"
+								mode="consult-form"
+								required
+								ref={textareaRef}
+								{...field}
+							/>
+						)}
+						control={control}
 						name="isuranceCase"
-						id="isuranceCase"
-						type="text"
-						mode="consult-form"
-						isValid
-						required
 					/>
 				</div>
 				<div className={cn(styles.box, styles.info)}>

@@ -73,13 +73,7 @@ export function Header() {
 								</div>
 							)}
 						</div>
-						<Button
-							type="Button"
-							bgcolor="ghost"
-							mode={ENTER}
-							disabled={false}
-							onClick
-						>
+						<Button type="Button" bgcolor="ghost" mode={ENTER} disabled={false}>
 							Войти
 						</Button>
 					</div>
