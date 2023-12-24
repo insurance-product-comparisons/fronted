@@ -8,6 +8,7 @@ import {
 import CARD_ITEMS from 'shared/utils/constants/CARD_ITEMS';
 import { ANSWERS_MAIN } from 'shared/store/answers';
 import { FOR_COMPANIES, FOR_REQUEST } from 'shared/store/companies';
+import { MORE, SUB_REQUEST } from 'shared/utils/constants/modes';
 import styles from './Main.module.scss';
 
 function Main() {
@@ -20,7 +21,7 @@ function Main() {
 				<InsuranceCompanies
 					data={FOR_COMPANIES}
 					nameButton={'Подробнее'}
-					modeButton={'more'}
+					modeButton={MORE}
 				/>
 			</Section>
 			<Section>
@@ -30,7 +31,7 @@ function Main() {
 				<InsuranceCompanies
 					data={FOR_REQUEST}
 					nameButton={'Отправить заявку'}
-					modeButton={'submit-request'}
+					modeButton={SUB_REQUEST}
 				/>
 			</Section>
 			<Section>

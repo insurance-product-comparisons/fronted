@@ -1,8 +1,11 @@
 import { InsuranceCompanies } from 'components';
+import { FOR_COMPANIES, FOR_REQUEST } from 'shared/store/companies';
+import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {
 	title: 'Components/InsuranceCompanies',
 	component: InsuranceCompanies,
+	decorators: [withRouter],
 	tags: ['autodocs'],
 	argTypes: {
 		title: {
@@ -39,20 +42,14 @@ const Template = (arg) => <InsuranceCompanies {...arg} />;
 export const Default = Template.bind({});
 
 Default.args = {
-	title: 'Страховым компаниям',
-	description:
-		'Мы привлекаем страховые компании для страхования имущества и здоровья клиентов. Ознакомьтесь с обязательными требованиями и условиями.',
+	data: FOR_COMPANIES,
 	nameButton: 'Подробнее',
 	modeButton: 'more',
-	disabled: false,
 };
 
 export const NotFoundInsuranceCase = Template.bind({});
 NotFoundInsuranceCase.args = {
-	title: 'Не нашли в каталоге свой страховой случай?',
-	description:
-		'Если вы не увидели в каталоге нужный вам страховой случай, то вы можете отправить заявку. В течение 2 рабочих дней мы рассмотрим ваш запрос и ответим на указанный email.',
+	data: FOR_REQUEST,
 	nameButton: 'Отправить заявку',
 	modeButton: 'submit-request',
-	disabled: false,
 };
