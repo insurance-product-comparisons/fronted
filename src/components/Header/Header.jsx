@@ -6,6 +6,7 @@ import { useState } from 'react';
 import cn from 'classnames';
 import { HEADER, MAIN, ENTER } from 'shared/utils/constants/modes';
 import { HEADER_LINKS } from 'shared/store/links';
+import ScrollToTop from 'shared/utils/handlers/scrolltop';
 import styles from './Header.module.scss';
 
 export function Header() {
@@ -78,6 +79,7 @@ export function Header() {
 						</Button>
 					</div>
 				</div>
+				<ScrollToTop />
 			</Section>
 		</header>
 	);

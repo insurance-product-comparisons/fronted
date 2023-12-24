@@ -1,8 +1,15 @@
 import React from 'react';
 import { Typography, Button } from 'shared/ui';
+import { useNavigate } from 'react-router-dom';
 import styles from './InsuranceCompanies.module.scss';
 
 function InsuranceCompanies({ nameButton, modeButton, data }) {
+	const navigate = useNavigate();
+
+	function handleCardClick() {
+		navigate(data.route);
+	}
+
 	return (
 		<>
 			<div className={styles.container}>
@@ -14,11 +21,14 @@ function InsuranceCompanies({ nameButton, modeButton, data }) {
 						{data.description}
 					</Typography>
 				</div>
-				<a href="/">
-					<Button type="button" bgcolor="ghost" mode={modeButton}>
-						{nameButton}
-					</Button>
-				</a>
+				<Button
+					type="button"
+					bgcolor="ghost"
+					mode={modeButton}
+					onClick={handleCardClick}
+				>
+					{nameButton}
+				</Button>
 			</div>
 		</>
 	);
