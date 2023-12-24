@@ -6,7 +6,7 @@ import styles from './ProductContainer.module.scss';
 
 function ProductContainer({ data, mode = DEFAULT }) {
 	return (
-		<section className={cn({ [styles[mode]]: mode })}>
+		<div className={cn({ [styles[mode]]: mode })}>
 			<div className={cn({ [styles[`title-${mode}`]]: mode })}>
 				<Typography variant="h2">Сравнивайте страховки онлайн</Typography>
 			</div>
@@ -15,7 +15,7 @@ function ProductContainer({ data, mode = DEFAULT }) {
 					<Card data={item} key={id} />
 				))}
 			</div>
-		</section>
+		</div>
 	);
 }
 

@@ -38,7 +38,7 @@ function ConsultForm() {
 		reset();
 	}
 	return (
-		<Section>
+		<>
 			<div className={styles.container}>
 				<Typography variant={'h2'}>Заявка на консультацию</Typography>
 				<Typography variant={'body2'}>
@@ -174,7 +174,7 @@ function ConsultForm() {
 					disabled={!isValid}
 				/>
 			</Form>
-		</Section>
+		</>
 	);
 }
 

@@ -1,38 +1,26 @@
 import React from 'react';
 import { Typography, Button } from 'shared/ui';
-import { Section } from 'components';
 import styles from './InsuranceCompanies.module.scss';
 
-function InsuranceCompanies({
-	title,
-	description,
-	nameButton,
-	modeButton,
-	disabled,
-}) {
+function InsuranceCompanies({ nameButton, modeButton, data }) {
 	return (
-		<Section>
+		<>
 			<div className={styles.container}>
 				<Typography variant="h2" color="black">
-					{title}
+					{data.title}
 				</Typography>
 				<div className={styles['container-description']}>
 					<Typography variant="body2" color="black">
-						{description}
+						{data.description}
 					</Typography>
 				</div>
 				<a href="/">
-					<Button
-						type="button"
-						bgcolor="ghost"
-						mode={modeButton}
-						disabled={disabled}
-					>
+					<Button type="button" bgcolor="ghost" mode={modeButton}>
 						{nameButton}
 					</Button>
 				</a>
 			</div>
-		</Section>
+		</>
 	);
 }
 

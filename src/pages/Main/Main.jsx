@@ -3,38 +3,40 @@ import {
 	ConsultForm,
 	AnswersList,
 	InsuranceCompanies,
+	Section,
 } from 'components';
 import CARD_ITEMS from 'shared/utils/constants/CARD_ITEMS';
 import { ANSWERS_MAIN } from 'shared/store/answers';
+import { FOR_COMPANIES, FOR_REQUEST } from 'shared/store/companies';
 import styles from './Main.module.scss';
 
 function Main() {
 	return (
-		<>
-			<main className={styles.root}>
+		<main className={styles.root}>
+			<Section>
 				<ProductContainer data={CARD_ITEMS} />
+			</Section>
+			<Section>
 				<InsuranceCompanies
-					title={'Страховым компаниям'}
-					description={
-						'Мы привлекаем страховые компании для страхования имущества и здоровья клиентов. Ознакомьтесь с обязательными требованиями и условиями.'
-					}
+					data={FOR_COMPANIES}
 					nameButton={'Подробнее'}
 					modeButton={'more'}
-					disabled={false}
 				/>
+			</Section>
+			<Section>
 				<ConsultForm />
+			</Section>
+			<Section>
 				<InsuranceCompanies
-					title={'Не нашли в каталоге свой страховой случай?'}
-					description={
-						'Если вы не увидели в каталоге нужный вам страховой случай, то вы можете отправить заявку. В течение 2 рабочих дней мы рассмотрим ваш запрос и ответим на указанный email.'
-					}
+					data={FOR_REQUEST}
 					nameButton={'Отправить заявку'}
 					modeButton={'submit-request'}
-					disabled={false}
 				/>
+			</Section>
+			<Section>
 				<AnswersList title="Вопросы и ответы" data={ANSWERS_MAIN} />
-			</main>
-		</>
+			</Section>
+		</main>
 	);
 }
 
