@@ -48,37 +48,10 @@ function UnusualCaseForm({ onSubmit }) {
 	return (
 		<div className={styles.wrapper}>
 			<div className={cn(styles.box, styles.text)}>
-
-		<Form type="unusual-case-form">
-			<FormInput
-				textLabel="Фамилия, имя, отчество"
-				inputId="user-data"
-				name="user-data"
-				id="user-data"
-				type="text"
-				submode="input-unusual-case-wide"
-			/>
-			<FormInput
-				phone
-				textLabel="Номер телефона"
-				inputId="user-tel"
-				name="user-tel"
-				id="user-tel"
-				submode="input-unusual-case-short"
-			/>
-			<FormInput
-				textLabel="E-mail"
-				inputId="user-email"
-				name="user-email"
-				id="user-email"
-				type="email"
-				submode="input-unusual-case-short"
-			/>
-			<div className={cn(styles.box, styles.input)}>
 				<Typography
-					variant="body2"
+					variant="h2"
 					color="black"
-					children="Для кого страховка"
+					children="Заявка на ситуацию, которой нет в каталоге"
 				/>
 			</div>
 
@@ -236,7 +209,6 @@ function UnusualCaseForm({ onSubmit }) {
 				/>
 			</Form>
 		</div>
-
 	);
 }
 
