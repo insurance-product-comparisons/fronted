@@ -1,5 +1,5 @@
 import React, { createRef } from 'react';
-import { Form, Section } from 'components';
+import { Form } from 'components';
 import { InputError } from 'shared/ui';
 import { useForm, Controller } from 'react-hook-form';
 import cn from 'classnames';
@@ -38,7 +38,7 @@ function ConsultForm() {
 		reset();
 	}
 	return (
-		<Section>
+		<>
 			<div className={styles.container}>
 				<Typography variant={'h2'}>Заявка на консультацию</Typography>
 				<Typography variant={'body2'}>
@@ -174,7 +174,7 @@ function ConsultForm() {
 					disabled={!isValid}
 				/>
 			</Form>
-		</Section>
+		</>
 	);
 }
 

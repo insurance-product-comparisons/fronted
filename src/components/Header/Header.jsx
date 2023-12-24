@@ -6,14 +6,12 @@ import { useState } from 'react';
 import cn from 'classnames';
 import { HEADER, MAIN, ENTER } from 'shared/utils/constants/modes';
 import { HEADER_LINKS } from 'shared/store/links';
-import { useForm } from 'react-hook-form';
+import ScrollToTop from 'shared/utils/handlers/scrolltop';
 import styles from './Header.module.scss';
 
 export function Header() {
 	const [isSearchOpen, setIsSearchOpen] = useState(false);
 	const [searchValue, setSearchValue] = useState('');
-
-	const { register } = useForm();
 
 	const headerClass = cn(styles.menu, {
 		[styles['header-search']]: isSearchOpen,
@@ -68,7 +66,6 @@ export function Header() {
 										isDisabled={false}
 										value={searchValue}
 										onChange={handleInputChange}
-										register={register}
 									/>
 									<button
 										className={styles['icon-close']}
@@ -82,6 +79,7 @@ export function Header() {
 						</Button>
 					</div>
 				</div>
+				<ScrollToTop />
 			</Section>
 		</header>
 	);

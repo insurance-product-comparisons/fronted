@@ -30,7 +30,7 @@ function Checkbox({
 				value={value}
 				id={id}
 				disabled={disabled}
-				{...register(name, validation)}
+				{...(register ? register(name, validation) : null)}
 				{...props}
 			/>
 			<span className={pseudoClassName}></span>
