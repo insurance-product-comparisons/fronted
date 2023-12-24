@@ -25,6 +25,7 @@ function SelectComponent({ options, mode = DEFAULT, placeholder, submode }) {
 			classNames={selectClassNames}
 			options={options}
 			placeholder={placeholder}
+			noOptionsMessage={() => 'Нет доступных вариантов'}
 		/>
 	);
 }

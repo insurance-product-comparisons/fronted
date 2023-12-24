@@ -31,7 +31,7 @@ function Input({
 			id={id}
 			disabled={isDisabled}
 			required={required}
-			{...register(name, validation)}
+			{...(register ? register(name, validation) : null)}
 			{...props}
 		></input>
 	);
