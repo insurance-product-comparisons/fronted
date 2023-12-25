@@ -1,8 +1,13 @@
-.root {
-	flex-grow: 1;
+.formWrapper,
+.requestWrapper {
+opacity: 1;
+transition: opacity 0.5s ease-in-out;
 }
 
-.title-wrapper {
-	max-width: 421px;
-	padding: 21px 0 40px;
+.visibly {
+opacity: 1;
+}
+
+.invisibly {
+opacity: 0;
 }
