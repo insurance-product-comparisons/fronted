@@ -1,13 +1,13 @@
 .formWrapper,
 .requestWrapper {
-opacity: 1;
-transition: opacity 0.5s ease-in-out;
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
 }
 
 .visibly {
-opacity: 1;
+	opacity: 1;
 }
 
 .invisibly {
-opacity: 0;
+	opacity: 0;
 }
