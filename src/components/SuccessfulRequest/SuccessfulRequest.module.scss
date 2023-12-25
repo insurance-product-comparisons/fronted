@@ -1,6 +1,7 @@
 .default {
 	background-color: var(--white);
 	box-sizing: border-box;
+	margin-bottom: 64px;
 	width: 1136px;
 	height: 732px;
 	padding: 64px 274px;
@@ -11,9 +12,21 @@
 	justify-content: space-between;
 
 	&.unusual-case {
+		margin-bottom: 100px;
 		height: 832px;
 		padding: 64px 254px 84px;
 	}
+}
+
+.title-unusual-case {
+	max-width: 421px;
+	margin-top: 24px;
+	margin-bottom: 40px;
+}
+
+.title-main {
+	margin-top: 64px;
+	margin-bottom: 24px;
 }
 
 .icon-success {

@@ -1,19 +1,37 @@
-import { Section, UnusualCaseForm } from 'components';
-import { Typography } from 'shared/ui';
+import { Section, SuccessfulRequest, UnusualCaseForm } from 'components';
+import { useState } from 'react';
 import styles from './Request.module.scss';
 
 function Request() {
+	const [formSubmitted, setFormSubmitted] = useState(false);
+
+	function handleFormSubmit() {
+		setFormSubmitted(true);
+	}
+
 	return (
-		<main className={styles.root}>
+		<main>
 			<Section>
-				<div className={styles['title-wrapper']}>
-					<Typography variant={'h2'}>
-						Заявка на ситуацию, которой нет в каталоге
-					</Typography>
+				<div
+					className={`${styles.formWrapper} ${
+						formSubmitted ? styles.invisibly : ''
+					}`}
+				>
+					{!formSubmitted && <UnusualCaseForm onSubmit={handleFormSubmit} />}
 				</div>
-			</Section>
-			<Section>
-				<UnusualCaseForm />
+				<div
+					className={`${styles.requestWrapper} ${
+						formSubmitted ? styles.visibly : styles.invisibly
+					}`}
+				>
+					{formSubmitted && (
+						<SuccessfulRequest
+							title="Заявка на ситуацию, которой нет в каталоге"
+							type="unusual-case"
+							text="Подтверждение придет вам на электронную почту."
+						/>
+					)}
+				</div>
 			</Section>
 		</main>
 	);
