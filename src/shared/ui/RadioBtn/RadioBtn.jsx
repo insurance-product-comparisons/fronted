@@ -4,17 +4,20 @@ import { DEFAULT } from 'shared/utils/constants/modes.js';
 import cn from 'classnames';
 import Typography from '../Typography';
 
-function RadioBtn({
-	label,
-	id,
-	name,
-	mode = DEFAULT,
-	value,
-	typoVariant,
-	typoColor,
-	disabled,
-	...props
-}) {
+const RadioBtn = React.forwardRef(function RadioBtn(
+	{
+		label,
+		id,
+		name,
+		mode = DEFAULT,
+		value,
+		typoVariant,
+		typoColor,
+		disabled,
+		...props
+	},
+	ref
+) {
 	const pseudoClassName = cn(styles[`pseudo-${mode}`], {
 		[styles.disable]: disabled,
 	});
@@ -29,6 +32,7 @@ function RadioBtn({
 				value={value}
 				required
 				disabled={disabled}
+				ref={ref}
 				{...props}
 			/>
 			<span className={pseudoClassName}></span>
@@ -37,6 +41,6 @@ function RadioBtn({
 			</Typography>
 		</label>
 	);
-}
+});
 
 export default RadioBtn;

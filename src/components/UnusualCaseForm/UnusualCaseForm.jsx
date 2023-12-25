@@ -19,6 +19,7 @@ const defaultValues = {
 	userEmail: '',
 	isuransecase: '',
 	personalData: false,
+	forWhom: 'for-me',
 };
 
 function UnusualCaseForm({ onSubmit }) {
@@ -133,13 +134,12 @@ function UnusualCaseForm({ onSubmit }) {
 					/>
 					<div className={cn(styles.box, styles.radio)}>
 						<RadioBtn
-							checked
 							label="Страховка для себя"
 							id="field-me"
 							name="forWhom"
 							value="for-me"
 							typoVariant="body2"
-							register={register}
+							{...register('forWhom')}
 						/>
 						<RadioBtn
 							label="Страховка в подарок"
@@ -147,7 +147,7 @@ function UnusualCaseForm({ onSubmit }) {
 							name="forWhom"
 							value="for-someone"
 							typoVariant="body2"
-							register={register}
+							{...register('forWhom')}
 						/>
 					</div>
 				</div>
