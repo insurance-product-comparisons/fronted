@@ -5,15 +5,6 @@ export default {
 	title: 'Components/Header',
 	component: Header,
 	decorators: [withRouter],
-	argTypes: {
-		mode: {
-			type: 'string',
-			description: 'Размер логотипа',
-			control: {
-				type: 'radio',
-			},
-		},
-	},
 };
 
 const Template = (arg) => <Header {...arg} />;
