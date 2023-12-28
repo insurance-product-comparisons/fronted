@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Typography } from 'shared/ui';
+import { Typography, List, ListItem } from 'shared/ui';
 import { DEFAULT } from 'shared/utils/constants/modes';
 import styles from './AnswersItem.module.scss';
 
@@ -14,7 +14,7 @@ function AnswersItem({ data, mode = DEFAULT }) {
 	const contentClassName = classNames(styles[`content-${mode}`], {
 		[styles.open]: isOpen,
 	});
-	const arrowClassName = classNames(styles[`arrow-${mode}`], {
+	const titleClassName = classNames(styles.title, {
 		[styles.rotate]: isOpen,
 	});
 
@@ -26,13 +26,27 @@ function AnswersItem({ data, mode = DEFAULT }) {
 					style={{ cursor: 'pointer' }}
 					onClick={() => setIsOpen((prev) => !prev)}
 				>
-					{data.title}
+					<span className={titleClassName}>{data.title}</span>
 				</Typography>
 				<div className={contentClassName}>
-					<Typography variant="body2">{data.content}</Typography>
+					{typeof data.content === 'object' ? (
+						<div>
+							<Typography variant="body2" padding="answerlist-title">
+								{data.content.title}
+							</Typography>
+							<List listmode={data.listmode}>
+								{data.content.array?.map((item, i) => (
+									<ListItem key={i} mode={data.listmode}>
+										<Typography variant="body2">{item} </Typography>
+									</ListItem>
+								))}
+							</List>
+						</div>
+					) : (
+						<Typography variant="body2">{data.content}</Typography>
+					)}
 				</div>
 			</div>
-			<div className={arrowClassName}></div>
 		</div>
 	);
 }
@@ -41,7 +55,11 @@ AnswersItem.propTypes = {
 	data: PropTypes.shape({
 		id: PropTypes.string,
 		title: PropTypes.string,
-		content: PropTypes.string,
+		content: PropTypes.oneOfType([
+			PropTypes.string,
+			PropTypes.array,
+			PropTypes.object,
+		]),
 	}),
 	mode: PropTypes.string,
 };

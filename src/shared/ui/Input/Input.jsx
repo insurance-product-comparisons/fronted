@@ -14,6 +14,7 @@ function Input({
 	isDisabled,
 	required,
 	register,
+	validation,
 	...props
 }) {
 	const inputClassName = cn(styles[`input-${mode}`], styles[submode], {
@@ -30,6 +31,7 @@ function Input({
 			id={id}
 			disabled={isDisabled}
 			required={required}
+			{...(register ? register(name, validation) : null)}
 			{...props}
 		></input>
 	);

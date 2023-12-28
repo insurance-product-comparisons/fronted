@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from 'components';
 import { Main, Osago, Kasko, Dms, Request, NotFound } from 'pages';
 
@@ -13,7 +13,8 @@ function App() {
 				<Route path="/request" element={<Request />} />
 				{/* <Route path="/products/:id" element={<Product />} /> Просмотр предложения страхованя */}
 				{/* <Route path="/admin" element={<Admin />} /> Панель администратора */}
-				<Route path="*" element={<NotFound />} />
+				<Route path="/404" element={<NotFound />} />
+				<Route path="*" element={<Navigate to="/404" />} />
 			</Routes>
 		</Layout>
 	);

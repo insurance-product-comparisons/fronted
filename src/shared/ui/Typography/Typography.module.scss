@@ -23,9 +23,16 @@
 
 .typography--variant-h4 {
 	margin: 0;
-	font-size: 28px;
+	font-size: 24px;
 	font-weight: 700;
-	line-height: 34px;
+	line-height: 32px;
+}
+
+.typography--variant-h5 {
+	margin: 0;
+	font-size: 96px;
+	font-weight: 400;
+	line-height: 84px;
 }
 
 .typography--variant-body1 {
@@ -79,4 +86,8 @@
 
 .typography--color-yellow {
 	color: var(--accent-color-yellow);
+}
+
+.typography--padding-answerlist-title {
+	padding-bottom: 10px;
 }

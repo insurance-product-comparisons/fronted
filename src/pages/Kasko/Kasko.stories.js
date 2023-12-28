@@ -1,10 +1,25 @@
-import Kasko from '.';
+import { Kasko } from 'pages';
+import { Default as Layout } from 'components/Layout/Layout.stories';
+import {
+	withRouter,
+	reactRouterParameters,
+} from 'storybook-addon-react-router-v6';
 
 export default {
-	title: 'Pages/KASKO',
+	title: 'Pages/KACKO',
 	component: Kasko,
+	decorators: [withRouter],
+	parameters: {
+		reactRouter: reactRouterParameters({
+			routing: { path: '/kasko' },
+		}),
+	},
 };
 
 export const Default = {
-	render: () => <Kasko />,
+	render: () => (
+		<Layout>
+			<Kasko />
+		</Layout>
+	),
 };

@@ -1,9 +1,11 @@
 import { Card } from 'components';
 import osago from 'images/osago.svg';
+import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {
 	title: 'Components/Card',
 	component: Card,
+	decorators: [withRouter],
 	argTypes: {
 		data: {
 			type: 'object',
@@ -43,6 +45,7 @@ Default.args = {
 		image: osago,
 		title: 'ОСАГО',
 		text: 'Электронный полис с онлайн-калькулятором и скидками (КБМ) за безаварийность.',
+		route: '/',
 	},
 
 	mode: 'default',

@@ -1,0 +1,30 @@
+.wrapper {
+	margin-bottom: 100px;
+	margin-top: 24px;
+}
+
+.box {
+	display: flex;
+
+	&.text {
+		max-width: 421px;
+		padding-bottom: 40px;
+	}
+
+	&.input {
+		flex-direction: column;
+		gap: 8px;
+		padding: 32px 0;
+	}
+
+	&.radio {
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	&.checkbox {
+		flex-direction: row;
+		align-items: center;
+		padding: 4px 0 32px;
+	}
+}

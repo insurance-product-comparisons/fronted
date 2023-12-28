@@ -5,9 +5,9 @@ import classNames from 'classnames';
 import Select from 'react-select';
 import styles from './SelectComponent.module.scss';
 
-function SelectComponent({ options, mode = DEFAULT, placeholder }) {
+function SelectComponent({ options, mode = DEFAULT, placeholder, submode }) {
 	const selectClassNames = {
-		container: (state) => classNames(styles[mode]),
+		container: (state) => classNames(styles[mode], styles[submode]),
 		control: ({ isDisabled, isFocused }) =>
 			classNames(styles[`control-${mode}`], isFocused && styles.focused),
 		valueContainer: (state) => classNames(styles[`value-container-${mode}`]),
@@ -25,6 +25,7 @@ function SelectComponent({ options, mode = DEFAULT, placeholder }) {
 			classNames={selectClassNames}
 			options={options}
 			placeholder={placeholder}
+			noOptionsMessage={() => 'Нет доступных вариантов'}
 		/>
 	);
 }

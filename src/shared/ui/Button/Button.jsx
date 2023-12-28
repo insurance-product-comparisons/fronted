@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './Button.module.scss';
 
-function Button({ children, type, bgcolor, mode, disabled }) {
+function Button({ children, type, bgcolor, mode, disabled, ...props }) {
 	return (
 		<button
 			type={type}
@@ -12,6 +12,7 @@ function Button({ children, type, bgcolor, mode, disabled }) {
 				[styles.disable]: disabled,
 			})}
 			disabled={disabled}
+			{...props}
 		>
 			{children}
 		</button>

@@ -35,6 +35,12 @@
 	&.count {
 		min-width: 157px;
 		height: 56px;
+		align-self: flex-start;
+	}
+
+	&.result {
+		min-width: 197px;
+		height: 56px;
 	}
 
 	&.disable {

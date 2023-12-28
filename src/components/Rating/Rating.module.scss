@@ -1,13 +1,28 @@
 .container {
 	display: flex;
-	width: 144px;
-	height: 16px;
-	gap: 16px;
+	column-gap: 12px;
+	align-items: center;
+	width: 148px;
+}
+
+.container-star {
+	display: flex;
+	height: 14px;
+	gap: 9px;
 }
 
 .star {
-	width: 16px;
-	height: 16px;
-	background-image: url('/images/rating-star.svg');
+	width: 14px;
+	height: 14px;
+	background-image: url('/images/Star.svg');
 	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.null-star {
+	width: 14px;
+	height: 14px;
+	background-image: url('/images/null-star.svg');
+	background-repeat: no-repeat;
+	background-position: center;
 }

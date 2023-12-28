@@ -3,10 +3,9 @@
 .default {
 	display: flex;
 	flex-direction: column;
-	padding: 24px 100px;
-	margin: 0 0 84px;
-	border-radius: 36px;
-	background-color: var(--white);
+	width: 565px;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
@@ -62,4 +61,33 @@
 			opacity: 1;
 		}
 	}
+}
+
+.answer {
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+	list-style: disc;
+}
+
+.paragraph {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0px;
+}
+
+.numbered-list {
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+	list-style-type: decimal;
+}
+
+.result {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 16px;
 }
