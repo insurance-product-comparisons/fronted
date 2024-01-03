@@ -12,7 +12,7 @@ export const FOOTER_CONTACTS = [
 	{
 		id: 3,
 		link: 'https://github.com/insurance-product-comparisons/Wiki-of-project/wiki/Main-page',
-		text: 'Вики проекта на GitHub',
+		text: 'Вики проекта на github',
 	},
 ];
 
