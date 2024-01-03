@@ -11,11 +11,10 @@
 
 .header {
 	display: flex;
-	gap: 40px;
+	gap: 36px;
 	padding-left: 0;
 	list-style: none;
 	pointer-events: none;
-	max-width: 496px;
 
 	li {
 		pointer-events: auto;
