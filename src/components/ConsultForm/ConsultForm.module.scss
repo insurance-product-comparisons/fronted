@@ -3,7 +3,7 @@
 
 	&.inputs {
 		flex-direction: column;
-		gap: 20px;
+		gap: 1px;
 	}
 
 	&.input {
@@ -18,14 +18,15 @@
 	&.info {
 		flex-direction: column;
 		gap: 24px;
-		padding: 24px 0 32px;
+		padding: 6px 4px 16px;
 	}
 }
 
 .container {
-	display: flex;
 	max-width: 558px;
-	padding-bottom: 32px;
-	flex-direction: column;
-	gap: 24px;
+	padding-bottom: 24px;
+}
+
+.button-wrapper {
+   width: 209px;
 }

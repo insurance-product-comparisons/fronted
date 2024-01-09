@@ -7,7 +7,7 @@ function AnswersList({ title, data, mode = DEFAULT }) {
 	return (
 		<>
 			<div className={styles[mode]}>
-				<Typography variant="h3">{title}</Typography>
+				<Typography variant="h2">{title}</Typography>
 				<div className={styles.wrapper}>
 					<List mode={mode}>
 						{data.map((item, index) => (
