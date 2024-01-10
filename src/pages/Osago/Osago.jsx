@@ -26,7 +26,12 @@ function Osago() {
 				<OsagoForm />
 			</Section>
 			<Section>
-				<AnswersList title="Вопросы и ответы" data={ANSWERS_OSAGO} />
+				<AnswersList
+					title="Вопросы и ответы"
+					data={ANSWERS_OSAGO}
+					fontSize="h3"
+					page="osago"
+				/>
 			</Section>
 		</main>
 	);

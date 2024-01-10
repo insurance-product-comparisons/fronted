@@ -67,9 +67,9 @@
 
 .arrow-default {
 	padding: 0 !important;
-	fill: var(--black);
 	transition: transform 300ms !important;
-	opacity: 1;
+	opacity: 1 !important;
+	color: var(--black) !important;
 
 	&.focused {
 		width: 24px !important;
