@@ -69,6 +69,7 @@
 	padding: 0 !important;
 	fill: var(--black);
 	transition: transform 300ms !important;
+	opacity: 1;
 
 	&.focused {
 		width: 24px !important;
