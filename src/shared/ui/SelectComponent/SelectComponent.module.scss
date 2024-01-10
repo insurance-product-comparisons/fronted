@@ -16,7 +16,7 @@
 }
 
 .select-dmc-short {
-	width: 162px !important;
+	width: 169px !important;
 }
 
 .select-kasko-short {
@@ -69,6 +69,7 @@
 	padding: 0 !important;
 	fill: var(--black);
 	transition: transform 300ms !important;
+	color: var(--black) !important;
 
 	&.focused {
 		width: 24px !important;

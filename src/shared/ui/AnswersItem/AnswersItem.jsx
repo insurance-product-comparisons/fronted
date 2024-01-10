@@ -5,7 +5,7 @@ import { Typography, List, ListItem } from 'shared/ui';
 import { DEFAULT } from 'shared/utils/constants/modes';
 import styles from './AnswersItem.module.scss';
 
-function AnswersItem({ data, mode = DEFAULT }) {
+function AnswersItem({ data, mode = DEFAULT, padding }) {
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	const componentClassName = classNames(styles[mode], {
@@ -31,7 +31,7 @@ function AnswersItem({ data, mode = DEFAULT }) {
 				<div className={contentClassName}>
 					{typeof data.content === 'object' ? (
 						<div>
-							<Typography variant="body2" padding="answerlist-title">
+							<Typography variant="body2" padding={padding}>
 								{data.content.title}
 							</Typography>
 							<List listmode={data.listmode}>
