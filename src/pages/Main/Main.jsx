@@ -35,7 +35,11 @@ function Main() {
 				/>
 			</Section>
 			<Section>
-				<AnswersList title="Вопросы и ответы" data={ANSWERS_MAIN} />
+				<AnswersList
+					title="Вопросы и ответы"
+					data={ANSWERS_MAIN}
+					fontSize="h2"
+				/>
 			</Section>
 		</main>
 	);

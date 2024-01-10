@@ -1,4 +1,5 @@
 import { Dms } from 'pages';
+import { Default as Layout } from 'components/Layout/Layout.stories';
 import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {
@@ -6,6 +7,11 @@ export default {
 	component: Dms,
 	decorators: [withRouter],
 };
-const Template = (args) => <Dms {...args} />;
 
-export const Default = Template.bind({});
+export const Default = {
+	render: () => (
+		<Layout>
+			<Dms />
+		</Layout>
+	),
+};

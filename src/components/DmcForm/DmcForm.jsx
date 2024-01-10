@@ -6,7 +6,7 @@ function DmcForm() {
 	return (
 		<div className={styles.root}>
 			<Form type="dmc-form">
-				<FormInput select textLabel="Возраст" submode="select-dmc-short" />
+				<FormInput textLabel="Возраст" submode="input-dms" />
 				<FormInput
 					select
 					textLabel="Срок страховки"
