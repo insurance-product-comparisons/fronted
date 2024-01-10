@@ -18,7 +18,7 @@ const defaultValues = {
 	personalData: false,
 };
 
-function ConsultForm() {
+function ConsultForm({ onSubmit }) {
 	const {
 		register,
 		handleSubmit,
@@ -36,6 +36,10 @@ function ConsultForm() {
 	function handleFormSubmit(data) {
 		console.log(data);
 		reset();
+
+		if (onSubmit) {
+			onSubmit(data);
+		}
 	}
 	return (
 		<>

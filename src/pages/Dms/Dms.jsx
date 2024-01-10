@@ -30,7 +30,6 @@ function Dms() {
 					title="Вопросы и ответы"
 					data={ANSWERS_DMS}
 					fontSize="h3"
-					page="dms"
 				/>
 			</Section>
 		</main>
