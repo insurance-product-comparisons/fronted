@@ -8,7 +8,7 @@ function ProductContainer({ data, mode = DEFAULT }) {
 	return (
 		<div className={cn({ [styles[mode]]: mode })}>
 			<div className={cn({ [styles[`title-${mode}`]]: mode })}>
-				<Typography variant="h2">Сравнивайте страховки онлайн</Typography>
+				<Typography variant="h1">Сравнивайте страховки онлайн</Typography>
 			</div>
 			<div className={cn({ [styles[`container-${mode}`]]: mode })}>
 				{data.map((item, id) => (

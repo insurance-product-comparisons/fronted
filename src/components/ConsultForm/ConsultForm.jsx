@@ -41,17 +41,13 @@ function ConsultForm() {
 		<>
 			<div className={styles.container}>
 				<Typography variant={'h2'}>Заявка на консультацию</Typography>
-				<Typography variant={'body2'}>
-					Если у вас возникли вопросы по страхованию, вы можете оставить заявку,
-					и наши специалисты свяжутся с вами в течение 1 часа.
-				</Typography>
 			</div>
 
 			<Form type="consult-form" onSubmit={handleSubmit(handleFormSubmit)}>
 				<div className={cn(styles.box, styles.inputs)}>
 					<FormInput
 						inputId="nameConsult"
-						textLabel="Имя*"
+						textLabel="Имя"
 						name="nameConsult"
 						id="nameConsult"
 						type="text"
@@ -76,7 +72,7 @@ function ConsultForm() {
 					/>
 					<FormInput
 						inputId="surnameConsult"
-						textLabel="Фамилия*"
+						textLabel="Фамилия"
 						name="surnameConsult"
 						id="surnameConsult"
 						type="text"
@@ -99,7 +95,7 @@ function ConsultForm() {
 						render={({ field }) => (
 							<FormInput
 								phone
-								textLabel="Номер телефона*"
+								textLabel="Номер телефона"
 								id="telConsult"
 								errors={errors?.telConsult}
 								ref={inputRef}
@@ -120,7 +116,7 @@ function ConsultForm() {
 						render={({ field }) => (
 							<FormInput
 								textarea
-								textLabel="Ситуация страхования*"
+								textLabel="Ситуация страхования"
 								name="isuranceCase"
 								id="isuranceCase"
 								type="text"
@@ -143,10 +139,6 @@ function ConsultForm() {
 					/>
 				</div>
 				<div className={cn(styles.box, styles.info)}>
-					<Typography
-						variant="body2"
-						children="* — обязательные поля для заполнения"
-					/>
 					<div>
 						<div className={cn(styles.box, styles.checkbox)}>
 							<Checkbox
@@ -158,6 +150,8 @@ function ConsultForm() {
 									required: 'Поле обязательно к заполнению',
 									value: true,
 								}}
+								typoVariant="body2"
+								typoColor="black"
 							/>
 							<LinkComponent link="#" text="персональных данных" mode="bold" />
 						</div>
@@ -166,13 +160,15 @@ function ConsultForm() {
 						</InputError>
 					</div>
 				</div>
-				<Button
-					children="Отправить заявку"
-					type="submit"
-					bgcolor="accent"
-					mode="submit-form"
-					disabled={!isValid}
-				/>
+				<div className={styles['button-wrapper']}>
+					<Button
+						children="Отправить заявку"
+						type="submit"
+						bgcolor="accent"
+						mode="submit-form"
+						disabled={!isValid}
+					/>
+				</div>
 			</Form>
 		</>
 	);
