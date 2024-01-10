@@ -26,7 +26,12 @@ function Dms() {
 				<DmcForm />
 			</Section>
 			<Section>
-				<AnswersList title="Вопросы и ответы" data={ANSWERS_DMS} />
+				<AnswersList
+					title="Вопросы и ответы"
+					data={ANSWERS_DMS}
+					fontSize="h3"
+					page="dms"
+				/>
 			</Section>
 		</main>
 	);
