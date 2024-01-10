@@ -4,7 +4,7 @@ import cn from 'classnames';
 import { DEFAULT } from 'shared/utils/constants/modes';
 import styles from './AnswersList.module.scss';
 
-function AnswersList({ title, data, mode = DEFAULT, fontSize, page }) {
+function AnswersList({ title, data, mode = DEFAULT, fontSize, page, padding }) {
 	return (
 		<>
 			<div className={styles[mode]}>
@@ -17,7 +17,12 @@ function AnswersList({ title, data, mode = DEFAULT, fontSize, page }) {
 					<List mode={mode}>
 						{data.map((item, index) => (
 							<ListItem key={index} mode={mode}>
-								<AnswersItem data={item} mode={mode} listmode={data.listmode} />
+								<AnswersItem
+									data={item}
+									mode={mode}
+									listmode={data.listmode}
+									padding={padding}
+								/>
 							</ListItem>
 						))}
 					</List>
