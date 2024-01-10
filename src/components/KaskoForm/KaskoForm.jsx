@@ -1,7 +1,7 @@
 import Form from 'components/Form';
 import { Button, FormInput } from 'shared/ui';
 import { useForm } from 'react-hook-form';
-import styles from './KaskoFrom.module.scss';
+import styles from './KaskoForm.module.scss';
 
 function KaskoForm() {
 	const {
@@ -36,13 +36,6 @@ function KaskoForm() {
 					submode="select-kasko"
 					name="experience"
 					id="experience"
-				/>
-				<FormInput
-					textLabel="Госномер"
-					mode="kasko"
-					name="carNumber"
-					id="carNumber"
-					register={register}
 				/>
 				<FormInput
 					textLabel="Год выпуска"

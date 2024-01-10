@@ -26,7 +26,12 @@ function Kasko() {
 				<KaskoForm />
 			</Section>
 			<Section>
-				<AnswersList title="Вопросы и ответы" data={ANSWERS_KASKO} />
+				<AnswersList
+					title="Вопросы и ответы"
+					data={ANSWERS_KASKO}
+					fontSize="h3"
+					page="kasko"
+				/>
 			</Section>
 		</main>
 	);
