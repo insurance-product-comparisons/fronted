@@ -41,10 +41,6 @@ function ConsultForm() {
 		<>
 			<div className={styles.container}>
 				<Typography variant={'h2'}>Заявка на консультацию</Typography>
-				{/* <Typography variant={'body2'}>
-					Если у вас возникли вопросы по страхованию, вы можете оставить заявку,
-					и наши специалисты свяжутся с вами в течение 1 часа.
-				</Typography> */}
 			</div>
 
 			<Form type="consult-form" onSubmit={handleSubmit(handleFormSubmit)}>
