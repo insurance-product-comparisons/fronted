@@ -1,7 +1,6 @@
 .default {
 	background-color: var(--white);
 	box-sizing: border-box;
-	margin-bottom: 64px;
 	width: 1136px;
 	height: 732px;
 	padding: 64px 274px;
@@ -25,8 +24,7 @@
 }
 
 .title-main {
-	margin-top: 64px;
-	margin-bottom: 24px;
+	margin-bottom: 25px;
 }
 
 .icon-success {
@@ -42,7 +40,6 @@
 	gap: 16px;
 	text-align: center;
 	padding: 0;
-	letter-spacing: -2.2px;
 }
 
 .icon-and-text {
