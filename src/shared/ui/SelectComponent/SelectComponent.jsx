@@ -18,6 +18,8 @@ function SelectComponent({ options, mode = DEFAULT, placeholder, submode }) {
 			classNames(styles[`arrow-${mode}`], isFocused && styles.focused),
 		option: ({ isDisabled, isFocused, isSelected }) =>
 			classNames(styles[`option-${mode}`], isSelected && styles.selected),
+		menu: (state) => classNames(styles[`menu-${mode}`]),
+		menuList: (state) => classNames(styles[`menu-list-${mode}`]),
 	};
 
 	return (

@@ -32,8 +32,21 @@ const options = [
 	{ value: 'vanilla', label: 'Vanilla' },
 ];
 
+const optionsSort = [
+	{ value: 'popular', label: 'по популярности' },
+	{ value: 'increase', label: 'по возрастанию цены' },
+	{ value: 'decrease', label: 'по убыванию цены' },
+];
+
 export const Default = Template.bind({});
 Default.args = {
 	options: options,
 	placeholder: '',
+};
+
+export const Sort = Template.bind({});
+Sort.args = {
+	options: optionsSort,
+	placeholder: '',
+	mode: 'sort',
 };
