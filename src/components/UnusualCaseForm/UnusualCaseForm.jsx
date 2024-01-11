@@ -191,6 +191,8 @@ function UnusualCaseForm({ onSubmit }) {
 								required: 'Поле обязательно к заполнению',
 								value: true,
 							}}
+							typoVariant="body2"
+							typoColor="black"
 						/>
 
 						<LinkComponent link="#" text="персональных данных" mode="bold" />
