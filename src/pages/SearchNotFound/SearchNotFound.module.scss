@@ -1,0 +1,25 @@
+.root {
+	display: flex;
+	flex-grow: 1;
+   margin: 57px auto;
+}
+
+.container {
+   display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 28px;
+}
+
+.image {
+	background-image: url('/images/search-not-found.svg');
+   width: 366px;
+   height: 366px;
+}
+
+.text-wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   align-items: center;
+}
