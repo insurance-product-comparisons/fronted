@@ -5,7 +5,13 @@ import classNames from 'classnames';
 import Select from 'react-select';
 import styles from './SelectComponent.module.scss';
 
-function SelectComponent({ options, mode = DEFAULT, placeholder, submode }) {
+function SelectComponent({
+	options,
+	mode = DEFAULT,
+	placeholder,
+	submode,
+	initialValue,
+}) {
 	const selectClassNames = {
 		container: (state) => classNames(styles[mode], styles[submode]),
 		control: ({ isDisabled, isFocused }) =>
@@ -28,6 +34,7 @@ function SelectComponent({ options, mode = DEFAULT, placeholder, submode }) {
 			options={options}
 			placeholder={placeholder}
 			noOptionsMessage={() => 'Нет доступных вариантов'}
+			defaultValue={options[0]}
 		/>
 	);
 }
@@ -41,6 +48,8 @@ Select.propTypes = {
 	),
 	mode: PropTypes.string,
 	placeholder: PropTypes.string,
+	submode: PropTypes.string,
+	initialValue: PropTypes.string,
 };
 
 export default SelectComponent;

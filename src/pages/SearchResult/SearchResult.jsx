@@ -17,7 +17,7 @@ function SearchResult() {
 				<div className={styles.container}>
 					<SelectComponent options={OPTIONS_SORT} placeholder="" mode="sort" />
 					<ResultCardContainer data={RESULT_DEFAULT} />
-					<Button bgcolor="ghost" mode="enter">
+					<Button bgcolor="ghost" mode="more">
 						Загрузить ещё
 					</Button>
 				</div>
