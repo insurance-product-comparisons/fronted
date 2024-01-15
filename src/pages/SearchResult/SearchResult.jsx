@@ -9,7 +9,7 @@ function SearchResult() {
 	const [sortValue, setSortValue] = React.useState('popular');
 	const [isShowMore, setIsShowMore] = React.useState(true);
 	const [resultsPerPage, setResultsPerPage] = React.useState(5);
-	const [resultsPerLoad, setResultsPerLoad] = React.useState(3);
+	const [resultsPerLoad] = React.useState(3);
 
 	const handleChange = (selectedOption) => {
 		setSortValue(selectedOption.value);
