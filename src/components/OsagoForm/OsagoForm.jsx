@@ -1,11 +1,18 @@
 import { Form } from 'components';
 import { Button, LinkComponent, FormInput } from 'shared/ui';
+import { RESULT_DEFAULT } from 'shared/store/resultDefault';
+
 import styles from './OsagoForm.module.scss';
 
-function OsagoForm() {
+function OsagoForm({ onSearch }) {
+	function handleSubmit(e) {
+		e.preventDefault();
+		onSearch(RESULT_DEFAULT);
+	}
+
 	return (
 		<div className={styles.wrapper}>
-			<Form type="osago-form">
+			<Form type="osago-form" onSubmit={handleSubmit}>
 				<fieldset className={styles.fieldset}>
 					<FormInput select textLabel="Тип ТС" submode="select-osago" />
 					<FormInput
@@ -47,7 +54,6 @@ function OsagoForm() {
 						type="submit"
 						bgcolor="accent"
 						mode="count"
-						disabled
 					/>
 				</div>
 			</Form>

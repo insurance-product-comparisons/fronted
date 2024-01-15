@@ -2,10 +2,9 @@ import { Section, Breadcrumbs, ResultCardContainer } from 'components';
 import React from 'react';
 import { Typography, SelectComponent, Button } from 'shared/ui';
 import { OPTIONS_SORT } from 'shared/store/sortOptions';
-import { RESULT_DEFAULT } from 'shared/store/resultDefault';
 import styles from './SearchResult.module.scss';
 
-function SearchResult() {
+function SearchResult({ result }) {
 	const [sortValue, setSortValue] = React.useState('popular');
 	const [isShowMore, setIsShowMore] = React.useState(true);
 	const [resultsPerPage, setResultsPerPage] = React.useState(5);
@@ -21,19 +20,19 @@ function SearchResult() {
 
 	const renderList = React.useMemo(() => {
 		if (sortValue === 'popular') {
-			return RESULT_DEFAULT.sort((option1, option2) =>
+			return result.sort((option1, option2) =>
 				option1['rating'] > option2['rating'] ? -1 : 1
 			);
 		} else if (sortValue === 'increase') {
-			return RESULT_DEFAULT.sort((option1, option2) =>
+			return result.sort((option1, option2) =>
 				option1['price']['value'] > option2['price']['value'] ? 1 : -1
 			);
 		} else if (sortValue === 'decrease') {
-			return RESULT_DEFAULT.sort((option1, option2) =>
+			return result.sort((option1, option2) =>
 				option1['price']['value'] > option2['price']['value'] ? -1 : 1
 			);
 		}
-	}, [sortValue]);
+	}, [sortValue, result]);
 
 	React.useEffect(() => {
 		if (renderList.length <= resultsPerPage) {

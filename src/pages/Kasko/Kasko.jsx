@@ -10,7 +10,7 @@ import { ANSWERS_KASKO } from 'shared/store/answers';
 import CARD_STAGES from 'shared/utils/constants/cardStages';
 import styles from './Kasko.module.scss';
 
-function Kasko() {
+function Kasko({ onSearch }) {
 	return (
 		<main className={styles.root}>
 			<Section>
@@ -23,7 +23,7 @@ function Kasko() {
 				<StagesContainer data={CARD_STAGES} />
 			</Section>
 			<Section>
-				<KaskoForm />
+				<KaskoForm onSearch={onSearch} />
 			</Section>
 			<Section>
 				<AnswersList
