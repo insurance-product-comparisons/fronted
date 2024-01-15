@@ -1,4 +1,9 @@
-import { Section, Breadcrumbs, ResultCardContainer } from 'components';
+import {
+	Section,
+	Breadcrumbs,
+	ResultCardContainer,
+	SearchNotFound,
+} from 'components';
 import React from 'react';
 import { Typography, SelectComponent, Button } from 'shared/ui';
 import { OPTIONS_SORT } from 'shared/store/sortOptions';
@@ -7,6 +12,7 @@ import styles from './SearchResult.module.scss';
 function SearchResult({ result }) {
 	const [sortValue, setSortValue] = React.useState('popular');
 	const [isShowMore, setIsShowMore] = React.useState(true);
+	const [isResult, setIsResult] = React.useState(false);
 	const [resultsPerPage, setResultsPerPage] = React.useState(5);
 	const [resultsPerLoad] = React.useState(3);
 
@@ -40,30 +46,47 @@ function SearchResult({ result }) {
 		}
 	}, [renderList, resultsPerPage]);
 
+	React.useEffect(() => {
+		if (result.length !== 0) {
+			setIsResult(true);
+		} else {
+			setIsResult(false);
+		}
+	}, [result]);
+
 	return (
 		<main className={styles.root}>
 			<Section>
 				<Breadcrumbs />
 			</Section>
-			<Section>
-				<Typography variant="h2">Выбор страховой компании</Typography>
-			</Section>
-			<Section>
-				<div className={styles.container}>
-					<SelectComponent
-						options={OPTIONS_SORT}
-						placeholder=""
-						mode="sort"
-						onChange={handleChange}
-					/>
-					<ResultCardContainer data={renderList.slice(0, resultsPerPage)} />
-					{isShowMore && (
-						<Button bgcolor="ghost" mode="more" onClick={showMoreResults}>
-							Загрузить ещё
-						</Button>
-					)}
-				</div>
-			</Section>
+			{isResult && (
+				<>
+					<Section>
+						<Typography variant="h2">Выбор страховой компании</Typography>
+					</Section>
+					<Section>
+						<div className={styles.container}>
+							<SelectComponent
+								options={OPTIONS_SORT}
+								placeholder=""
+								mode="sort"
+								onChange={handleChange}
+							/>
+							<ResultCardContainer data={renderList.slice(0, resultsPerPage)} />
+							{isShowMore && (
+								<Button bgcolor="ghost" mode="more" onClick={showMoreResults}>
+									Загрузить ещё
+								</Button>
+							)}
+						</div>
+					</Section>
+				</>
+			)}
+			{!isResult && (
+				<Section>
+					<SearchNotFound />
+				</Section>
+			)}
 		</main>
 	);
 }

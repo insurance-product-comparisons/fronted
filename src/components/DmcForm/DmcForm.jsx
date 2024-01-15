@@ -26,7 +26,6 @@ function DmcForm({ onSearch }) {
 						type="submit"
 						bgcolor="accent"
 						mode="count"
-						disabled
 					/>
 				</div>
 			</Form>
