@@ -1,9 +1,10 @@
 import Form from 'components/Form';
 import { Button, FormInput } from 'shared/ui';
 import { useForm } from 'react-hook-form';
+import { RESULT_DEFAULT } from 'shared/store/resultDefault';
 import styles from './KaskoForm.module.scss';
 
-function KaskoForm() {
+function KaskoForm({ onSearch }) {
 	const {
 		register,
 		formState: { isValid },
@@ -11,9 +12,14 @@ function KaskoForm() {
 		mode: 'onChange',
 	});
 
+	function handleSubmit(e) {
+		e.preventDefault();
+		onSearch(RESULT_DEFAULT);
+	}
+
 	return (
 		<div className={styles.wrapper}>
-			<Form type="kasko-form">
+			<Form type="kasko-form" onSubmit={handleSubmit}>
 				<div className={styles.flexInput}>
 					<FormInput
 						select

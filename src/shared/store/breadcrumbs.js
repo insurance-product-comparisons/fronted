@@ -16,15 +16,15 @@ export const CRUMBS = [
 		breadcrumb: 'Добровольное медицинское страхование',
 	},
 	{
-		path: '/osago/choose',
+		path: '/osago/result',
 		breadcrumb: 'Выбор страховой компании',
 	},
 	{
-		path: '/kasko/choose',
+		path: '/kasko/result',
 		breadcrumb: 'Выбор страховой компании',
 	},
 	{
-		path: '/dms/choose',
+		path: '/dms/result',
 		breadcrumb: 'Выбор страховой компании',
 	},
 	{
