@@ -1,4 +1,5 @@
 import { SearchResult } from 'pages';
+import { RESULT_DEFAULT } from 'shared/store/resultDefault';
 import { Default as Layout } from 'components/Layout/Layout.stories';
 import {
 	reactRouterParameters,
@@ -10,14 +11,14 @@ export default {
 	decorators: [withRouter],
 	parameters: {
 		reactRouter: reactRouterParameters({
-			routing: { path: '/search-result' },
+			routing: { path: '/osago/result' },
 		}),
 	},
 };
 export const Default = {
 	render: () => (
 		<Layout>
-			<SearchResult />
+			<SearchResult result={RESULT_DEFAULT} />
 		</Layout>
 	),
 };

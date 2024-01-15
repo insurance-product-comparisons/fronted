@@ -1,23 +1,9 @@
-import { SearchNotFound } from 'pages';
-import { Default as Layout } from 'components/Layout/Layout.stories';
-import {
-	reactRouterParameters,
-	withRouter,
-} from 'storybook-addon-react-router-v6';
+import { SearchNotFound } from 'components';
+
 export default {
-	title: 'Pages/Ничего не найдено',
+	title: 'Components/Продукты не найдены',
 	component: SearchNotFound,
-	decorators: [withRouter],
-	parameters: {
-		reactRouter: reactRouterParameters({
-			routing: { path: '/not-found' },
-		}),
-	},
 };
 export const Default = {
-	render: () => (
-		<Layout>
-			<SearchNotFound />
-		</Layout>
-	),
+	render: () => <SearchNotFound />,
 };
