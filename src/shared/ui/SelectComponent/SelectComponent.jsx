@@ -6,11 +6,11 @@ import Select from 'react-select';
 import styles from './SelectComponent.module.scss';
 
 function SelectComponent({
-	options,
+	options = [],
 	mode = DEFAULT,
 	placeholder,
 	submode,
-	initialValue,
+	...props
 }) {
 	const selectClassNames = {
 		container: (state) => classNames(styles[mode], styles[submode]),
@@ -35,6 +35,7 @@ function SelectComponent({
 			placeholder={placeholder}
 			noOptionsMessage={() => 'Нет доступных вариантов'}
 			defaultValue={options[0]}
+			{...props}
 		/>
 	);
 }
