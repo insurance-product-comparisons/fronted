@@ -5,10 +5,10 @@ export const RESULT_DEFAULT = [
 		rating: 4.9,
 		franchise: {
 			name: 'Франшиза',
-			sum: 15000,
+			sum: '15 000 ₽',
 		},
 		period: { name: 'Срок', value: '1 год' },
-		price: { name: 'Цена', value: 10000 },
+		price: { name: 'Цена', value: '10 000 ₽' },
 	},
 	{
 		id: '2',
@@ -16,10 +16,10 @@ export const RESULT_DEFAULT = [
 		rating: 4.8,
 		franchise: {
 			name: 'Франшиза',
-			sum: 15000,
+			sum: '15 000 ₽',
 		},
 		period: { name: 'Срок', value: '1 год' },
-		price: { name: 'Цена', value: 1000 },
+		price: { name: 'Цена', value: '10 000 ₽' },
 	},
 	{
 		id: '3',
@@ -27,10 +27,10 @@ export const RESULT_DEFAULT = [
 		rating: 4.5,
 		franchise: {
 			name: 'Франшиза',
-			sum: 15000,
+			sum: '15 000 ₽',
 		},
 		period: { name: 'Срок', value: '1 год' },
-		price: { name: 'Цена', value: 12000 },
+		price: { name: 'Цена', value: '12 000 ₽' },
 	},
 	{
 		id: '4',
@@ -38,10 +38,10 @@ export const RESULT_DEFAULT = [
 		rating: 4.1,
 		franchise: {
 			name: 'Франшиза',
-			sum: 15000,
+			sum: '15 000 ₽',
 		},
 		period: { name: 'Срок', value: '1 год' },
-		price: { name: 'Цена', value: 13000 },
+		price: { name: 'Цена', value: '13 000 ₽' },
 	},
 	{
 		id: '5',
@@ -49,10 +49,10 @@ export const RESULT_DEFAULT = [
 		rating: 3.9,
 		franchise: {
 			name: 'Франшиза',
-			sum: 15000,
+			sum: '15 000 ₽',
 		},
 		period: { name: 'Срок', value: '1 год' },
-		price: { name: 'Цена', value: 10900 },
+		price: { name: 'Цена', value: '10 900 ₽' },
 	},
 	{
 		id: '6',
@@ -60,9 +60,9 @@ export const RESULT_DEFAULT = [
 		rating: 3.0,
 		franchise: {
 			name: 'Франшиза',
-			sum: 15000,
+			sum: '15 000 ₽',
 		},
 		period: { name: 'Срок', value: '1 год' },
-		price: { name: 'Цена', value: 11000 },
+		price: { name: 'Цена', value: '11 000 ₽' },
 	},
 ];
