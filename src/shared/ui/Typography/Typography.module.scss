@@ -12,6 +12,16 @@
 	font-size: 36px;
 	font-weight: 700;
 	line-height: 44px;
+
+	@include tablet {
+		font-size: 28px;
+		line-height: 34px;
+	}
+
+	@include mobile {
+		font-size: 22px;
+		line-height: 28px;
+	}
 }
 
 .typography--variant-h3 {
@@ -19,6 +29,16 @@
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 36px;
+
+	@include tablet {
+		font-size: 26px;
+		line-height: 32px;
+	}
+
+	@include mobile {
+		font-size: 22px;
+		line-height: 28px;
+	}
 }
 
 .typography--variant-h4 {
@@ -33,6 +53,16 @@
 	font-size: 96px;
 	font-weight: 400;
 	line-height: 84px;
+
+	@include tablet {
+		font-size: 64px;
+		line-height: 60px;
+	}
+
+	@include mobile {
+		font-size: 64px;
+		line-height: 60px;
+	}
 }
 
 .typography--variant-body1 {
@@ -41,6 +71,18 @@
 	font-weight: 700;
 	line-height: 24px;
 	white-space: pre-wrap;
+
+	@include tablet {
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+
+	@include mobile {
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 400;
+	}
 }
 
 .typography--variant-body2 {
@@ -55,6 +97,11 @@
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 20px;
+
+	@include mobile {
+		font-size: 14px;
+		line-height: 20px;
+	}
 }
 
 .typography--color-black {

@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .default {
 	width: 324px !important;
 	height: 56px !important;
@@ -16,6 +18,10 @@
 
 .select-kasko {
 	width: 551px !important;
+
+	@include mobile {
+		width: 100% !important;
+	}
 }
 
 .select-dmc {
@@ -28,6 +34,10 @@
 
 .select-kasko-short {
 	width: 265px !important;
+
+	@include mobile {
+		width: 100% !important;
+	}
 }
 
 .control-default {

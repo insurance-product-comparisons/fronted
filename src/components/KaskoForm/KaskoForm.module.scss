@@ -1,6 +1,13 @@
+@import 'app/styles/sass/mixins.scss';
+
 .flexInput {
 	display: flex;
 	gap: 20px;
+
+	@include mobile {
+		flex-direction: column;
+		gap: 0;
+	}
 }
 
 .btn {
@@ -9,4 +16,8 @@
 
 .wrapper {
 	padding-bottom: 46px;
+
+	@include mobile {
+		padding-bottom: 40px;
+	}
 }

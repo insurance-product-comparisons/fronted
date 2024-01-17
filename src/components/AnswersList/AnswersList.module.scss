@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .default {
 	display: flex;
 	flex-direction: column;
@@ -16,5 +18,15 @@
 
 	&.kasko {
 		margin-bottom: 105px;
+
+		@include tablet {
+			padding: 20px 50px;
+			margin-bottom: 40px;
+		}
+
+		@include mobile {
+			padding: 18px 20px;
+			margin-bottom: 40px;
+		}
 	}
 }

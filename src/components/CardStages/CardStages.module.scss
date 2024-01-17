@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .default {
 	display: flex;
 	width: 301px;
@@ -7,4 +9,17 @@
 	margin: 0;
 	background-color: var(--white);
 	gap: 16px;
+
+	@include tablet {
+		padding: 28px 20px;
+		width: 635px;
+		height: 100%;
+		align-items: center;
+	}
+
+	@include mobile {
+		padding: 28px 20px;
+		width: 288px;
+		height: 100%;
+	}
 }
