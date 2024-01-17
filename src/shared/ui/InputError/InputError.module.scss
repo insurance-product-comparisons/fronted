@@ -1,5 +1,12 @@
+@import 'app/styles/sass/mixins.scss';
+
 .default {
 	display: block;
 	min-height: 20px;
 	color: var(--red);
+
+	@include mobile {
+		min-height: 16px;
+	}
+
 }

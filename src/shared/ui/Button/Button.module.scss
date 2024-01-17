@@ -37,6 +37,10 @@
 		width: 157px;
 		height: 56px;
 		align-self: flex-start;
+
+		@include mobile {
+			width: 100%;
+		}
 	}
 
 	&.result {

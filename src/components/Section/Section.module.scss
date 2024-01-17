@@ -1,4 +1,10 @@
+@import 'app/styles/sass/mixins.scss';
+
 .root {
 	margin: 0 auto;
 	max-width: var(--max-width-section);
+
+	@include mobile {
+		max-width: 328px;
+	}
 }

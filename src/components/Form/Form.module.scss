@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .root {
 	display: flex;
 	flex-direction: row;
@@ -41,6 +43,12 @@
 		padding: 64px 0;
 		min-width: 936px;
 		justify-content: space-between;
+
+		@include mobile {
+			min-width: 100%;
+			padding: 28px 0 24px;
+			justify-content: center;
+		}
 	}
 
 	&.dmc-form {
@@ -56,6 +64,10 @@
 		align-items: flex-end;
 		padding-top: 76px;
 		padding-bottom: 77px;
+	}
+
+	@include mobile {
+		flex-direction: column;
 	}
 }
 
@@ -75,6 +87,10 @@
 	&.kasko-form {
 		max-width: 551px;
 		gap: 5px;
+
+		@include mobile {
+			min-width: 288px;
+		}
 	}
 
 	&.dmc-form {
@@ -111,6 +127,13 @@
 		height: 288px;
 		align-self: flex-start;
 		margin-top: 48px;
+
+		@include mobile {
+			margin-top: 20px;
+			width: 289px;
+			height: 230px;
+			align-self: center;
+		}
 	}
 
 	&.dmc-form {

@@ -1,6 +1,15 @@
+@import 'app/styles/sass/mixins.scss';
+
 .default {
 	margin: 0;
 	padding: 41px 0 48px;
 	display: flex;
 	justify-content: space-between;
+
+	@include mobile {
+		padding-top: 24px;
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+	}
 }

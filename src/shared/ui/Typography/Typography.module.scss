@@ -12,6 +12,11 @@
 	font-size: 36px;
 	font-weight: 700;
 	line-height: 44px;
+
+	@include mobile {
+		font-size: 22px;
+		line-height: 28px;
+	}
 }
 
 .typography--variant-h3 {
@@ -19,6 +24,11 @@
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 36px;
+
+	@include mobile {
+		font-size: 22px;
+		line-height: 28px;
+	}
 }
 
 .typography--variant-h4 {
@@ -33,6 +43,12 @@
 	font-size: 96px;
 	font-weight: 400;
 	line-height: 84px;
+
+	@include mobile {
+		font-size: 64px;
+		line-height: 60px;
+		font-weight: 400;
+	}
 }
 
 .typography--variant-body1 {
@@ -41,6 +57,12 @@
 	font-weight: 700;
 	line-height: 24px;
 	white-space: pre-wrap;
+
+	@include mobile {
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 400;
+	}
 }
 
 .typography--variant-body2 {
