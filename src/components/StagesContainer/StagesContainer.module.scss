@@ -6,6 +6,15 @@
 	display: flex;
 	justify-content: space-between;
 
+	@include tablet {
+		padding-top: 24px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		width: 100%;
+	}
+
 	@include mobile {
 		padding-top: 24px;
 		flex-direction: column;

@@ -10,6 +10,12 @@
 	background-color: var(--white);
 	gap: 16px;
 
+	@include tablet {
+		padding: 28px 20px;
+		width: 500px;
+		height: 100%;
+	}
+
 	@include mobile {
 		padding: 28px 20px;
 		width: 288px;

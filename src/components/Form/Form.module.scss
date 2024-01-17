@@ -44,10 +44,14 @@
 		min-width: 936px;
 		justify-content: space-between;
 
+		@include tablet {
+			min-width: 100%;
+			justify-content: center;
+		}
+
 		@include mobile {
 			min-width: 100%;
 			padding: 28px 0 24px;
-			justify-content: center;
 		}
 	}
 
@@ -66,9 +70,10 @@
 		padding-bottom: 77px;
 	}
 
-	@include mobile {
+	@include tablet {
 		flex-direction: column;
 	}
+
 }
 
 .form {
@@ -127,6 +132,10 @@
 		height: 288px;
 		align-self: flex-start;
 		margin-top: 48px;
+
+		@include tablet {
+			display: none;
+		}
 
 		@include mobile {
 			margin-top: 20px;

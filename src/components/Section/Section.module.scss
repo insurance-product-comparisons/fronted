@@ -4,6 +4,10 @@
 	margin: 0 auto;
 	max-width: var(--max-width-section);
 
+	@include tablet {
+		max-width: 675px;
+	}
+
 	@include mobile {
 		max-width: 328px;
 	}
