@@ -35,11 +35,16 @@ function Sber({ id = '1' }) {
 					</Section>
 					<Section>
 						<Typography variant={'h4'}>О компании</Typography>
-						<Typography variant={'body2'}>
-							ООО СК «Сбербанк Страхование» предоставляет широкий спектр
-							страховых услуг в сегменте имущественного и личного страхования,
-							кроме страхования жизни. Компания основана в 2014 году.
-						</Typography>
+						<div className={styles['about-container']}>
+							<Typography variant={'body2'}>
+								ООО СК «Сбербанк Страхование» предоставляет широкий спектр
+								страховых услуг в сегменте имущественного и личного страхования,
+								кроме страхования жизни.
+							</Typography>
+							<Typography variant={'body2'}>
+								Компания основана в 2014 году.
+							</Typography>
+						</div>
 					</Section>
 					<Section>
 						<Typography variant={'h4'}>Что входит в страхование</Typography>
@@ -58,22 +63,24 @@ function Sber({ id = '1' }) {
 					<Section>
 						<Typography variant={'h4'}>Лицензии</Typography>
 						<Typography variant={'body2'}>
-							АА №0123-44 АА №0123-44 АА №0123-44 АА
+							<span className={styles.license}>
+								АА №0123-44 АА №0123-44 АА №0123-44 АА
+							</span>
 						</Typography>
 					</Section>
 					<Section>
 						<div className={styles['button-container']}>
-							<Button type="button" bgcolor="accent" mode="count">
+							<Button type="button" bgcolor="ghost" mode={SBERBANK}>
 								Вернуться к выбору
 							</Button>
-							<Button type="button" bgcolor="ghost" mode="count">
+							<Button type="button" bgcolor="accent" mode={SBERBANK}>
 								Перейти на сайт
 							</Button>
 						</div>
 					</Section>
 				</div>
 				<div className={styles['right-column']}>
-					<Logo mode={'sberbank'} />
+					<Logo mode={SBERBANK} />
 				</div>
 			</div>
 		</main>

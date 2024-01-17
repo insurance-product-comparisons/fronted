@@ -54,6 +54,11 @@
 		cursor: auto;
 	}
 
+	&.sberbank {
+		min-width: 227px;
+		height: 56px;
+	}
+
 	@include hover;
 }
 
@@ -93,6 +98,12 @@
 		color: var(--grey-1);
 		border-color: var(--grey-1);
 		cursor: auto;
+	}
+
+	&.sberbank {
+		min-width: 196px;
+		height: 56px;
+		padding: 0 32px;
 	}
 
 	@include hover;
