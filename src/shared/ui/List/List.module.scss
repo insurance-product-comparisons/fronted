@@ -96,3 +96,13 @@
 	margin: 0;
 	gap: 16px;
 }
+
+
+.tinkoff {
+  list-style: none;
+	padding: 0;
+	margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
