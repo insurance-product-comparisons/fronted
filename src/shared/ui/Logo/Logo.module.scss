@@ -25,4 +25,10 @@
 		height: 64px;
 		border-radius: 12px;
 	}
+
+	&.sberbank {
+		background-image: url('/images/logo_sber.svg');
+		width: 269px;
+		height: 25px;
+	}
 }

@@ -1,0 +1,25 @@
+.root {
+	flex-grow: 1;
+}
+
+.container {
+	display: flex;
+	margin-inline: auto;
+	max-width: 1136px;
+	gap: 20px;
+}
+
+.left-column {
+	display: flex;
+	flex-direction: column;
+	max-width: 847px;
+	gap: 40px;
+}
+
+.left-column section {
+	margin: 0;
+}
+
+.rating-container {
+	margin-top: 8px;
+}

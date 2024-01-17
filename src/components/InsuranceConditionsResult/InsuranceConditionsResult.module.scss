@@ -1,6 +1,10 @@
 .container {
 	display: flex;
 	column-gap: 40px;
+
+	&.sberbank {
+		column-gap: 20px;
+	}
 }
 
 .conditions-item {
@@ -8,6 +12,16 @@
 	margin-bottom: 5px;
 	flex-direction: column;
 	row-gap: 12px;
+
+	&.sberbank {
+		display: flex;
+		width: 173px;
+		height: 108px;
+		border-radius: 12px;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--white);
+	}
 }
 
 .value-container {

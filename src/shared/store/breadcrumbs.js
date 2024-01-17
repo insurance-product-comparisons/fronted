@@ -28,6 +28,10 @@ export const CRUMBS = [
 		breadcrumb: 'Выбор страховой компании',
 	},
 	{
+		path: '/osago/result/sberbank',
+		breadcrumb: 'СберСтрахование',
+	},
+	{
 		path: '/osago/choose/vsk',
 		breadcrumb: 'ВСК',
 	},
@@ -38,10 +42,6 @@ export const CRUMBS = [
 	{
 		path: '/dms/choose/vsk',
 		breadcrumb: 'ВСК',
-	},
-	{
-		path: '/osago/choose/sber',
-		breadcrumb: 'СберСтрахование',
 	},
 	{
 		path: '/kasko/choose/sber',
