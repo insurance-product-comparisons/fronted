@@ -95,5 +95,10 @@
 		cursor: auto;
 	}
 
+  &.back-button {
+    min-width: 227px;
+		height: 56px;
+  }
+
 	@include hover;
 }
