@@ -2,11 +2,11 @@
 	display: flex;
 	column-gap: 40px;
 
-  &.tinkoff {
-    width: 654px;
-    height: 108px;
-    gap: 20px;
-  }
+	&.tinkoff {
+		width: 654px;
+		height: 108px;
+		gap: 20px;
+	}
 }
 
 .conditions-item {
@@ -15,12 +15,12 @@
 	flex-direction: column;
 	row-gap: 12px;
 
-  &.tinkoff {
-    background-color: var(--white);
-    width: 100%;
-    border-radius: 12px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-  }
+	&.tinkoff {
+		background-color: var(--white);
+		width: 100%;
+		border-radius: 12px;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 0;
+	}
 }
