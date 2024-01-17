@@ -12,8 +12,9 @@
 
 	@include tablet {
 		padding: 28px 20px;
-		width: 500px;
+		width: 635px;
 		height: 100%;
+		align-items: center;
 	}
 
 	@include mobile {
