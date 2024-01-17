@@ -9,3 +9,17 @@
 	flex-direction: column;
 	row-gap: 12px;
 }
+
+.value-container {
+	&::after {
+		content: '₽';
+		margin-left: 3px;
+	}
+}
+
+.year-container {
+	&::after {
+		content: 'год';
+		margin-left: 3px;
+	}
+}
