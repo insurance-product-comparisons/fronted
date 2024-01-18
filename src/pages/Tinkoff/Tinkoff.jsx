@@ -8,10 +8,17 @@ import {
 import { SERVICES_TINKOFF } from 'shared/store/servicesTinkoff';
 import { Button, Typography } from 'shared/ui';
 import { TINKOFF } from 'shared/utils/constants/modes';
+import { useNavigate } from 'react-router-dom';
 import styles from './Tinkoff.module.scss';
 
 function Tinkoff({ result }) {
 	const companyData = result.find((company) => TINKOFF === company.code);
+	const navigate = useNavigate();
+
+	function handleBackButton() {
+		navigate(-1);
+	}
+
 	return (
 		<main>
 			<Section>
@@ -79,6 +86,7 @@ function Tinkoff({ result }) {
 						type="button"
 						bgcolor="ghost"
 						mode="back-button"
+						onClick={handleBackButton}
 					/>
 					<Button children="Перейти на сайт " type="button" bgcolor="accent" />
 				</section>

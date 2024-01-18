@@ -9,10 +9,16 @@ import { Typography, List, ListItem, Button, Logo } from 'shared/ui';
 import { DOCUMENTS } from 'shared/store/sberbank';
 import { SBERBANK, SBERBANK_SERV } from 'shared/utils/constants/modes';
 import { SERVICES_SBERBANK } from 'shared/store/servicesSber';
+import { useNavigate } from 'react-router-dom';
 import styles from './Sber.module.scss';
 
 function Sber({ result }) {
+	const navigate = useNavigate();
 	const companyData = result.find((company) => SBERBANK === company.code);
+
+	function handleBackButton() {
+		navigate(-1);
+	}
 
 	return (
 		<main className={styles.root}>
@@ -71,7 +77,12 @@ function Sber({ result }) {
 					</Section>
 					<Section>
 						<div className={styles['button-container']}>
-							<Button type="button" bgcolor="ghost" mode={SBERBANK}>
+							<Button
+								type="button"
+								bgcolor="ghost"
+								mode={SBERBANK}
+								onClick={handleBackButton}
+							>
 								Вернуться к выбору
 							</Button>
 							<Button type="button" bgcolor="accent" mode={SBERBANK}>
