@@ -32,7 +32,6 @@ function InsuranceConditionsResult({ data, page, font }) {
 						{data.price.value.replace(REG_VALUE, REG_SPACE)}
 					</span>
 				</Typography>
-
 			</div>
 		</div>
 	);

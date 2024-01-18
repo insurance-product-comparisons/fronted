@@ -8,4 +8,14 @@ import SearchResult from './SearchResult';
 import Sber from './Sber';
 import Tinkoff from './Tinkoff';
 
-export { Main, Osago, Kasko, Dms, Request, NotFound, SearchResult, Tinkoff, Sber };
+export {
+	Main,
+	Osago,
+	Kasko,
+	Dms,
+	Request,
+	NotFound,
+	SearchResult,
+	Tinkoff,
+	Sber,
+};

@@ -47,10 +47,10 @@
 	font-weight: 700;
 	line-height: 32px;
 
-  @include tablet {
-    font-size: 18px;
-    line-height: 24px;
-  }
+	@include tablet {
+		font-size: 18px;
+		line-height: 24px;
+	}
 }
 
 .typography--variant-h5 {
