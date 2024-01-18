@@ -7,6 +7,7 @@ import NotFound from './NotFound';
 import SearchResult from './SearchResult';
 import Sber from './Sber';
 import Tinkoff from './Tinkoff';
+import CompaniesPage from './CompaniesPage';
 
 export {
 	Main,
@@ -18,4 +19,5 @@ export {
 	SearchResult,
 	Tinkoff,
 	Sber,
+	CompaniesPage,
 };

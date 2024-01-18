@@ -10,7 +10,7 @@ import {
 	Request,
 	NotFound,
 	SearchResult,
-	Sber,
+	CompaniesPage,
 } from 'pages';
 
 function App() {
@@ -44,8 +44,7 @@ function App() {
 					path="/osago/result"
 					element={<SearchResult result={osagoResult} />}
 				/>
-
-				<Route path="/osago/result/sberbank" element={<Sber />} />
+				<Route path="/osago/result/:code" element={<CompaniesPage />} />
 
 				<Route path="/kasko" element={<Kasko onSearch={handleKaskoSearch} />} />
 				<Route
