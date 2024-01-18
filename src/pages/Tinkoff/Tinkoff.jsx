@@ -7,7 +7,7 @@ import {
 } from 'components';
 import { CONDITIONS_RESULT_TINKOFF } from 'shared/store/insuranceCompany';
 import { SERVICES_TINKOFF } from 'shared/store/servicesTinkoff';
-import { Button, List, ListItem, Typography } from 'shared/ui';
+import { Button, Typography } from 'shared/ui';
 import styles from './Tinkoff.module.scss';
 
 function Tinkoff() {

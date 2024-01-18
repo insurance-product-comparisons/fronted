@@ -4,8 +4,8 @@
 
 	&.sberbank {
 		column-gap: 20px;
-  }
-  
+	}
+
 	&.tinkoff {
 		width: 654px;
 		height: 108px;
@@ -19,7 +19,6 @@
 	flex-direction: column;
 	row-gap: 12px;
 
-
 	&.sberbank {
 		display: flex;
 		width: 173px;
@@ -29,8 +28,8 @@
 		align-items: center;
 		background-color: var(--white);
 	}
-  
-  &.tinkoff {
+
+	&.tinkoff {
 		background-color: var(--white);
 		width: 100%;
 		border-radius: 12px;
@@ -51,4 +50,5 @@
 	&::after {
 		content: 'год';
 		margin-left: 3px;
+	}
 }
