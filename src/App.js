@@ -10,6 +10,7 @@ import {
 	Request,
 	NotFound,
 	SearchResult,
+	Sber,
 } from 'pages';
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
 					path="/osago/result"
 					element={<SearchResult result={osagoResult} />}
 				/>
+
+				<Route path="/osago/result/sberbank" element={<Sber />} />
+
 				<Route path="/kasko" element={<Kasko onSearch={handleKaskoSearch} />} />
 				<Route
 					path="/kasko/result"

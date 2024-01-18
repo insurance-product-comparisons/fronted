@@ -97,6 +97,16 @@
 	gap: 16px;
 }
 
+
+.sberbank {
+	display: flex;
+	flex-direction: column;
+	width: 559px;
+	margin: 28px 0 0 15px;
+	padding: 0;
+	list-style: disc;
+}
+
 .tinkoff {
 	list-style: none;
 	padding: 0;

@@ -2,6 +2,10 @@
 	display: flex;
 	column-gap: 40px;
 
+	&.sberbank {
+		column-gap: 20px;
+  }
+  
 	&.tinkoff {
 		width: 654px;
 		height: 108px;
@@ -15,7 +19,18 @@
 	flex-direction: column;
 	row-gap: 12px;
 
-	&.tinkoff {
+
+	&.sberbank {
+		display: flex;
+		width: 173px;
+		height: 108px;
+		border-radius: 12px;
+		justify-content: center;
+		align-items: center;
+		background-color: var(--white);
+	}
+  
+  &.tinkoff {
 		background-color: var(--white);
 		width: 100%;
 		border-radius: 12px;
@@ -23,4 +38,17 @@
 		align-items: center;
 		margin-bottom: 0;
 	}
+}
+
+.value-container {
+	&::after {
+		content: '₽';
+		margin-left: 3px;
+	}
+}
+
+.year-container {
+	&::after {
+		content: 'год';
+		margin-left: 3px;
 }

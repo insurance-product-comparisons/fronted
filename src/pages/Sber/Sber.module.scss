@@ -1,0 +1,44 @@
+.root {
+	flex-grow: 1;
+	padding-bottom: 100px;
+}
+
+.container {
+	display: flex;
+	margin-inline: auto;
+	max-width: 1136px;
+	gap: 20px;
+}
+
+.left-column {
+	display: flex;
+	flex-direction: column;
+	width: 847px;
+	gap: 40px;
+}
+
+.left-column section {
+	margin: 0;
+}
+
+.rating-container {
+	margin-top: 8px;
+}
+
+.about-container {
+	display: flex;
+	max-width: 558px;
+	flex-direction: column;
+	margin-top: 28px;
+	gap: 10px;
+}
+
+.license {
+	display: block;
+	margin-top: 28px;
+}
+
+.button-container {
+	display: flex;
+	gap: 24px;
+}
