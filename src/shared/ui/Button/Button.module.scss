@@ -104,6 +104,11 @@
 		min-width: 196px;
 		height: 56px;
 		padding: 0 32px;
+  }
+
+	&.back-button {
+		min-width: 227px;
+		height: 56px;
 	}
 
 	@include hover;

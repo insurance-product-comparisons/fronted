@@ -6,5 +6,6 @@ import Request from './Request';
 import NotFound from './NotFound';
 import SearchResult from './SearchResult';
 import Sber from './Sber';
+import Tinkoff from './Tinkoff';
 
-export { Main, Osago, Kasko, Dms, Request, NotFound, SearchResult, Sber };
+export { Main, Osago, Kasko, Dms, Request, NotFound, SearchResult, Tinkoff, Sber };
