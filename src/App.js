@@ -44,17 +44,28 @@ function App() {
 					path="/osago/result"
 					element={<SearchResult result={osagoResult} />}
 				/>
-				<Route path="/osago/result/:code" element={<CompaniesPage />} />
+				<Route
+					path="/osago/result/:code"
+					element={<CompaniesPage result={osagoResult} />}
+				/>
 
 				<Route path="/kasko" element={<Kasko onSearch={handleKaskoSearch} />} />
 				<Route
 					path="/kasko/result"
 					element={<SearchResult result={kaskoResult} />}
 				/>
+				<Route
+					path="/kasko/result/:code"
+					element={<CompaniesPage result={kaskoResult} />}
+				/>
 				<Route path="/dms" element={<Dms onSearch={handleDmsSearch} />} />
 				<Route
 					path="/dms/result"
 					element={<SearchResult result={dmsResult} />}
+				/>
+				<Route
+					path="/dms/result/:code"
+					element={<CompaniesPage result={dmsResult} />}
 				/>
 				<Route path="/request" element={<Request />} />
 				{/* <Route path="/products/:id" element={<Product />} /> Просмотр предложения страхованя */}

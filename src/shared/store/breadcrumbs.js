@@ -32,35 +32,35 @@ export const CRUMBS = [
 		breadcrumb: 'СберСтрахование',
 	},
 	{
-		path: '/osago/choose/vsk',
+		path: '/osago/result/tinkoff',
+		breadcrumb: 'Тинкофф Страхование',
+	},
+	{
+		path: '/osago/result/vsk',
 		breadcrumb: 'ВСК',
 	},
 	{
-		path: '/kasko/choose/vsk',
-		breadcrumb: 'ВСК',
-	},
-	{
-		path: '/dms/choose/vsk',
-		breadcrumb: 'ВСК',
-	},
-	{
-		path: '/kasko/choose/sber',
+		path: '/kasko/result/sberbank',
 		breadcrumb: 'СберСтрахование',
 	},
 	{
-		path: '/dms/choose/sber',
+		path: '/kasko/result/tinkoff',
+		breadcrumb: 'Тинкофф Страхование',
+	},
+	{
+		path: '/kasko/result/vsk',
+		breadcrumb: 'ВСК',
+	},
+	{
+		path: '/dms/result/sberbank',
 		breadcrumb: 'СберСтрахование',
 	},
 	{
-		path: '/osago/choose/tinkoff',
-		breadcrumb: 'Тинькофф Страхование',
+		path: '/dms/result/tinkoff',
+		breadcrumb: 'Тинкофф Страхование',
 	},
 	{
-		path: '/kasko/choose/tinkoff',
-		breadcrumb: 'Тинькофф Страхование',
-	},
-	{
-		path: '/dms/choose/tinkoff',
-		breadcrumb: 'Тинькофф Страхование',
+		path: '/dms/result/vsk',
+		breadcrumb: 'ВСК',
 	},
 ];

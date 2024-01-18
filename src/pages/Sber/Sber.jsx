@@ -5,15 +5,14 @@ import {
 	InsuranceConditionsResult,
 	InsuranceServices,
 } from 'components';
-import { RESULT_DEFAULT } from 'shared/store/resultDefault';
 import { Typography, List, ListItem, Button, Logo } from 'shared/ui';
 import { DOCUMENTS } from 'shared/store/sberbank';
 import { SBERBANK, SBERBANK_SERV } from 'shared/utils/constants/modes';
 import { SERVICES_SBERBANK } from 'shared/store/servicesSber';
 import styles from './Sber.module.scss';
 
-function Sber({ id = '1' }) {
-	const companyData = RESULT_DEFAULT.find((company) => id === company.id);
+function Sber({ result }) {
+	const companyData = result.find((company) => SBERBANK === company.code);
 
 	return (
 		<main className={styles.root}>
@@ -25,7 +24,7 @@ function Sber({ id = '1' }) {
 					<Section>
 						<Typography variant={'h2'}>СберСтрахование</Typography>
 						<div className={styles['rating-container']}>
-							<Rating rating={4.9} />
+							<Rating rating={companyData ? companyData.rating : 0} />
 						</div>
 					</Section>
 					<Section>
