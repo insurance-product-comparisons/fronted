@@ -8,6 +8,7 @@ import {
 import { CONDITIONS_RESULT_TINKOFF } from 'shared/store/insuranceCompany';
 import { SERVICES_TINKOFF } from 'shared/store/servicesTinkoff';
 import { Button, Typography } from 'shared/ui';
+import { TINKOFF } from 'shared/utils/constants/modes';
 import styles from './Tinkoff.module.scss';
 
 function Tinkoff() {
@@ -55,7 +56,7 @@ function Tinkoff() {
 
 				<section className={styles.services}>
 					<Typography variant="h4">Что входит в страхование</Typography>
-					<InsuranceServices data={SERVICES_TINKOFF} />
+					<InsuranceServices data={SERVICES_TINKOFF} mode={TINKOFF} />
 				</section>
 
 				<section className={styles.documents}>

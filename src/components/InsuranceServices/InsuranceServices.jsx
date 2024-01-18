@@ -1,11 +1,11 @@
 import { List, ListItem, Typography } from 'shared/ui';
 import styles from './InsuranceServices.module.scss';
 
-function InsuranceServices({ data }) {
+function InsuranceServices({ data, mode }) {
 	return (
-		<List listmode="tinkoff">
+		<List listmode={mode}>
 			{data.map((card) => (
-				<ListItem key={card.id} mode="tinkoff">
+				<ListItem key={card.id} mode={mode}>
 					<div
 						className={styles.icon}
 						style={{ backgroundImage: `url(${card.image})` }}
