@@ -5,15 +5,20 @@ import {
 	InsuranceConditionsResult,
 	InsuranceServices,
 } from 'components';
-import { RESULT_DEFAULT } from 'shared/store/resultDefault';
 import { Typography, List, ListItem, Button, Logo } from 'shared/ui';
 import { DOCUMENTS } from 'shared/store/sberbank';
 import { SBERBANK, SBERBANK_SERV } from 'shared/utils/constants/modes';
 import { SERVICES_SBERBANK } from 'shared/store/servicesSber';
+import { useNavigate } from 'react-router-dom';
 import styles from './Sber.module.scss';
 
-function Sber({ id = '1' }) {
-	const companyData = RESULT_DEFAULT.find((company) => id === company.id);
+function Sber({ result }) {
+	const navigate = useNavigate();
+	const companyData = result.find((company) => SBERBANK === company.code);
+
+	function handleBackButton() {
+		navigate(-1);
+	}
 
 	return (
 		<main className={styles.root}>
@@ -25,7 +30,7 @@ function Sber({ id = '1' }) {
 					<Section>
 						<Typography variant={'h2'}>СберСтрахование</Typography>
 						<div className={styles['rating-container']}>
-							<Rating rating={4.9} />
+							<Rating rating={companyData ? companyData.rating : 0} />
 						</div>
 					</Section>
 					<Section>
@@ -72,7 +77,12 @@ function Sber({ id = '1' }) {
 					</Section>
 					<Section>
 						<div className={styles['button-container']}>
-							<Button type="button" bgcolor="ghost" mode={SBERBANK}>
+							<Button
+								type="button"
+								bgcolor="ghost"
+								mode={SBERBANK}
+								onClick={handleBackButton}
+							>
 								Вернуться к выбору
 							</Button>
 							<Button type="button" bgcolor="accent" mode={SBERBANK}>

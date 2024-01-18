@@ -5,13 +5,20 @@ import {
 	Rating,
 	Section,
 } from 'components';
-import { CONDITIONS_RESULT_TINKOFF } from 'shared/store/insuranceCompany';
 import { SERVICES_TINKOFF } from 'shared/store/servicesTinkoff';
 import { Button, Typography } from 'shared/ui';
 import { TINKOFF } from 'shared/utils/constants/modes';
+import { useNavigate } from 'react-router-dom';
 import styles from './Tinkoff.module.scss';
 
-function Tinkoff() {
+function Tinkoff({ result }) {
+	const companyData = result.find((company) => TINKOFF === company.code);
+	const navigate = useNavigate();
+
+	function handleBackButton() {
+		navigate(-1);
+	}
+
 	return (
 		<main>
 			<Section>
@@ -21,10 +28,10 @@ function Tinkoff() {
 					<div>
 						<Typography variant="h2">Тинкофф Страхование</Typography>
 						<div className={styles.rating}>
-							<Rating rating="4.8" />
+							<Rating rating={companyData ? companyData.rating : 0} />
 						</div>
 						<InsuranceConditionsResult
-							data={CONDITIONS_RESULT_TINKOFF}
+							data={companyData}
 							page="tinkoff"
 							font="body1"
 						/>
@@ -79,6 +86,7 @@ function Tinkoff() {
 						type="button"
 						bgcolor="ghost"
 						mode="back-button"
+						onClick={handleBackButton}
 					/>
 					<Button children="Перейти на сайт " type="button" bgcolor="accent" />
 				</section>
