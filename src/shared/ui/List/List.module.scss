@@ -114,3 +114,12 @@
 	grid-template-columns: repeat(2, 1fr);
 	gap: 20px;
 }
+
+.sberbank-sevice {
+	list-style: none;
+	padding: 0;
+	margin: 28px 0 0 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}

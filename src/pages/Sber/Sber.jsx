@@ -3,11 +3,13 @@ import {
 	Section,
 	Rating,
 	InsuranceConditionsResult,
+	InsuranceServices,
 } from 'components';
 import { RESULT_DEFAULT } from 'shared/store/resultDefault';
 import { Typography, List, ListItem, Button, Logo } from 'shared/ui';
 import { DOCUMENTS } from 'shared/store/sberbank';
-import { SBERBANK } from 'shared/utils/constants/modes';
+import { SBERBANK, SBERBANK_SERV } from 'shared/utils/constants/modes';
+import { SERVICES_SBERBANK } from 'shared/store/servicesSber';
 import styles from './Sber.module.scss';
 
 function Sber({ id = '1' }) {
@@ -48,7 +50,7 @@ function Sber({ id = '1' }) {
 					</Section>
 					<Section>
 						<Typography variant={'h4'}>Что входит в страхование</Typography>
-						{/**Карточки с вариантами страхования */}
+						<InsuranceServices data={SERVICES_SBERBANK} mode={SBERBANK_SERV} />
 					</Section>
 					<Section>
 						<Typography variant={'h4'}>Необходимые документы</Typography>

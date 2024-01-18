@@ -17,3 +17,15 @@
 	box-sizing: border-box;
 	min-height: 224px;
 }
+
+.sberbank-sevice {
+	display: flex;
+	flex-direction: column;
+	width: 269px;
+	min-height: 224px;
+	padding: 24px;
+	background-color: var(--white);
+	border-radius: 20px;
+	gap: 12px;
+	box-sizing: border-box;
+}
