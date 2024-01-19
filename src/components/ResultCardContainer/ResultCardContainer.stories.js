@@ -1,9 +1,11 @@
 import { ResultCardContainer } from 'components';
 import { RESULT_DEFAULT } from 'shared/store/resultDefault';
+import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {
 	title: 'Components/ResultCardContainer',
 	component: ResultCardContainer,
+	decorators: [withRouter],
 	tags: ['autodocs'],
 	argTypes: {
 		cards: {

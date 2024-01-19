@@ -4,6 +4,7 @@ import {
 	withRouter,
 	reactRouterParameters,
 } from 'storybook-addon-react-router-v6';
+import { RESULT_DEFAULT } from 'shared/store/resultDefault';
 
 export default {
 	title: 'Pages/СберСтрахование',
@@ -19,7 +20,7 @@ export default {
 export const Default = {
 	render: () => (
 		<Layout>
-			<Sber />
+			<Sber result={RESULT_DEFAULT} />
 		</Layout>
 	),
 };
