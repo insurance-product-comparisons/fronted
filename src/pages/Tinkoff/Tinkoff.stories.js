@@ -4,6 +4,7 @@ import {
 	withRouter,
 } from 'storybook-addon-react-router-v6';
 import { Default as Layout } from 'components/Layout/Layout.stories';
+import { RESULT_DEFAULT } from 'shared/store/resultDefault';
 
 export default {
 	title: 'Pages/Tinkoff',
@@ -19,7 +20,7 @@ export default {
 export const Default = {
 	render: () => (
 		<Layout>
-			<Tinkoff />
+			<Tinkoff result={RESULT_DEFAULT} />
 		</Layout>
 	),
 };

@@ -3,7 +3,7 @@
 .root {
 	flex-grow: 1;
 
-    @include mobile {
+	@include mobile {
 		padding-top: 32px;
 	}
 }
