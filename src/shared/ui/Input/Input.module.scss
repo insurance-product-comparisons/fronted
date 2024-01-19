@@ -84,10 +84,20 @@
 
 .input-unusual-case-wide {
 	min-width: 100%;
+
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .input-unusual-case-short {
 	max-width: 265px;
+
+  @include mobile {
+    max-width: 288px;
+    width: 100%;
+  }
+
 }
 
 .input-dms {
