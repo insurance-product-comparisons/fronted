@@ -64,6 +64,16 @@
 		padding: 64px 0;
 		min-width: 936px;
 		justify-content: space-between;
+
+        @include tablet {
+			min-width: 100%;
+			justify-content: center;
+		}
+
+		@include mobile {
+			min-width: 100%;
+			padding: 28px 0 24px;
+		}
 	}
 
 	&.unusual-case-form {
@@ -113,6 +123,14 @@
 	&.dmc-form {
 		min-width: 362px;
 		gap: 4px;
+
+        @include tablet {
+			min-width: 80%;
+		}
+
+        @include mobile {
+			min-width: 288px;
+		}
 	}
 
 	&.unusual-case-form {
@@ -167,6 +185,17 @@
 		width: 458px;
 		height: 458px;
 		margin-top: 35px;
+
+        @include tablet {
+			display: none;
+		}
+
+		@include mobile {
+			margin-top: 20px;
+			width: 289px;
+			height: 230px;
+			align-self: center;
+		}
 	}
 
 	&.unusual-case-form {
