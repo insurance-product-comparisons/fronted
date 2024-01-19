@@ -26,10 +26,18 @@
 
 .select-dmc {
 	width: 100% !important;
+
+    @include mobile {
+		width: 100% !important;
+	}
 }
 
 .select-dmc-short {
 	width: 169px !important;
+
+    @include mobile {
+		width: 100% !important;
+	}
 }
 
 .select-kasko-short {
