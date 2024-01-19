@@ -65,7 +65,7 @@
 		min-width: 936px;
 		justify-content: space-between;
 
-        @include tablet {
+		@include tablet {
 			min-width: 100%;
 			justify-content: center;
 		}
@@ -124,11 +124,11 @@
 		min-width: 362px;
 		gap: 4px;
 
-        @include tablet {
+		@include tablet {
 			min-width: 80%;
 		}
 
-        @include mobile {
+		@include mobile {
 			min-width: 288px;
 		}
 	}
@@ -186,7 +186,7 @@
 		height: 458px;
 		margin-top: 35px;
 
-        @include tablet {
+		@include tablet {
 			display: none;
 		}
 
