@@ -32,10 +32,10 @@
 		height: 56px;
 		align-self: flex-start;
 
-    @include mobile {
-      width: 100%;
-      height: 48px;
-    }
+		@include mobile {
+			width: 100%;
+			height: 48px;
+		}
 	}
 
 	&.count {

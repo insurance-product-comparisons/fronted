@@ -38,8 +38,8 @@
 .input-unusual-case-short {
 	max-width: 265px;
 
-  @include mobile {
-    max-width: 288px;
-    width: 100%;
-  }
+	@include mobile {
+		max-width: 288px;
+		width: 100%;
+	}
 }

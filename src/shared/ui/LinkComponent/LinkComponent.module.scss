@@ -38,11 +38,11 @@
 }
 
 .unusual-case-form {
-  color: var(--black);
+	color: var(--black);
 	font-weight: 700;
 	cursor: pointer;
 
-  @include mobile {
-    padding-left: 32px;
-  }
+	@include mobile {
+		padding-left: 32px;
+	}
 }
