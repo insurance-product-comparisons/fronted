@@ -36,3 +36,13 @@
 	color: var(--grey);
 	cursor: pointer;
 }
+
+.unusual-case-form {
+	color: var(--black);
+	font-weight: 700;
+	cursor: pointer;
+
+	@include mobile {
+		padding-left: 32px;
+	}
+}

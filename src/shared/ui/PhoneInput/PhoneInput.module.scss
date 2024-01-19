@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .input-default {
 	width: 265px;
 	height: 56px;
@@ -35,4 +37,9 @@
 
 .input-unusual-case-short {
 	max-width: 265px;
+
+	@include mobile {
+		max-width: 288px;
+		width: 100%;
+	}
 }

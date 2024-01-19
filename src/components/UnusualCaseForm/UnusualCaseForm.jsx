@@ -195,7 +195,11 @@ function UnusualCaseForm({ onSubmit }) {
 							typoColor="black"
 						/>
 
-						<LinkComponent link="#" text="персональных данных" mode="bold" />
+						<LinkComponent
+							link="#"
+							text="персональных данных"
+							mode="unusual-case-form"
+						/>
 					</div>
 					<InputError>
 						{errors?.personalData && errors?.personalData.message}

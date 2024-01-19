@@ -19,6 +19,11 @@
 	&.unusual-case-form {
 		min-width: 100%;
 		margin: 0 auto 100px;
+
+		@include mobile {
+			border-radius: 24px;
+			margin-bottom: 48px;
+		}
 	}
 }
 
@@ -68,6 +73,14 @@
 		align-items: flex-end;
 		padding-top: 76px;
 		padding-bottom: 77px;
+
+		@include tablet {
+			align-items: center;
+		}
+
+		@include mobile {
+			padding: 28px 20px;
+		}
 	}
 
 	@include tablet {
@@ -104,6 +117,10 @@
 
 	&.unusual-case-form {
 		min-width: 554px;
+
+		@include mobile {
+			min-width: 288px;
+		}
 	}
 }
 
@@ -156,5 +173,9 @@
 		background-image: url('/images/unusualcase_form.svg');
 		width: 362px;
 		height: 362px;
+
+		@include mobile {
+			display: none;
+		}
 	}
 }
