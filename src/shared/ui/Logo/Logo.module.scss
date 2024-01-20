@@ -12,17 +12,17 @@
 		cursor: pointer;
 		flex-shrink: 0;
 	}
-    
-    &.footer {
+
+	&.footer {
 		background-image: url('/images/logo.svg');
 		width: 221px;
 		height: 54px;
 		cursor: pointer;
 		flex-shrink: 0;
 
-        @include mobile {
-            display: none;
-        }
+        @include tablet {
+			display: none;
+		}
 	}
 
 	&.insurance {
