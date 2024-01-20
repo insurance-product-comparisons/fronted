@@ -109,6 +109,20 @@
 	}
 }
 
+.typography--variant-footer {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 24px;
+	white-space: pre-wrap;
+
+	@include mobile {
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+	}
+}
+
 .typography--color-black {
 	color: var(--black);
 }

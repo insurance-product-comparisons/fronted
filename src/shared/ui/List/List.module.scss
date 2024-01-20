@@ -46,6 +46,10 @@
 	gap: 16px;
 	list-style: none;
 
+    @include mobile {
+		gap: 12px;
+	}
+
 	li {
 		position: relative;
 		width: fit-content;
