@@ -25,18 +25,19 @@ function SearchResult({ result }) {
 	}
 
 	const renderList = React.useMemo(() => {
-		if (sortValue === 'popular') {
-			return result.sort((option1, option2) =>
-				option1['rating'] > option2['rating'] ? -1 : 1
-			);
-		} else if (sortValue === 'increase') {
-			return result.sort((option1, option2) =>
-				option1['price']['value'] > option2['price']['value'] ? 1 : -1
-			);
-		} else if (sortValue === 'decrease') {
-			return result.sort((option1, option2) =>
-				option1['price']['value'] > option2['price']['value'] ? -1 : 1
-			);
+		switch (sortValue) {
+			case 'increase':
+				return result.sort((option1, option2) =>
+					option1['price']['value'] > option2['price']['value'] ? 1 : -1
+				);
+			case 'decrease':
+				return result.sort((option1, option2) =>
+					option1['price']['value'] > option2['price']['value'] ? -1 : 1
+				);
+			default:
+				return result.sort((option1, option2) =>
+					option1['rating'] > option2['rating'] ? -1 : 1
+				);
 		}
 	}, [sortValue, result]);
 
@@ -47,11 +48,7 @@ function SearchResult({ result }) {
 	}, [renderList, resultsPerPage]);
 
 	React.useEffect(() => {
-		if (result.length !== 0) {
-			setIsResult(true);
-		} else {
-			setIsResult(false);
-		}
+		setIsResult(result.length !== 0);
 	}, [result]);
 
 	return (
