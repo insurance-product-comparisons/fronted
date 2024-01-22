@@ -7,8 +7,8 @@
 
 	&.main {
 		background-image: url('/images/logo.svg');
-		width: 219px;
-		height: 51px;
+		width: 221px;
+		height: 54px;
 		cursor: pointer;
 		flex-shrink: 0;
 	}
@@ -23,5 +23,12 @@
 		background-color: #d3d3d3;
 		width: 64px;
 		height: 64px;
+		border-radius: 12px;
+	}
+
+	&.sberbank {
+		background-image: url('/images/logo_sber.svg');
+		width: 269px;
+		height: 25px;
 	}
 }

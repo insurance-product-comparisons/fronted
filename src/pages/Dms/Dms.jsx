@@ -10,7 +10,7 @@ import { Typography } from 'shared/ui';
 import STEPS_FOR_DMS from 'shared/utils/constants/cardStepDms';
 import styles from './Dms.module.scss';
 
-function Dms() {
+function Dms({ onSearch }) {
 	return (
 		<main className={styles.root}>
 			<Section>
@@ -23,10 +23,14 @@ function Dms() {
 				<StagesContainer data={STEPS_FOR_DMS} />
 			</Section>
 			<Section>
-				<DmcForm />
+				<DmcForm onSearch={onSearch} />
 			</Section>
 			<Section>
-				<AnswersList title="Вопросы и ответы" data={ANSWERS_DMS} />
+				<AnswersList
+					title="Вопросы и ответы"
+					data={ANSWERS_DMS}
+					fontSize="h3"
+				/>
 			</Section>
 		</main>
 	);

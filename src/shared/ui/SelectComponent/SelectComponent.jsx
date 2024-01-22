@@ -5,7 +5,13 @@ import classNames from 'classnames';
 import Select from 'react-select';
 import styles from './SelectComponent.module.scss';
 
-function SelectComponent({ options, mode = DEFAULT, placeholder, submode }) {
+function SelectComponent({
+	options = [],
+	mode = DEFAULT,
+	placeholder,
+	submode,
+	...props
+}) {
 	const selectClassNames = {
 		container: (state) => classNames(styles[mode], styles[submode]),
 		control: ({ isDisabled, isFocused }) =>
@@ -18,6 +24,8 @@ function SelectComponent({ options, mode = DEFAULT, placeholder, submode }) {
 			classNames(styles[`arrow-${mode}`], isFocused && styles.focused),
 		option: ({ isDisabled, isFocused, isSelected }) =>
 			classNames(styles[`option-${mode}`], isSelected && styles.selected),
+		menu: (state) => classNames(styles[`menu-${mode}`]),
+		menuList: (state) => classNames(styles[`menu-list-${mode}`]),
 	};
 
 	return (
@@ -26,6 +34,8 @@ function SelectComponent({ options, mode = DEFAULT, placeholder, submode }) {
 			options={options}
 			placeholder={placeholder}
 			noOptionsMessage={() => 'Нет доступных вариантов'}
+			defaultValue={options[0]}
+			{...props}
 		/>
 	);
 }
@@ -39,6 +49,8 @@ Select.propTypes = {
 	),
 	mode: PropTypes.string,
 	placeholder: PropTypes.string,
+	submode: PropTypes.string,
+	initialValue: PropTypes.string,
 };
 
 export default SelectComponent;

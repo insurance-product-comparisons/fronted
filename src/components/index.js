@@ -22,6 +22,8 @@ import ResultCard from './ResultCard';
 import InsuranceConditionsResult from './InsuranceConditionsResult';
 import SuccessfulRequest from './SuccessfulRequest';
 import ResultCardContainer from './ResultCardContainer';
+import SearchNotFound from './SearchNotFound';
+import InsuranceServices from './InsuranceServices';
 
 export {
 	AnswersList,
@@ -48,4 +50,6 @@ export {
 	SuccessfulRequest,
 	DmcForm,
 	ResultCardContainer,
+	SearchNotFound,
+	InsuranceServices,
 };

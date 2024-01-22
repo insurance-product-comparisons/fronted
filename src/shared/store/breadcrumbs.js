@@ -16,51 +16,51 @@ export const CRUMBS = [
 		breadcrumb: 'Добровольное медицинское страхование',
 	},
 	{
-		path: '/osago/choose',
+		path: '/osago/result',
 		breadcrumb: 'Выбор страховой компании',
 	},
 	{
-		path: '/kasko/choose',
+		path: '/kasko/result',
 		breadcrumb: 'Выбор страховой компании',
 	},
 	{
-		path: '/dms/choose',
+		path: '/dms/result',
 		breadcrumb: 'Выбор страховой компании',
 	},
 	{
-		path: '/osago/choose/vsk',
-		breadcrumb: 'ВСК',
-	},
-	{
-		path: '/kasko/choose/vsk',
-		breadcrumb: 'ВСК',
-	},
-	{
-		path: '/dms/choose/vsk',
-		breadcrumb: 'ВСК',
-	},
-	{
-		path: '/osago/choose/sber',
+		path: '/osago/result/sberbank',
 		breadcrumb: 'СберСтрахование',
 	},
 	{
-		path: '/kasko/choose/sber',
+		path: '/osago/result/tinkoff',
+		breadcrumb: 'Тинкофф Страхование',
+	},
+	{
+		path: '/osago/result/vsk',
+		breadcrumb: 'ВСК',
+	},
+	{
+		path: '/kasko/result/sberbank',
 		breadcrumb: 'СберСтрахование',
 	},
 	{
-		path: '/dms/choose/sber',
+		path: '/kasko/result/tinkoff',
+		breadcrumb: 'Тинкофф Страхование',
+	},
+	{
+		path: '/kasko/result/vsk',
+		breadcrumb: 'ВСК',
+	},
+	{
+		path: '/dms/result/sberbank',
 		breadcrumb: 'СберСтрахование',
 	},
 	{
-		path: '/osago/choose/tinkoff',
-		breadcrumb: 'Тинькофф Страхование',
+		path: '/dms/result/tinkoff',
+		breadcrumb: 'Тинкофф Страхование',
 	},
 	{
-		path: '/kasko/choose/tinkoff',
-		breadcrumb: 'Тинькофф Страхование',
-	},
-	{
-		path: '/dms/choose/tinkoff',
-		breadcrumb: 'Тинькофф Страхование',
+		path: '/dms/result/vsk',
+		breadcrumb: 'ВСК',
 	},
 ];

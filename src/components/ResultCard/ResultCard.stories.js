@@ -1,8 +1,10 @@
 import { ResultCard } from 'components';
+import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {
 	title: 'Components/ResultCard',
 	component: ResultCard,
+	decorators: [withRouter],
 	tags: ['autodocs'],
 	argTypes: {
 		data: {

@@ -1,8 +1,9 @@
 .default {
 	border-radius: 12px;
+	box-sizing: border-box;
 	border: 1px solid var(--grey-2);
 	color: var(--black);
-	min-width: 100%;
+	max-width: 100%;
 	padding: 16px 20px;
 	background-color: var(--grey-2);
 	resize: none;
@@ -22,7 +23,7 @@
 	}
 
 	&.consult-form {
-		height: 148px;
+		height: 120px;
 	}
 }
 

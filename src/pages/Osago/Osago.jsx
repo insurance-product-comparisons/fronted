@@ -10,7 +10,7 @@ import { ANSWERS_OSAGO } from 'shared/store/answers';
 import CARD_STAGES from 'shared/utils/constants/cardStages';
 import styles from './Osago.module.scss';
 
-function Osago() {
+function Osago({ onSearch }) {
 	return (
 		<main className={styles.root}>
 			<Section>
@@ -23,10 +23,15 @@ function Osago() {
 				<StagesContainer data={CARD_STAGES} />
 			</Section>
 			<Section>
-				<OsagoForm />
+				<OsagoForm onSearch={onSearch} />
 			</Section>
 			<Section>
-				<AnswersList title="Вопросы и ответы" data={ANSWERS_OSAGO} />
+				<AnswersList
+					title="Вопросы и ответы"
+					data={ANSWERS_OSAGO}
+					fontSize="h3"
+					page="osago"
+				/>
 			</Section>
 		</main>
 	);

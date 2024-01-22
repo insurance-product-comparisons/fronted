@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .root {
 	display: flex;
 	flex-grow: 1;
@@ -6,9 +8,19 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	margin-top: 204px;
+	margin-top: 220px;
+	margin-bottom: 204px;
 	gap: 32px;
 	justify-content: center;
+
+	@include tablet {
+		gap: 15px;
+	}
+
+	@include mobile {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
 }
 
 .title {
@@ -16,4 +28,9 @@
 	margin: 0 auto;
 	max-width: 180px;
 	text-align: center;
+	margin-bottom: 16px;
+
+	@include tablet {
+		margin-bottom: 0;
+	}
 }

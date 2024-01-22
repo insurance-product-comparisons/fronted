@@ -1,4 +1,5 @@
 import { SelectComponent } from 'shared/ui';
+import { OPTIONS_SORT } from 'shared/store/sortOptions';
 
 export default {
 	title: 'UI-KIT/SelectComponent',
@@ -36,4 +37,11 @@ export const Default = Template.bind({});
 Default.args = {
 	options: options,
 	placeholder: '',
+};
+
+export const Sort = Template.bind({});
+Sort.args = {
+	options: OPTIONS_SORT,
+	placeholder: '',
+	mode: 'sort',
 };

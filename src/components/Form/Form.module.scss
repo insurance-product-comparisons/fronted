@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .root {
 	display: flex;
 	flex-direction: row;
@@ -11,12 +13,17 @@
 	}
 
 	&.osago-form {
-		max-width: 943px;
+		max-width: 1040px;
 	}
 
 	&.unusual-case-form {
 		min-width: 100%;
 		margin: 0 auto 100px;
+
+		@include mobile {
+			border-radius: 24px;
+			margin-bottom: 48px;
+		}
 	}
 }
 
@@ -24,7 +31,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding: 64px 0;
+	padding: 64px 96px;
 
 	&.consult-form {
 		min-width: 936px;
@@ -33,7 +40,7 @@
 
 	&.osago-form {
 		min-width: 747px;
-		gap: 20px;
+		gap: 120px;
 		align-items: flex-start;
 	}
 
@@ -41,12 +48,32 @@
 		padding: 64px 0;
 		min-width: 936px;
 		justify-content: space-between;
+
+		@include tablet {
+			min-width: 100%;
+			justify-content: center;
+		}
+
+		@include mobile {
+			min-width: 100%;
+			padding: 28px 0 24px;
+		}
 	}
 
 	&.dmc-form {
 		padding: 64px 0;
 		min-width: 936px;
 		justify-content: space-between;
+
+		@include tablet {
+			min-width: 100%;
+			justify-content: center;
+		}
+
+		@include mobile {
+			min-width: 100%;
+			padding: 28px 0 24px;
+		}
 	}
 
 	&.unusual-case-form {
@@ -54,6 +81,20 @@
 		gap: 20px;
 		justify-content: center;
 		align-items: flex-end;
+		padding-top: 76px;
+		padding-bottom: 77px;
+
+		@include tablet {
+			align-items: center;
+		}
+
+		@include mobile {
+			padding: 28px 20px;
+		}
+	}
+
+	@include tablet {
+		flex-direction: column;
 	}
 }
 
@@ -67,21 +108,37 @@
 
 	&.osago-form {
 		min-width: 362px;
-		gap: 20px;
+		gap: 12px;
 	}
 
 	&.kasko-form {
 		max-width: 551px;
 		gap: 5px;
+
+		@include mobile {
+			min-width: 288px;
+		}
 	}
 
 	&.dmc-form {
 		min-width: 362px;
 		gap: 4px;
+
+		@include tablet {
+			min-width: 80%;
+		}
+
+		@include mobile {
+			min-width: 288px;
+		}
 	}
 
 	&.unusual-case-form {
 		min-width: 554px;
+
+		@include mobile {
+			min-width: 288px;
+		}
 	}
 }
 
@@ -92,8 +149,9 @@
 
 	&.consult-form {
 		background-image: url('/images/consult_form.svg');
-		width: 366px;
-		height: 368px;
+		width: 458px;
+		height: 458px;
+		margin-top: 145px;
 	}
 
 	&.osago-form {
@@ -106,6 +164,19 @@
 		background-image: url('/images/kasko_form.svg');
 		width: 362px;
 		height: 288px;
+		align-self: flex-start;
+		margin-top: 48px;
+
+		@include tablet {
+			display: none;
+		}
+
+		@include mobile {
+			margin-top: 20px;
+			width: 289px;
+			height: 230px;
+			align-self: center;
+		}
 	}
 
 	&.dmc-form {
@@ -113,11 +184,27 @@
 		background-image: url('/images/dmc_form.svg');
 		width: 458px;
 		height: 458px;
+		margin-top: 35px;
+
+		@include tablet {
+			display: none;
+		}
+
+		@include mobile {
+			margin-top: 20px;
+			width: 289px;
+			height: 230px;
+			align-self: center;
+		}
 	}
 
 	&.unusual-case-form {
 		background-image: url('/images/unusualcase_form.svg');
 		width: 362px;
-		height: 352px;
+		height: 362px;
+
+		@include mobile {
+			display: none;
+		}
 	}
 }

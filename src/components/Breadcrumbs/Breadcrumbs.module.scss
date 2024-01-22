@@ -1,8 +1,14 @@
+@import 'app/styles/sass/mixins.scss';
+
 .root {
 	display: flex;
-	gap: 4px;
+	gap: 5px;
 
 	&.default {
 		padding: 24px 0;
+	}
+
+	@include mobile {
+		display: none;
 	}
 }

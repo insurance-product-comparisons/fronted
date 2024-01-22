@@ -1,6 +1,15 @@
+@import 'app/styles/sass/mixins.scss';
+
 .default {
 	width: 324px !important;
 	height: 56px !important;
+}
+
+.sort {
+	width: 240px !important;
+	height: 52px !important;
+	border: 0 !important;
+	outline: 0 !important;
 }
 
 .select-osago {
@@ -9,18 +18,34 @@
 
 .select-kasko {
 	width: 551px !important;
+
+	@include mobile {
+		width: 100% !important;
+	}
 }
 
 .select-dmc {
 	width: 100% !important;
+
+	@include mobile {
+		width: 100% !important;
+	}
 }
 
 .select-dmc-short {
-	width: 162px !important;
+	width: 169px !important;
+
+	@include mobile {
+		width: 100% !important;
+	}
 }
 
 .select-kasko-short {
 	width: 265px !important;
+
+	@include mobile {
+		width: 100% !important;
+	}
 }
 
 .control-default {
@@ -36,7 +61,31 @@
 	}
 }
 
+.control-sort {
+	padding: 0 32px 0 60px;
+	width: 240px !important;
+	height: 52px !important;
+	box-sizing: border-box !important;
+	border: 2px solid var(--black) !important;
+	border-radius: 12px !important;
+	background-color: transparent !important;
+	background-image: url(/images/icon_sort.svg);
+	background-size: 24px 24px;
+	background-position: 29px center;
+	background-repeat: no-repeat;
+	box-shadow: none !important;
+	cursor: pointer !important;
+}
+
 .value-container-default {
+	padding: 0 !important;
+	font-size: 16px !important;
+	font-weight: 400 !important;
+	line-height: 20px !important;
+	color: var(--black) !important;
+}
+
+.value-container-sort {
 	padding: 0 !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
@@ -47,10 +96,21 @@
 .input-default {
 	padding: 0 !important;
 	margin: 0 !important;
+	color: var(--black) !important;
+}
+
+.input-sort {
+	padding: 0 0 0 2px !important;
+	margin: 0 !important;
+	color: var(--black) !important;
 }
 
 .separator-default {
 	width: 0 !important;
+}
+
+.separator-sort {
+	display: none !important;
 }
 
 .indicator-default {
@@ -65,10 +125,15 @@
 	}
 }
 
+.indicator-sort {
+	display: none !important;
+}
+
 .arrow-default {
 	padding: 0 !important;
-	fill: var(--black);
 	transition: transform 300ms !important;
+	opacity: 1 !important;
+	color: var(--black) !important;
 
 	&.focused {
 		width: 24px !important;
@@ -89,4 +154,34 @@
 		color: var(--black) !important;
 		background-color: var(--grey-1) !important;
 	}
+}
+
+.option-sort {
+	padding: 12px 32px !important;
+	background-color: var(--white) !important;
+
+	&:hover {
+		background-color: var(--white) !important;
+		cursor: pointer;
+	}
+
+	&.selected {
+		color: var(--black) !important;
+		background-color: var(--grey-2) !important;
+	}
+}
+
+.menu-sort {
+	padding: 0 !important;
+	margin-top: 4px !important;
+	border-radius: 12px !important;
+	overflow: hidden !important;
+	box-shadow:
+		-4px -4px 8px 0px #f3f5f7,
+		4px 4px 8px 0px #f3f5f7 !important;
+	background-color: var(--white) !important;
+}
+
+.menu-list-sort {
+	padding: 0 !important;
 }

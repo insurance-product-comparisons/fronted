@@ -24,7 +24,7 @@ function Card({ data, mode = DEFAULT }) {
 				alt="Изображение"
 			/>
 			<div className={cn({ [styles[`title-${mode}`]]: mode })}>
-				<Typography variant="h3">{data.title}</Typography>
+				<Typography variant="h4">{data.title}</Typography>
 			</div>
 			<Typography variant="body2">{data.text}</Typography>
 			<div className={cn({ [styles[`button-${mode}`]]: mode })}>
@@ -34,7 +34,7 @@ function Card({ data, mode = DEFAULT }) {
 					bgcolor="bgcolor"
 					onClick={handleCardClick}
 				>
-					Рассчитать
+					{data.textButton}
 				</Button>
 			</div>
 		</section>
