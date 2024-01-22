@@ -1,4 +1,4 @@
-import { Tinkoff } from 'pages';
+import { Vsk } from 'pages';
 import {
 	reactRouterParameters,
 	withRouter,
@@ -7,12 +7,12 @@ import { Default as Layout } from 'components/Layout/Layout.stories';
 import { RESULT_DEFAULT } from 'shared/store/resultDefault';
 
 export default {
-	title: 'Pages/Tinkoff',
-	component: Tinkoff,
+	title: 'Pages/ВСК',
+	component: Vsk,
 	decorators: [withRouter],
 	parameters: {
 		reactRouter: reactRouterParameters({
-			routing: { path: '/osago/result/tinkoff' },
+			routing: { path: '/osago/result/vsk' },
 		}),
 	},
 };
@@ -20,7 +20,7 @@ export default {
 export const Default = {
 	render: () => (
 		<Layout>
-			<Tinkoff result={RESULT_DEFAULT} />
+			<Vsk result={RESULT_DEFAULT} />
 		</Layout>
 	),
 };
