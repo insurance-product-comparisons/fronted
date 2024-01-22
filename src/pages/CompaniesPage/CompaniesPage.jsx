@@ -5,13 +5,14 @@ import { useParams } from 'react-router-dom';
 function CompaniesPage({ result }) {
 	let { code } = useParams();
 
-	return code === SBERBANK ? (
-		<Sber result={result} />
-	) : code === TINKOFF ? (
-		<Tinkoff result={result} />
-	) : (
-		<NotFound />
-	);
+	switch (code) {
+		case SBERBANK:
+			return <Sber result={result} />;
+		case TINKOFF:
+			return <Tinkoff result={result} />;
+		default:
+			return <NotFound />;
+	}
 }
 
 export default CompaniesPage;
