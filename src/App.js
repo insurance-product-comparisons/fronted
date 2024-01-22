@@ -68,8 +68,6 @@ function App() {
 					element={<CompaniesPage result={dmsResult} />}
 				/>
 				<Route path="/request" element={<Request />} />
-				{/* <Route path="/products/:id" element={<Product />} /> Просмотр предложения страхованя */}
-				{/* <Route path="/admin" element={<Admin />} /> Панель администратора */}
 				<Route path="/404" element={<NotFound />} />
 				<Route path="*" element={<Navigate to="/404" />} />
 			</Routes>
