@@ -5,8 +5,19 @@
 }
 
 .container-default {
-	display: flex;
-	justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+
+  }
 }
 
 .title-default {
