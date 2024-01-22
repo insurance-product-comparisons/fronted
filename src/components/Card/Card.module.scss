@@ -11,24 +11,24 @@
 	flex-direction: column;
 	justify-content: flex-start;
 
-  @include tablet {
-    margin: 0 auto;
-  }
+	@include tablet {
+		margin: 0 auto;
+	}
 
-  @include mobile {
-    padding: 28px 20px;
-  }
+	@include mobile {
+		padding: 28px 20px;
+	}
 }
 
 .image-default {
 	display: block;
 	margin: 0 auto 16px;
-  width: 100%;
-  height: 212px;
+	width: 100%;
+	height: 212px;
 
-  @include mobile {
-    margin-bottom: 12px;
-  }
+	@include mobile {
+		margin-bottom: 12px;
+	}
 }
 
 .title-default {
@@ -39,7 +39,7 @@
 .button-default {
 	margin-top: 24px;
 
-  @include mobile {
-    margin-top: 20px;
-  }
+	@include mobile {
+		margin-top: 20px;
+	}
 }
