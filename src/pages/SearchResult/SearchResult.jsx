@@ -48,11 +48,7 @@ function SearchResult({ result }) {
 	}, [renderList, resultsPerPage]);
 
 	React.useEffect(() => {
-		if (result.length !== 0) {
-			setIsResult(true);
-		} else {
-			setIsResult(false);
-		}
+		setIsResult(result.length !== 0);
 	}, [result]);
 
 	return (
