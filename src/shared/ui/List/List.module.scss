@@ -123,3 +123,12 @@
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
 }
+
+.vsk {
+	display: flex;
+	flex-direction: column;
+	width: 559px;
+	margin: 15px 0 0 24px;
+	padding: 0;
+	list-style: disc;
+}

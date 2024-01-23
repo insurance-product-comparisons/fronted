@@ -23,6 +23,10 @@ function Vsk() {
 		navigate(-1);
 	}
 
+	function handleToSiteButton() {
+		window.open('https://www.vsk.ru/klientam', '_blank');
+	}
+
 	React.useEffect(() => {
 		if (!companyData) {
 			navigate('/404');
@@ -71,14 +75,18 @@ function Vsk() {
 					</Section>
 					<Section>
 						<Typography variant={'h4'}>Что входит в страхование</Typography>
-						<Typography variant={'body2'}>
-							Страховыми событиями по ОСАГО являются случаи, когда вследствие
-							эксплуатации транспорта был причинён имущественный ущерб или вред
-							здоровью либо жизни человека.
-						</Typography>
+						<div className={styles['term-container']}>
+							<Typography variant={'body2'}>
+								Страховыми событиями по ОСАГО являются случаи, когда вследствие
+								эксплуатации транспорта был причинён имущественный ущерб или
+								вред здоровью либо жизни человека.
+							</Typography>
+						</div>
 					</Section>
 					<Section>
-						<Typography variant={'h4'}>Необходимые документы</Typography>
+						<Typography variant={'h4'}>
+							Необходимые для оформления документы
+						</Typography>
 						<List listmode={VSK}>
 							{DOCUMENTS.map((item, index) => (
 								<ListItem key={index}>
@@ -105,7 +113,12 @@ function Vsk() {
 							>
 								Вернуться к выбору
 							</Button>
-							<Button type="button" bgcolor="accent" mode={VSK}>
+							<Button
+								type="button"
+								bgcolor="accent"
+								mode={VSK}
+								onClick={handleToSiteButton}
+							>
 								Перейти на сайт
 							</Button>
 						</div>

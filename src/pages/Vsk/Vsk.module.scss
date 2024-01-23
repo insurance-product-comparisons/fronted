@@ -1,3 +1,47 @@
 .root {
 	flex-grow: 1;
+	padding-bottom: 100px;
+}
+
+.container {
+	display: flex;
+	margin-inline: auto;
+	max-width: 1136px;
+	justify-content: space-between;
+}
+
+.left-column {
+	display: flex;
+	flex-direction: column;
+	width: 559px;
+	gap: 40px;
+}
+
+.left-column section {
+	margin: 0;
+}
+
+.rating-container {
+	margin-top: 8px;
+}
+
+.about-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 16px;
+	gap: 10px;
+}
+
+.term-container {
+	margin-top: 16px;
+}
+
+.license {
+	display: block;
+	margin-top: 18px;
+}
+
+.button-container {
+	display: flex;
+	gap: 24px;
 }
