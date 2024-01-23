@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .box {
 	display: flex;
 
@@ -8,17 +10,27 @@
 
 	&.input {
 		flex-direction: column;
+
+    @include mobile {
+			padding: 7px 0 24px;
+		}
 	}
 
 	&.checkbox {
 		flex-direction: row;
 		align-items: center;
+
+    @include tablet {
+			flex-direction: column;
+			align-items: normal;
+			padding: 0;
+		}
 	}
 
 	&.info {
 		flex-direction: column;
 		gap: 24px;
-		padding: 6px 4px 16px;
+		padding: 6px 4px 0;
 	}
 }
 
@@ -29,4 +41,9 @@
 
 .button-wrapper {
 	width: 209px;
+
+  @include mobile {
+    max-width: 288px;
+    width: 100%;
+  }
 }
