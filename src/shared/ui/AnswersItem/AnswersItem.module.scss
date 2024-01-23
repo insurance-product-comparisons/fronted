@@ -37,6 +37,12 @@
 			transform: rotate(180deg);
 		}
 	}
+
+  @include tablet {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px; 
+  }
 }
 
 .content-default {
@@ -50,5 +56,9 @@
 	&.open {
 		max-height: 100vh;
 		padding-top: 16px;
+    
+    @include mobile {
+      padding-top: 5px;
+    }
 	}
 }
