@@ -10,6 +10,10 @@
 
 	&.consult-form {
 		min-width: 100%;
+
+    @include tablet {
+      border-radius: 24px;
+    }
 	}
 
 	&.osago-form {
@@ -37,6 +41,12 @@
 	&.consult-form {
 		min-width: 936px;
 		justify-content: space-between;
+
+    @include tablet {
+      max-width: 328px;
+      min-width: auto;
+      padding: 28px 20px;
+    }
 	}
 
 	&.osago-form {
@@ -123,6 +133,11 @@
 
 	&.consult-form {
 		min-width: 458px;
+
+    @include mobile {
+      min-width: auto;
+      max-width: 288px;
+    }
 	}
 
 	&.osago-form {
@@ -170,6 +185,12 @@
 		width: 458px;
 		height: 458px;
 		margin-top: 145px;
+
+    @include mobile {
+      max-width: 328px;
+      max-height: 328px;
+      margin-top: 32px;
+    }
 	}
 
 	&.osago-form {

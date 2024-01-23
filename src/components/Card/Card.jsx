@@ -30,8 +30,8 @@ function Card({ data, mode = DEFAULT }) {
 			<div className={cn({ [styles[`button-${mode}`]]: mode })}>
 				<Button
 					type="button"
-					mode="accent"
-					bgcolor="bgcolor"
+					bgcolor="accent"
+					mode="main"
 					onClick={handleCardClick}
 				>
 					{data.textButton}

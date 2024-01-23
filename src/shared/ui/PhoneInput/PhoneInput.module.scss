@@ -17,6 +17,11 @@
 		outline: 1px solid var(--black);
 		background-color: var(--white);
 	}
+
+  @include tablet {
+    max-width: 288px;
+		width: 100%;
+  }
 }
 
 .input-default-error {

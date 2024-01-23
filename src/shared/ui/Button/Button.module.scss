@@ -64,6 +64,11 @@
 		height: 56px;
 	}
 
+	&.main {
+		width: 100%;
+		height: 48px;
+	}
+
 	&.vsk {
 		min-width: 227px;
 		height: 56px;
@@ -93,6 +98,12 @@
 	&.submit-request {
 		min-width: 211px;
 		height: 56px;
+
+		@include mobile {
+			min-width: 193px;
+			height: 48px;
+			padding: 0 24px;
+		}
 	}
 
 	&.enter {
@@ -102,6 +113,12 @@
 	&.more {
 		padding: 0 32px;
 		align-self: center;
+
+		@include mobile {
+			height: 48px;
+			min-width: 139px;
+			padding: 0 16px;
+		}
 	}
 
 	&.disable {
