@@ -8,6 +8,7 @@ import SearchResult from './SearchResult';
 import Sber from './Sber';
 import Tinkoff from './Tinkoff';
 import CompaniesPage from './CompaniesPage';
+import Vsk from './Vsk';
 
 export {
 	Main,
@@ -20,4 +21,5 @@ export {
 	Tinkoff,
 	Sber,
 	CompaniesPage,
+	Vsk,
 };

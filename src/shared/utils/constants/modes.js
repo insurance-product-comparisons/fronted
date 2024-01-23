@@ -10,3 +10,4 @@ export const SUB_REQUEST = 'submit-request';
 export const SBERBANK = 'sberbank';
 export const SBERBANK_SERV = 'sberbank-sevice';
 export const TINKOFF = 'tinkoff';
+export const VSK = 'vsk';

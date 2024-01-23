@@ -1,22 +1,20 @@
+import React from 'react';
 import {
 	Breadcrumbs,
 	Section,
 	Rating,
 	InsuranceConditionsResult,
-	InsuranceServices,
 } from 'components';
-import React from 'react';
 import { Typography, List, ListItem, Button, Logo } from 'shared/ui';
-import { DOCUMENTS } from 'shared/store/sberbank';
-import { SBERBANK, SBERBANK_SERV } from 'shared/utils/constants/modes';
-import { SERVICES_SBERBANK } from 'shared/store/servicesSber';
 import { useNavigate } from 'react-router-dom';
-import styles from './Sber.module.scss';
+import { DOCUMENTS } from 'shared/store/vsk';
+import { VSK } from 'shared/utils/constants/modes';
+import styles from './Vsk.module.scss';
 
-function Sber({ result }) {
+function Vsk({ result }) {
 	const navigate = useNavigate();
 	const companyData = React.useMemo(
-		() => result.find((company) => SBERBANK === company.code),
+		() => result.find((company) => VSK === company.code),
 		[result]
 	);
 
@@ -25,7 +23,7 @@ function Sber({ result }) {
 	}
 
 	function handleToSiteButton() {
-		window.open('https://sberbankins.ru', '_blank');
+		window.open('https://www.vsk.ru/klientam', '_blank');
 	}
 
 	return (
@@ -36,7 +34,7 @@ function Sber({ result }) {
 			<div className={styles.container}>
 				<div className={styles['left-column']}>
 					<Section>
-						<Typography variant={'h2'}>СберСтрахование</Typography>
+						<Typography variant={'h2'}>ВСК</Typography>
 						<div className={styles['rating-container']}>
 							<Rating rating={companyData ? companyData.rating : 0} />
 						</div>
@@ -44,7 +42,7 @@ function Sber({ result }) {
 					<Section>
 						<InsuranceConditionsResult
 							data={companyData}
-							page={SBERBANK}
+							page={VSK}
 							font={'body1'}
 						/>
 					</Section>
@@ -52,22 +50,37 @@ function Sber({ result }) {
 						<Typography variant={'h4'}>О компании</Typography>
 						<div className={styles['about-container']}>
 							<Typography variant={'body2'}>
-								ООО СК «Сбербанк Страхование» предоставляет широкий спектр
-								страховых услуг в сегменте имущественного и личного страхования,
-								кроме страхования жизни.
+								Страховой Дом ВСК(САО «ВСК») осуществляет страховую деятельность
+								с 11 февраля 1992 года и в настоящее время занимает ведущие
+								позиции на рынке страховых услуг России.
 							</Typography>
 							<Typography variant={'body2'}>
-								Компания основана в 2014 году.
+								Высокий уровень работы компании четырежды отмечен благодарностью
+								Президента России за большой вклад в развитие страхового дела
+								(2002, 2007, 2017 и 2022).
+							</Typography>
+							<Typography variant={'body2'}>
+								ВСК является пятикратным лауреатом Национального конкурса
+								«Компания года» (2013, 2015, 2018, 2020 и 2021) в номинации
+								«Страховая компания».
 							</Typography>
 						</div>
 					</Section>
 					<Section>
 						<Typography variant={'h4'}>Что входит в страхование</Typography>
-						<InsuranceServices data={SERVICES_SBERBANK} mode={SBERBANK_SERV} />
+						<div className={styles['term-container']}>
+							<Typography variant={'body2'}>
+								Страховыми событиями по ОСАГО являются случаи, когда вследствие
+								эксплуатации транспорта был причинён имущественный ущерб или
+								вред здоровью либо жизни человека.
+							</Typography>
+						</div>
 					</Section>
 					<Section>
-						<Typography variant={'h4'}>Необходимые документы</Typography>
-						<List listmode={SBERBANK}>
+						<Typography variant={'h4'}>
+							Необходимые для оформления документы
+						</Typography>
+						<List listmode={VSK}>
 							{DOCUMENTS.map((item, index) => (
 								<ListItem key={index}>
 									<Typography variant={'body2'}>{item}</Typography>
@@ -88,7 +101,7 @@ function Sber({ result }) {
 							<Button
 								type="button"
 								bgcolor="ghost"
-								mode={SBERBANK}
+								mode={VSK}
 								onClick={handleBackButton}
 							>
 								Вернуться к выбору
@@ -96,7 +109,7 @@ function Sber({ result }) {
 							<Button
 								type="button"
 								bgcolor="accent"
-								mode={SBERBANK}
+								mode={VSK}
 								onClick={handleToSiteButton}
 							>
 								Перейти на сайт
@@ -105,11 +118,11 @@ function Sber({ result }) {
 					</Section>
 				</div>
 				<div className={styles['right-column']}>
-					<Logo mode={SBERBANK} />
+					<Logo mode={VSK} />
 				</div>
 			</div>
 		</main>
 	);
 }
 
-export default Sber;
+export default Vsk;
