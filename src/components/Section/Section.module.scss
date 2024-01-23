@@ -4,6 +4,10 @@
 	margin: 0 auto;
 	max-width: var(--max-width-section);
 
+	@include desktop {
+		padding: 0 16px;
+	}
+
 	@include tablet {
 		max-width: 675px;
 	}

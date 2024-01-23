@@ -14,6 +14,10 @@
 
 .select-osago {
 	width: 362px !important;
+
+	@include mobile {
+		width: 288px !important;
+	}
 }
 
 .select-kasko {
