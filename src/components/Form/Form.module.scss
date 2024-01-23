@@ -115,7 +115,7 @@
 	&.consult-form {
 		min-width: 458px;
 
-    @include tablet {
+    @include mobile {
       min-width: auto;
       max-width: 288px;
     }
@@ -168,7 +168,7 @@
 		height: 458px;
 		margin-top: 145px;
 
-    @include tablet {
+    @include mobile {
       max-width: 328px;
       max-height: 328px;
       margin-top: 32px;
