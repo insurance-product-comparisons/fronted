@@ -20,10 +20,15 @@
 	@include mobile {
 		padding: 18px 20px;
 		margin-bottom: 48px;
+		border-radius: 24px;
 	}
 
 	&.osago {
 		margin-bottom: 92px;
+
+		@include mobile {
+			margin-bottom: 48px;
+		}
 	}
 
 	&.kasko {

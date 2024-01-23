@@ -3,23 +3,28 @@
 .default {
 	display: flex;
 	width: 301px;
-	height: 120px;
+	min-height: 120px;
 	border-radius: 36px;
 	padding: 32px;
 	margin: 0;
 	background-color: var(--white);
 	gap: 16px;
 
+	@include desktop {
+		width: 251px;
+	}
+
 	@include tablet {
 		padding: 28px 20px;
 		width: 635px;
-		height: 100%;
+		min-height: 100%;
 		align-items: center;
 	}
 
 	@include mobile {
 		padding: 28px 20px;
 		width: 288px;
-		height: 100%;
+		min-height: 100%;
+		border-radius: 24px;
 	}
 }
