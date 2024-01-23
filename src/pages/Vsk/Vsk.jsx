@@ -7,16 +7,15 @@ import {
 } from 'components';
 import { Typography, List, ListItem, Button, Logo } from 'shared/ui';
 import { useNavigate } from 'react-router-dom';
-import { RESULT_DEFAULT } from 'shared/store/resultDefault';
 import { DOCUMENTS } from 'shared/store/vsk';
 import { VSK } from 'shared/utils/constants/modes';
 import styles from './Vsk.module.scss';
 
-function Vsk() {
+function Vsk({ result }) {
 	const navigate = useNavigate();
 	const companyData = React.useMemo(
-		() => RESULT_DEFAULT.find((company) => VSK === company.code),
-		[]
+		() => result.find((company) => VSK === company.code),
+		[result]
 	);
 
 	function handleBackButton() {
@@ -26,12 +25,6 @@ function Vsk() {
 	function handleToSiteButton() {
 		window.open('https://www.vsk.ru/klientam', '_blank');
 	}
-
-	React.useEffect(() => {
-		if (!companyData) {
-			navigate('/404');
-		}
-	}, [companyData, navigate]);
 
 	return (
 		<main className={styles.root}>

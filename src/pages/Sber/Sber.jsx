@@ -5,6 +5,7 @@ import {
 	InsuranceConditionsResult,
 	InsuranceServices,
 } from 'components';
+import React from 'react';
 import { Typography, List, ListItem, Button, Logo } from 'shared/ui';
 import { DOCUMENTS } from 'shared/store/sberbank';
 import { SBERBANK, SBERBANK_SERV } from 'shared/utils/constants/modes';
@@ -14,10 +15,17 @@ import styles from './Sber.module.scss';
 
 function Sber({ result }) {
 	const navigate = useNavigate();
-	const companyData = result.find((company) => SBERBANK === company.code);
+	const companyData = React.useMemo(
+		() => result.find((company) => SBERBANK === company.code),
+		[result]
+	);
 
 	function handleBackButton() {
 		navigate(-1);
+	}
+
+	function handleToSiteButton() {
+		window.open('https://sberbankins.ru', '_blank');
 	}
 
 	return (
@@ -85,7 +93,12 @@ function Sber({ result }) {
 							>
 								Вернуться к выбору
 							</Button>
-							<Button type="button" bgcolor="accent" mode={SBERBANK}>
+							<Button
+								type="button"
+								bgcolor="accent"
+								mode={SBERBANK}
+								onClick={handleToSiteButton}
+							>
 								Перейти на сайт
 							</Button>
 						</div>

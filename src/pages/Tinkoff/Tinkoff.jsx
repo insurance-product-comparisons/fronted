@@ -5,6 +5,7 @@ import {
 	Rating,
 	Section,
 } from 'components';
+import React from 'react';
 import { SERVICES_TINKOFF } from 'shared/store/servicesTinkoff';
 import { Button, Typography } from 'shared/ui';
 import { TINKOFF } from 'shared/utils/constants/modes';
@@ -12,11 +13,19 @@ import { useNavigate } from 'react-router-dom';
 import styles from './Tinkoff.module.scss';
 
 function Tinkoff({ result }) {
-	const companyData = result.find((company) => TINKOFF === company.code);
 	const navigate = useNavigate();
+
+	const companyData = React.useMemo(
+		() => result.find((company) => TINKOFF === company.code),
+		[result]
+	);
 
 	function handleBackButton() {
 		navigate(-1);
+	}
+
+	function handleToSiteButton() {
+		window.open('https://www.tinkoff.ru/insurance/', '_blank');
 	}
 
 	return (
@@ -88,7 +97,12 @@ function Tinkoff({ result }) {
 						mode="back-button"
 						onClick={handleBackButton}
 					/>
-					<Button children="Перейти на сайт " type="button" bgcolor="accent" />
+					<Button
+						children="Перейти на сайт "
+						type="button"
+						bgcolor="accent"
+						onClick={handleToSiteButton}
+					/>
 				</section>
 			</Section>
 		</main>
