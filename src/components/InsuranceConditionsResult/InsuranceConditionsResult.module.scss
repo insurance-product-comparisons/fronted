@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .container {
 	display: flex;
 	column-gap: 40px;
@@ -10,6 +12,10 @@
 		width: 654px;
 		height: 108px;
 		gap: 20px;
+
+    @include tablet {
+      width: 400px;
+    }
 	}
 }
 

@@ -1,13 +1,27 @@
+@import 'app/styles/sass/mixins.scss';
+
 .logo {
 	background-image: url('/images/logo_tinkoff.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 	width: 269px;
 	height: 215px;
+
+  @include tablet {
+    width: 210px;
+    height: 210px;
+  }
 }
 
 .main-info {
 	display: flex;
 	justify-content: space-between;
 	gap: 213px;
+
+  @include desktop {
+    gap: 30px;
+  }
 }
 
 .rating {
