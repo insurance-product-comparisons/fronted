@@ -15,10 +15,10 @@ function Footer() {
 				<Section>
 					<div className={styles.columns}>
 						<div className={styles.column}>
-							<Logo mode="main" />
+							<Logo mode="footer" />
 						</div>
 						<div className={styles.column}>
-							<Typography variant="body1" color="grey5">
+							<Typography variant={FOOTER} color="grey5">
 								Меню
 							</Typography>
 							<NavigationBar
@@ -29,7 +29,7 @@ function Footer() {
 							/>
 						</div>
 						<div className={styles.column}>
-							<Typography variant="body1" color="grey5">
+							<Typography variant={FOOTER} color="grey5">
 								Контакты
 							</Typography>
 
@@ -48,7 +48,7 @@ function Footer() {
 							</List>
 						</div>
 						<div className={styles.column}>
-							<Typography variant="body1" color="grey5">
+							<Typography variant={FOOTER} color="grey5">
 								Документы
 							</Typography>
 

@@ -1,20 +1,100 @@
+@import 'app/styles/sass/mixins.scss';
+
 .root {
 	background-color: var(--white);
 }
 
+.container {
+	display: flex;
+	height: 48px;
+	width: 100%;
+	justify-content: space-between;
+
+	@include mobile {
+		justify-content: end;
+		flex-direction: row-reverse;
+		gap: 8px;
+	}
+}
+
 .menu {
+	position: relative;
 	max-width: 1136px;
 	display: flex;
 	margin: 0 auto;
 	align-items: center;
-	justify-content: space-between;
 	padding: 12px 0;
+
+    @include desktop {
+		padding: 12px 5px;
+	}
+
 }
 
-.buttons {
+.mobileMenu {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	justify-content: space-between;
+
+	min-width: 90%;
+
+    @include desktop {
+        min-width: 88%;
+	}
+
+	@include tablet {
+		min-width: 80%;
+	}
+
+	@include mobile {
+		visibility: hidden;
+
+        z-index: 1;
+		flex-direction: column;
+		position: absolute;
+		top: 65px;
+		right: 0px;
+
+		min-width: 212px;
+
+		background-color: var(--white);
+		border-radius: 12px;
+		box-shadow: 1px 1px 7px var(--grey-1);
+	}
+}
+
+.mobileMenu-active {
+	@include mobile {
+		visibility: visible;
+	}
+}
+
+.burger-lines {
+	display: none;
+
+	@include mobile {
+		display: flex;
+
+		flex-direction: column;
+		gap: 8px;
+
+		position: absolute;
+		top: 12px;
+		left: 12px;
+	}
+}
+
+.burger-line {
+	display: none;
+
+	@include mobile {
+		display: block;
+
+		width: 20px;
+		height: 1.5px;
+		border-radius: 15px;
+		background-color: var(--black);
+	}
 }
 
 .button-search {
@@ -31,6 +111,18 @@
 	&:hover {
 		opacity: 0.8;
 		cursor: pointer;
+	}
+
+	@include tablet {
+		margin-left: 10px;
+	}
+
+	@include mobile {
+		width: 100%;
+		margin: 0;
+
+		background-image: none;
+		text-align: start;
 	}
 }
 
@@ -52,6 +144,20 @@
 		opacity: 0.8;
 		cursor: pointer;
 	}
+
+	@include tablet {
+		padding: 4px;
+		top: 22px;
+		right: 20px;
+
+		width: 13px;
+		height: 13px;
+	}
+
+	@include mobile {
+		top: 13px;
+		right: 11px;
+	}
 }
 
 .header-search {
@@ -65,12 +171,31 @@
 	margin: 0 auto;
 	height: 56px;
 	margin-right: 12px;
+
+	@include tablet {
+		margin-left: 10px;
+	}
+
+	@include mobile {
+		height: 40px;
+
+		margin: 10px 0 10px 0;
+		padding-left: 13px;
+	}
 }
 
 .search-input {
 	display: flex;
 	align-items: center;
 	width: 792px;
+
+	@include tablet {
+		width: 415px;
+	}
+
+	@include mobile {
+		width: 100%;
+	}
 }
 
 .icon-search {
@@ -81,6 +206,10 @@
 	z-index: 100;
 	top: 26%;
 	left: 16px;
+
+	@include tablet {
+		display: none;
+	}
 }
 
 .header-search .icon-close {

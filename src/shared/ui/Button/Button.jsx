@@ -2,7 +2,15 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './Button.module.scss';
 
-function Button({ children, type, bgcolor, mode, disabled, ...props }) {
+function Button({
+	children,
+	type,
+	bgcolor,
+	mode,
+	submode,
+	disabled,
+	...props
+}) {
 	return (
 		<button
 			type={type}
@@ -10,6 +18,7 @@ function Button({ children, type, bgcolor, mode, disabled, ...props }) {
 				[styles[bgcolor]]: bgcolor,
 				[styles[mode]]: mode,
 				[styles.disable]: disabled,
+				[styles[submode]]: submode,
 			})}
 			disabled={disabled}
 			{...props}

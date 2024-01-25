@@ -16,18 +16,46 @@
 .header {
 	display: flex;
 	gap: 36px;
-	padding-left: 0;
+	padding-left: 80px;
 	list-style: none;
 	pointer-events: none;
 	margin-right: 75px;
 
+    @include desktop {
+		padding-left: 44px;
+	}
+
+
+	@include tablet {
+		gap: 18px;
+
+		padding-left: 25px;
+		margin-right: 0;
+	}
+
+	@include mobile {
+		flex-direction: column;
+		gap: 24px;
+
+		margin: 16px 0 0;
+		padding-left: 12px;
+	}
+
 	li {
 		pointer-events: auto;
 		transition: 0.3s;
+
+		@include mobile {
+			transition: 0s;
+		}
 	}
 
 	a {
 		transition: 0.3s;
+
+		@include mobile {
+			transition: 0s;
+		}
 	}
 
 	&:hover {
@@ -45,6 +73,10 @@
 	padding: 0;
 	gap: 16px;
 	list-style: none;
+
+	@include mobile {
+		gap: 12px;
+	}
 
 	li {
 		position: relative;

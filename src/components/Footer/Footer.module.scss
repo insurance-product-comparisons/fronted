@@ -1,12 +1,23 @@
+@import 'app/styles/sass/mixins.scss';
+
 .root {
 	padding: 48px 0 96px;
 	box-sizing: border-box;
 	background-color: var(--white);
+
+	@include mobile {
+		padding: 4px 0 40px;
+	}
 }
 
 .columns {
 	display: flex;
 	gap: 20px;
+
+	@include mobile {
+		flex-direction: column;
+		gap: 24px;
+	}
 }
 
 .column {
@@ -14,4 +25,12 @@
 	flex-direction: column;
 	width: 269px;
 	gap: 24px;
+
+	@include tablet {
+		width: auto;
+	}
+
+	@include mobile {
+		gap: 16px;
+	}
 }

@@ -144,5 +144,28 @@
 		height: 56px;
 	}
 
+	&.menu {
+		display: none;
+
+		@include mobile {
+			display: inline-block;
+
+			position: relative;
+			box-sizing: border-box;
+
+			padding: 0;
+			min-width: 48px;
+			height: 48px;
+
+			border: 2px solid var(--grey-2);
+			border-radius: 12px;
+			background-color: var(--grey-2);
+
+			&.activated {
+				border-color: var(--black);
+			}
+		}
+	}
+
 	@include hover;
 }
