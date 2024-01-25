@@ -24,6 +24,11 @@
 	margin: 0 auto;
 	align-items: center;
 	padding: 12px 0;
+
+    @include desktop {
+		padding: 12px 5px;
+	}
+
 }
 
 .mobileMenu {
@@ -32,6 +37,10 @@
 	justify-content: space-between;
 
 	min-width: 90%;
+
+    @include desktop {
+        min-width: 88%;
+	}
 
 	@include tablet {
 		min-width: 80%;

@@ -21,6 +21,11 @@
 	pointer-events: none;
 	margin-right: 75px;
 
+    @include desktop {
+		padding-left: 44px;
+	}
+
+
 	@include tablet {
 		gap: 18px;
 
