@@ -49,6 +49,7 @@
 	@include mobile {
 		visibility: hidden;
 
+        z-index: 1;
 		flex-direction: column;
 		position: absolute;
 		top: 65px;
