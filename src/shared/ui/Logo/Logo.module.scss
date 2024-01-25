@@ -11,6 +11,11 @@
 		height: 54px;
 		cursor: pointer;
 		flex-shrink: 0;
+
+        @include tablet {
+			width: 128px;
+            height: 36px;
+		}
 	}
 
 	&.footer {

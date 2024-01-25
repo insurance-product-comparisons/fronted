@@ -1,3 +1,6 @@
+@import 'app/styles/sass/mixins.scss';
+@import 'src/components/Header/Header.module.scss';
+
 .label-default {
 	display: flex;
 	gap: 8px;
@@ -51,3 +54,5 @@
 		}
 	}
 }
+
+

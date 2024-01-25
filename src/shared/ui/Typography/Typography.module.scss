@@ -78,7 +78,7 @@
 	white-space: pre-wrap;
 
 	@include tablet {
-		font-size: 18px;
+		font-size: 14px;
 		line-height: 20px;
 		font-weight: 400;
 	}
@@ -120,6 +120,18 @@
 		font-size: 16px;
 		line-height: 20px;
 		font-weight: 700;
+	}
+}
+
+.typography--variant-search {
+    display: none;
+	margin: 0;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+
+	@include mobile {
+		display: block;
 	}
 }
 

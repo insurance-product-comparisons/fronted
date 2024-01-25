@@ -8,4 +8,5 @@ export const VARIANTS_MAPPING = {
 	body2: 'p',
 	body3: 'p',
 	footer: 'p',
+	search: 'p',
 };
