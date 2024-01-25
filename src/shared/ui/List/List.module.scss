@@ -21,37 +21,36 @@
 	pointer-events: none;
 	margin-right: 75px;
 
-    @include tablet {
-        gap: 18px;
+	@include tablet {
+		gap: 18px;
 
-        padding-left: 25px;
-        margin-right: 0;
+		padding-left: 25px;
+		margin-right: 0;
 	}
 
-    @include mobile {
+	@include mobile {
 		flex-direction: column;
-        gap: 24px;
+		gap: 24px;
 
-        margin: 16px 0 0;
-        padding-left: 12px;
+		margin: 16px 0 0;
+		padding-left: 12px;
 	}
 
 	li {
 		pointer-events: auto;
 		transition: 0.3s;
 
-        @include mobile {
-            transition: 0s;
-        }
-    
+		@include mobile {
+			transition: 0s;
+		}
 	}
 
 	a {
 		transition: 0.3s;
 
-        @include mobile {
-            transition: 0s;
-        }
+		@include mobile {
+			transition: 0s;
+		}
 	}
 
 	&:hover {

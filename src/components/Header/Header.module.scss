@@ -5,20 +5,20 @@
 }
 
 .container {
-    display: flex;
-    height: 48px;
-    width: 100%;
-    justify-content: space-between;
+	display: flex;
+	height: 48px;
+	width: 100%;
+	justify-content: space-between;
 
-    @include mobile {
-        justify-content: end;
-        flex-direction: row-reverse;
-        gap: 8px;
-    }
+	@include mobile {
+		justify-content: end;
+		flex-direction: row-reverse;
+		gap: 8px;
+	}
 }
 
 .menu {
-    position: relative;
+	position: relative;
 	max-width: 1136px;
 	display: flex;
 	margin: 0 auto;
@@ -27,64 +27,64 @@
 }
 
 .mobileMenu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-    min-width: 90%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
-    @include tablet {
-        min-width: 80%;
-    }
+	min-width: 90%;
 
-    @include mobile {
-        visibility: hidden;
+	@include tablet {
+		min-width: 80%;
+	}
 
-        flex-direction: column;
-        position: absolute;
-        top: 65px;
-        right: 0px;
+	@include mobile {
+		visibility: hidden;
 
-        min-width: 212px;
+		flex-direction: column;
+		position: absolute;
+		top: 65px;
+		right: 0px;
 
-        background-color: var(--white);
-        border-radius: 12px;
-        box-shadow: 1px 1px 7px var(--grey-1);
-    }
+		min-width: 212px;
+
+		background-color: var(--white);
+		border-radius: 12px;
+		box-shadow: 1px 1px 7px var(--grey-1);
+	}
 }
 
-.mobileMenu-active{
-    @include mobile {
-        visibility: visible;
-    }
+.mobileMenu-active {
+	@include mobile {
+		visibility: visible;
+	}
 }
 
 .burger-lines {
-    display: none;
+	display: none;
 
-    @include mobile {
-        display: flex;
+	@include mobile {
+		display: flex;
 
-        flex-direction: column;
-        gap: 8px;
+		flex-direction: column;
+		gap: 8px;
 
-        position: absolute;
-        top: 12px;
-        left: 12px;
-    }
+		position: absolute;
+		top: 12px;
+		left: 12px;
+	}
 }
 
 .burger-line {
-    display: none;
+	display: none;
 
-    @include mobile {
-        display: block;
+	@include mobile {
+		display: block;
 
-        width: 20px;
-        height: 1.5px;
-        border-radius: 15px;
-        background-color: var(--black);
-    }
+		width: 20px;
+		height: 1.5px;
+		border-radius: 15px;
+		background-color: var(--black);
+	}
 }
 
 .button-search {
@@ -103,17 +103,17 @@
 		cursor: pointer;
 	}
 
-    @include tablet {
-        margin-left: 10px;
-    }
+	@include tablet {
+		margin-left: 10px;
+	}
 
-    @include mobile {
-        width: 100%;
-        margin: 0;
+	@include mobile {
+		width: 100%;
+		margin: 0;
 
-        background-image: none;
-        text-align: start;
-    }
+		background-image: none;
+		text-align: start;
+	}
 }
 
 .icon-close {
@@ -135,19 +135,19 @@
 		cursor: pointer;
 	}
 
-    @include tablet {
-        padding: 4px;
-        top: 22px;
-        right: 20px;
+	@include tablet {
+		padding: 4px;
+		top: 22px;
+		right: 20px;
 
-        width: 13px;
-        height: 13px;
-    }
+		width: 13px;
+		height: 13px;
+	}
 
-    @include mobile {
-        top: 13px;
-        right: 11px;
-    }
+	@include mobile {
+		top: 13px;
+		right: 11px;
+	}
 }
 
 .header-search {
@@ -162,16 +162,16 @@
 	height: 56px;
 	margin-right: 12px;
 
-    @include tablet {
-        margin-left: 10px;
-    }
+	@include tablet {
+		margin-left: 10px;
+	}
 
-    @include mobile {
-        height: 40px;
+	@include mobile {
+		height: 40px;
 
-        margin: 10px 0 10px 0;
-        padding-left: 13px;
-    }
+		margin: 10px 0 10px 0;
+		padding-left: 13px;
+	}
 }
 
 .search-input {
@@ -179,13 +179,13 @@
 	align-items: center;
 	width: 792px;
 
-    @include tablet {
-        width: 415px;
-    }
+	@include tablet {
+		width: 415px;
+	}
 
-    @include mobile {
-        width: 100%;
-    }
+	@include mobile {
+		width: 100%;
+	}
 }
 
 .icon-search {
@@ -197,9 +197,9 @@
 	top: 26%;
 	left: 16px;
 
-    @include tablet {
-        display: none;
-    }
+	@include tablet {
+		display: none;
+	}
 }
 
 .header-search .icon-close {

@@ -81,13 +81,13 @@
 		word-spacing: 2px;
 	}
 
-    @include tablet {
-        position: static;
-        width: 95%;
-        height: 40px;
+	@include tablet {
+		position: static;
+		width: 95%;
+		height: 40px;
 
-        padding-left: 13px;
-    }
+		padding-left: 13px;
+	}
 }
 
 .input-unusual-case-wide {

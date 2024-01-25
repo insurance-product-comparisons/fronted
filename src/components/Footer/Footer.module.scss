@@ -26,8 +26,8 @@
 	width: 269px;
 	gap: 24px;
 
-    @include tablet {
-	width: auto;
+	@include tablet {
+		width: auto;
 	}
 
 	@include mobile {
