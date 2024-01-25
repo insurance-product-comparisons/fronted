@@ -3,7 +3,7 @@ import { List } from 'shared/ui';
 import { LinkRouter, Typography, ListItem } from 'shared/ui';
 import { DEFAULT } from 'shared/utils/constants/modes';
 
-function NavigationBar({ data, mode = DEFAULT, variant, color }) {
+function NavigationBar({ data, mode = DEFAULT, variant, color, onClick }) {
 	const linkItems = data.map((item) => (
 		<ListItem key={item.id}>
 			<LinkRouter
@@ -14,6 +14,7 @@ function NavigationBar({ data, mode = DEFAULT, variant, color }) {
 					</Typography>
 				}
 				mode={DEFAULT}
+				onClick={onClick}
 			/>
 		</ListItem>
 	));

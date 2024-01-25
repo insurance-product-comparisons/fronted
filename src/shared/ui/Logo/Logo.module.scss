@@ -11,6 +11,23 @@
 		height: 54px;
 		cursor: pointer;
 		flex-shrink: 0;
+
+		@include tablet {
+			width: 128px;
+			height: 36px;
+		}
+	}
+
+	&.footer {
+		background-image: url('/images/logo.svg');
+		width: 221px;
+		height: 54px;
+		cursor: pointer;
+		flex-shrink: 0;
+
+		@include tablet {
+			display: none;
+		}
 	}
 
 	&.insurance {

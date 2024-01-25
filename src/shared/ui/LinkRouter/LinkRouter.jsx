@@ -4,12 +4,13 @@ import cn from 'classnames';
 import { DEFAULT } from 'shared/utils/constants/modes';
 import styles from './LinkRouter.module.scss';
 
-function LinkRouter({ route, text, mode = DEFAULT, ...args }) {
+function LinkRouter({ route, text, mode = DEFAULT, onClick, ...args }) {
 	return (
 		<Link
 			to={route}
 			className={cn(styles.root, { [styles[mode]]: mode })}
 			{...args}
+			onClick={onClick}
 		>
 			{text}
 		</Link>
