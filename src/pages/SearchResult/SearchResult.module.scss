@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .root {
 	flex-grow: 1;
 }
@@ -7,4 +9,15 @@
 	flex-direction: column;
 	margin: 40px 0 100px;
 	gap: 32px;
+
+	@include mobile {
+		margin: 24px 0 48px;
+		gap: 0;
+	}
+}
+
+.header-container {
+	@include mobile {
+		margin-top: 12px;
+	}
 }

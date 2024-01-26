@@ -9,4 +9,5 @@ export const VARIANTS_MAPPING = {
 	body3: 'p',
 	footer: 'p',
 	search: 'p',
+	mob1: 'p',
 };

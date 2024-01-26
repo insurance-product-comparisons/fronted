@@ -10,6 +10,12 @@
 	height: 52px !important;
 	border: 0 !important;
 	outline: 0 !important;
+
+	@include mobile {
+		width: 198px !important;
+		height: 48px !important;
+		margin-bottom: 20px;
+	}
 }
 
 .select-osago {
@@ -79,6 +85,13 @@
 	background-repeat: no-repeat;
 	box-shadow: none !important;
 	cursor: pointer !important;
+
+	@include mobile {
+		width: 198px !important;
+		height: 48px !important;
+		padding: 0 12px 0 37px;
+		background-position: 12px center;
+	}
 }
 
 .value-container-default {
@@ -95,6 +108,11 @@
 	font-weight: 400 !important;
 	line-height: 20px !important;
 	color: var(--black) !important;
+
+	@include mobile {
+		font-weight: 600 !important;
+		line-height: 24px !important;
+	}
 }
 
 .input-default {

@@ -51,13 +51,7 @@ export function Header() {
 							mode="menu"
 							submode={isMenuOpen ? 'activated' : ''}
 							onClick={handleClickMenuButton}
-						>
-							<div className={styles['burger-lines']}>
-								<span className={styles['burger-line']}></span>
-								<span className={styles['burger-line']}></span>
-								<span className={styles['burger-line']}></span>
-							</div>
-						</Button>
+						></Button>
 						<div
 							className={cn(
 								styles.mobileMenu,

@@ -59,7 +59,9 @@ function SearchResult({ result }) {
 			{isResult && (
 				<>
 					<Section>
-						<Typography variant="h2">Выбор страховой компании</Typography>
+						<div className={styles['header-container']}>
+							<Typography variant="h2">Выбор страховой компании</Typography>
+						</div>
 					</Section>
 					<Section>
 						<div className={styles.container}>
@@ -71,7 +73,11 @@ function SearchResult({ result }) {
 							/>
 							<ResultCardContainer data={renderList.slice(0, resultsPerPage)} />
 							{isShowMore && (
-								<Button bgcolor="ghost" mode="more" onClick={showMoreResults}>
+								<Button
+									bgcolor="ghost"
+									mode="more-results"
+									onClick={showMoreResults}
+								>
 									Загрузить ещё
 								</Button>
 							)}
