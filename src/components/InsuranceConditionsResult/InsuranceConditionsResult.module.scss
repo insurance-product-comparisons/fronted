@@ -67,6 +67,10 @@
 		align-items: center;
 		background-color: var(--white);
 	}
+
+	@include tablet {
+		align-items: center;
+	}
 }
 
 .value-container {

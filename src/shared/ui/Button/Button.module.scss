@@ -97,6 +97,10 @@
 	&.more {
 		min-width: 156px;
 		height: 56px;
+
+		@include mobile {
+			width: 100%;
+		}
 	}
 
 	&.submit-request {

@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .container {
 	display: flex;
 	min-height: 120px;
@@ -7,11 +9,24 @@
 	align-items: center;
 	padding: 28px 24px;
 	box-sizing: border-box;
+
+	@include desktop {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	@include mobile {
+		padding: 28px 20px;
+	}
 }
 
 .container-company {
 	display: flex;
 	margin-right: 45.5px;
+
+	@include mobile {
+	 margin-right: 0;
+	}
 }
 
 .rating {
@@ -20,10 +35,29 @@
 	gap: 12px;
 	margin-left: 16px;
 	width: 237px;
+
+	@include mobile {
+		width: 212px;
+		margin-left: 12px;
+	}
 }
 
 .container-button {
 	display: flex;
 	gap: 8px;
 	margin-left: auto;
+
+	@include desktop {
+		margin-left: 0;
+	}
+
+	@include tablet {
+		justify-content: center;
+	}
+
+	@include mobile {
+		width: 100%;
+		flex-direction: column;
+		gap: 12px;
+	}
 }
