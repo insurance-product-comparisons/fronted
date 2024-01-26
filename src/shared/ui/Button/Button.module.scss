@@ -154,6 +154,10 @@
 
 	&.menu {
 		display: none;
+		background-image: url('/images/icon_burger.svg');
+		background-size: 26px 17px;
+		background-position: center;
+		background-repeat: no-repeat;
 
 		@include mobile {
 			display: inline-block;
