@@ -76,9 +76,9 @@
 
 	@include hover;
 
-  @include mobile {
-    height: 48px;
-  }
+	@include mobile {
+		height: 48px;
+	}
 }
 
 .ghost {
@@ -147,9 +147,9 @@
 		min-width: 227px;
 		height: 56px;
 
-    @include mobile {
-      height: 48px;
-    }
+		@include mobile {
+			height: 48px;
+		}
 	}
 
 	&.menu {

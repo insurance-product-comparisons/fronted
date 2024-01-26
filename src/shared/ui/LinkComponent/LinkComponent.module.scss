@@ -31,9 +31,9 @@
 	font-weight: 700;
 	cursor: pointer;
 
-  @include tablet {
-    padding-left: 30px;
-  }
+	@include tablet {
+		padding-left: 30px;
+	}
 }
 
 .check-kbm-in-form {

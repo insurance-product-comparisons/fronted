@@ -13,21 +13,21 @@
 		height: 108px;
 		gap: 20px;
 
-    @include tablet {
-      width: 400px;
-    }
+		@include tablet {
+			width: 400px;
+		}
 
-    @include tablet {
-      width: 654px;
-    }
+		@include tablet {
+			width: 654px;
+		}
 
-    @include mobile {
-      width: 328px;
-      height: auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px 20px;
-    }
+		@include mobile {
+			width: 328px;
+			height: auto;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 16px 20px;
+		}
 	}
 }
 
@@ -54,9 +54,9 @@
 		align-items: center;
 		margin-bottom: 0;
 
-    @include mobile {
-      height: 84px;
-    }
+		@include mobile {
+			height: 84px;
+		}
 	}
 
 	&.vsk {

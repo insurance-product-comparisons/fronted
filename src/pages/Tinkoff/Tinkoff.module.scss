@@ -2,20 +2,20 @@
 
 .logo {
 	background-image: url('/images/logo_tinkoff.svg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 	width: 269px;
 	height: 215px;
 
-  @include desktop {
-    width: 210px;
-    height: 210px;
-  }
+	@include desktop {
+		width: 210px;
+		height: 210px;
+	}
 
-  @include tablet {
-    display: none;
-  }
+	@include tablet {
+		display: none;
+	}
 }
 
 .main-info {
@@ -23,22 +23,22 @@
 	justify-content: space-between;
 	gap: 213px;
 
-  @include desktop {
-    gap: 30px;
-  }
+	@include desktop {
+		gap: 30px;
+	}
 
-  @include mobile {
-    margin-top: 12px;
-  }
+	@include mobile {
+		margin-top: 12px;
+	}
 }
 
 .rating {
 	margin-top: 8px;
 	margin-bottom: 40px;
 
-  @include mobile{
-    margin-bottom: 24px;
-  }
+	@include mobile {
+		margin-bottom: 24px;
+	}
 }
 
 .description {
@@ -49,11 +49,11 @@
 	margin-top: 40px;
 	margin-bottom: 40px;
 
-  @include mobile {
-    margin-top: 24px;
-    gap: 12px;
-    margin-bottom: 21px;
-  }
+	@include mobile {
+		margin-top: 24px;
+		gap: 12px;
+		margin-bottom: 21px;
+	}
 }
 
 .paragraphs {
@@ -68,9 +68,9 @@
 	flex-direction: column;
 	gap: 16px;
 
-  @include mobile {
-    gap: 11px;
-  }
+	@include mobile {
+		gap: 11px;
+	}
 }
 
 .wrapper-services {
@@ -85,10 +85,10 @@
 	flex-direction: column;
 	gap: 16px;
 
-  @include mobile {
-    gap: 11px;
-    margin: 21px 0;
-  }
+	@include mobile {
+		gap: 11px;
+		margin: 21px 0;
+	}
 }
 
 .passport {
@@ -107,9 +107,9 @@
 		border-radius: 50%;
 	}
 
-  @include mobile {
-    margin-left: 20px;
-  }
+	@include mobile {
+		margin-left: 20px;
+	}
 }
 
 .license {
@@ -118,10 +118,10 @@
 	gap: 16px;
 	margin-bottom: 32px;
 
-  @include mobile {
-    gap: 12px;
-    margin-bottom: 24px;
-  }
+	@include mobile {
+		gap: 12px;
+		margin-bottom: 24px;
+	}
 }
 
 .buttons {
@@ -129,9 +129,9 @@
 	gap: 24px;
 	margin-bottom: 100px;
 
-  @include mobile {
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 52px;
-  }
+	@include mobile {
+		flex-direction: column;
+		gap: 12px;
+		margin-bottom: 52px;
+	}
 }
