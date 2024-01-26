@@ -16,6 +16,18 @@
     @include tablet {
       width: 400px;
     }
+
+    @include tablet {
+      width: 654px;
+    }
+
+    @include mobile {
+      width: 328px;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 20px;
+    }
 	}
 }
 
@@ -41,6 +53,10 @@
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 0;
+
+    @include mobile {
+      height: 84px;
+    }
 	}
 
 	&.vsk {

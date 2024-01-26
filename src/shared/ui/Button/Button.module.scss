@@ -75,6 +75,10 @@
 	}
 
 	@include hover;
+
+  @include mobile {
+    height: 48px;
+  }
 }
 
 .ghost {
@@ -142,6 +146,10 @@
 	&.back-button {
 		min-width: 227px;
 		height: 56px;
+
+    @include mobile {
+      height: 48px;
+    }
 	}
 
 	&.menu {
