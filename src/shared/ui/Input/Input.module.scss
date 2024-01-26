@@ -14,9 +14,9 @@
 		background-color: var(--white);
 	}
 
-  @include tablet {
-    width: 288px;
-  }
+	@include tablet {
+		width: 288px;
+	}
 }
 
 .input-kasko {

@@ -1,18 +1,44 @@
+@import 'app/styles/sass/mixins.scss';
+
 .logo {
 	background-image: url('/images/logo_tinkoff.svg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 	width: 269px;
 	height: 215px;
+
+	@include desktop {
+		width: 210px;
+		height: 210px;
+	}
+
+	@include tablet {
+		display: none;
+	}
 }
 
 .main-info {
 	display: flex;
 	justify-content: space-between;
 	gap: 213px;
+
+	@include desktop {
+		gap: 30px;
+	}
+
+	@include mobile {
+		margin-top: 12px;
+	}
 }
 
 .rating {
 	margin-top: 8px;
 	margin-bottom: 40px;
+
+	@include mobile {
+		margin-bottom: 24px;
+	}
 }
 
 .description {
@@ -22,6 +48,12 @@
 	max-width: 654px;
 	margin-top: 40px;
 	margin-bottom: 40px;
+
+	@include mobile {
+		margin-top: 24px;
+		gap: 12px;
+		margin-bottom: 21px;
+	}
 }
 
 .paragraphs {
@@ -35,6 +67,10 @@
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+
+	@include mobile {
+		gap: 11px;
+	}
 }
 
 .wrapper-services {
@@ -48,6 +84,11 @@
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+
+	@include mobile {
+		gap: 11px;
+		margin: 21px 0;
+	}
 }
 
 .passport {
@@ -65,6 +106,10 @@
 		transform: translateY(-50%);
 		border-radius: 50%;
 	}
+
+	@include mobile {
+		margin-left: 20px;
+	}
 }
 
 .license {
@@ -72,10 +117,21 @@
 	flex-direction: column;
 	gap: 16px;
 	margin-bottom: 32px;
+
+	@include mobile {
+		gap: 12px;
+		margin-bottom: 24px;
+	}
 }
 
 .buttons {
 	display: flex;
 	gap: 24px;
 	margin-bottom: 100px;
+
+	@include mobile {
+		flex-direction: column;
+		gap: 12px;
+		margin-bottom: 52px;
+	}
 }

@@ -11,7 +11,7 @@
 	&.input {
 		flex-direction: column;
 
-    @include mobile {
+		@include mobile {
 			padding: 7px 0 24px;
 		}
 	}
@@ -20,7 +20,7 @@
 		flex-direction: row;
 		align-items: center;
 
-    @include tablet {
+		@include tablet {
 			flex-direction: column;
 			align-items: normal;
 			padding: 0;
@@ -42,8 +42,8 @@
 .button-wrapper {
 	width: 209px;
 
-  @include mobile {
-    max-width: 288px;
-    width: 100%;
-  }
+	@include mobile {
+		max-width: 288px;
+		width: 100%;
+	}
 }

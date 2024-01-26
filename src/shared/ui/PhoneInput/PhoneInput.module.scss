@@ -18,10 +18,10 @@
 		background-color: var(--white);
 	}
 
-  @include tablet {
-    max-width: 288px;
+	@include tablet {
+		max-width: 288px;
 		width: 100%;
-  }
+	}
 }
 
 .input-default-error {

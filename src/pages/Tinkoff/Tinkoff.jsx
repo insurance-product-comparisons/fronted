@@ -76,7 +76,9 @@ function Tinkoff({ result }) {
 				</section>
 
 				<section className={styles.documents}>
-					<Typography variant="h4">Необходимые документы</Typography>
+					<Typography variant="h4">
+						Необходимые для оформления документы
+					</Typography>
 					<div className={styles.passport}>
 						<Typography variant="body2">Паспорт</Typography>
 					</div>
