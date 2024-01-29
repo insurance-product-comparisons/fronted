@@ -2,7 +2,7 @@
 
 .container {
 	display: flex;
-	column-gap: 40px;
+	column-gap: 20px;
 
 	&.sberbank {
 		column-gap: 20px;
@@ -29,6 +29,18 @@
 			gap: 16px 20px;
 		}
 	}
+
+  @include tablet {
+    column-gap: 20px;
+  }
+
+  @include mobile {
+    width: 328px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 20px;
+  }
 }
 
 .conditions-item {
@@ -66,6 +78,14 @@
 		justify-content: center;
 		align-items: center;
 		background-color: var(--white);
+
+    @include tablet {
+      height: 84px;
+    }
+
+    @include mobile {
+      width: 154px;
+    }
 	}
 
 	@include tablet {

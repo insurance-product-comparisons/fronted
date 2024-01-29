@@ -170,4 +170,9 @@
 	margin: 15px 0 0 24px;
 	padding: 0;
 	list-style: disc;
+
+  @include mobile {
+    width: 328px;
+    margin: 11px 0 0 21px;
+  }
 }

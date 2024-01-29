@@ -72,6 +72,10 @@
 	&.vsk {
 		min-width: 227px;
 		height: 56px;
+
+    @include mobile {
+      height: 48px;
+    }
 	}
 
 	@include hover;
@@ -157,6 +161,10 @@
 		min-width: 196px;
 		height: 56px;
 		padding: 0 32px;
+
+    @include mobile {
+      height: 48px;
+    }
 	}
 
 	&.back-button {
