@@ -1,3 +1,5 @@
+@import 'app/styles/sass/mixins.scss';
+
 .root {
 	flex-grow: 1;
 	padding-bottom: 100px;
@@ -6,14 +8,18 @@
 .container {
 	display: flex;
 	margin-inline: auto;
-	max-width: 1136px;
 	gap: 20px;
+
+	@include desktop {
+		flex-direction: column;
+		gap: 0;
+	}
 }
 
 .left-column {
 	display: flex;
 	flex-direction: column;
-	width: 847px;
+	max-width: 847px;
 	gap: 40px;
 }
 
