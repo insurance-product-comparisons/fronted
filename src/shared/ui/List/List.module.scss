@@ -171,8 +171,8 @@
 	padding: 0;
 	list-style: disc;
 
-  @include mobile {
-    width: 328px;
-    margin: 11px 0 0 21px;
-  }
+	@include mobile {
+		width: 328px;
+		margin: 11px 0 0 21px;
+	}
 }
