@@ -57,5 +57,9 @@
 		background-image: url('/images/logo_vsk.svg');
 		width: 349px;
 		height: 92px;
+
+		@include tablet {
+			display: none;
+		}
 	}
 }
