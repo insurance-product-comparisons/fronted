@@ -38,7 +38,7 @@
 	gap: 12px;
 	box-sizing: border-box;
 
-	@include desktop{
+	@include desktop {
 		background-color: var(--grey3);
 		min-height: auto;
 		padding: 0;

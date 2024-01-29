@@ -164,9 +164,10 @@
 
 	@include desktop {
 		grid-template-columns: 1fr;
-		gap: 0;
+		gap: 5px;
 		list-style: disc;
 		padding-left: 20px;
+		margin-top: 14px;
 	}
 }
 
