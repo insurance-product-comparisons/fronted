@@ -62,6 +62,16 @@
 	&.sberbank {
 		min-width: 227px;
 		height: 56px;
+
+		@include tablet {
+			height: 50px;
+			width: 328px;
+			align-self: center;
+		}
+
+		@include mobile {
+			width: 100%;
+		}
 	}
 
 	&.main {
@@ -151,6 +161,16 @@
 		min-width: 196px;
 		height: 56px;
 		padding: 0 32px;
+
+		@include tablet {
+			height: 50px;
+			width: 328px;
+			align-self: center;
+		}
+
+		@include mobile {
+			width: 100%;
+		}
 	}
 
 	&.vsk {

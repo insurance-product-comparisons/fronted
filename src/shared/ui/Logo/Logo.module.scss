@@ -47,6 +47,10 @@
 		background-image: url('/images/logo_sber.svg');
 		width: 269px;
 		height: 25px;
+
+		@include desktop {
+			display: none;
+		}
 	}
 
 	&.vsk {

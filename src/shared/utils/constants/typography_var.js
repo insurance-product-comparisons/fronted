@@ -10,4 +10,5 @@ export const VARIANTS_MAPPING = {
 	footer: 'p',
 	search: 'p',
 	mob1: 'p',
+	mob2: 'p',
 };

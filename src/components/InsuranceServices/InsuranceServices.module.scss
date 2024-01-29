@@ -5,7 +5,7 @@
 	height: 32px;
 	background-size: cover;
 
-	@include mobile {
+	@include desktop {
 		display: none;
 	}
 }

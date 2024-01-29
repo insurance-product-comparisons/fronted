@@ -1,20 +1,38 @@
+@import 'app/styles/sass/mixins.scss';
+
 .root {
 	flex-grow: 1;
 	padding-bottom: 100px;
+
+	@include tablet {
+		padding-bottom: 54px;
+	}
 }
 
 .container {
 	display: flex;
 	margin-inline: auto;
-	max-width: 1136px;
 	gap: 20px;
+
+	@include desktop {
+		flex-direction: column;
+		gap: 0;
+	}
 }
 
 .left-column {
 	display: flex;
 	flex-direction: column;
-	width: 847px;
+	max-width: 847px;
 	gap: 40px;
+
+	@include tablet {
+		gap: 20px;
+	}
+
+	@include mobile {
+		padding-top: 12px;
+	}
 }
 
 .left-column section {
@@ -31,14 +49,27 @@
 	flex-direction: column;
 	margin-top: 28px;
 	gap: 10px;
+
+	@include tablet {
+		margin-top: 9px;
+	}
 }
 
 .license {
 	display: block;
 	margin-top: 28px;
+
+	@include tablet {
+		margin-top: 12px;
+	}
 }
 
 .button-container {
 	display: flex;
 	gap: 24px;
+
+	@include tablet {
+		flex-direction: column;
+		gap: 12px;
+	}
 }

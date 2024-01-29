@@ -132,7 +132,7 @@
 .sberbank {
 	display: flex;
 	flex-direction: column;
-	width: 559px;
+	max-width: 559px;
 	margin: 28px 0 0 15px;
 	padding: 0;
 	list-style: disc;
@@ -161,6 +161,14 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
+
+	@include desktop {
+		grid-template-columns: 1fr;
+		gap: 5px;
+		list-style: disc;
+		padding-left: 20px;
+		margin-top: 14px;
+	}
 }
 
 .vsk {
