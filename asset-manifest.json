@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/fronted/static/css/main.cf447745.css",
-    "main.js": "/fronted/static/js/main.40ebd7c8.js",
+    "main.css": "/fronted/static/css/main.4b70b15b.css",
+    "main.js": "/fronted/static/js/main.a67125fa.js",
     "static/js/787.0101eb82.chunk.js": "/fronted/static/js/787.0101eb82.chunk.js",
     "static/media/Inter-Bold.ttf": "/fronted/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
     "static/media/Inter-Regular.ttf": "/fronted/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
-    "static/media/consult_form.svg": "/fronted/static/media/consult_form.e2475aed8d9c95c7d761.svg",
+    "static/media/logo_tinkoff.svg": "/fronted/static/media/logo_tinkoff.573019779bf9f5fcb325.svg",
     "static/media/kasko.svg": "/fronted/static/media/kasko.57748b7b69889e061254207c99936518.svg",
+    "static/media/consult_form.svg": "/fronted/static/media/consult_form.b10035d43d3bd4932662.svg",
     "static/media/dmc_form.svg": "/fronted/static/media/dmc_form.67b29fa7d33cf7eed68e.svg",
     "static/media/dmc.svg": "/fronted/static/media/dmc.e7fe0e1bbe96ffa31da6bfd3506e3c66.svg",
     "static/media/osago_form.svg": "/fronted/static/media/osago_form.00f4ab56b160a1aee815.svg",
@@ -15,7 +16,16 @@
     "static/media/osago.svg": "/fronted/static/media/osago.c526b9acb505b04f029ad1b55b5d6059.svg",
     "static/media/kasko_form.svg": "/fronted/static/media/kasko_form.8f99456039093114130d.svg",
     "static/media/search-not-found.svg": "/fronted/static/media/search-not-found.c012bcf254d5e345f551.svg",
+    "static/media/logo_sber.svg": "/fronted/static/media/logo_sber.1947779d1134ad629910.svg",
+    "static/media/logo_vsk.svg": "/fronted/static/media/logo_vsk.57ca2bc262f57027827b.svg",
     "static/media/logo.svg": "/fronted/static/media/logo.7b563c09a55389a40cbb.svg",
+    "static/media/icon_damage.svg": "/fronted/static/media/icon_damage.988b8409b82b9b21762b2b2f88350a13.svg",
+    "static/media/icon_car_crash.svg": "/fronted/static/media/icon_car_crash.01ae0cf3da6a229abd83345ac9640868.svg",
+    "static/media/icon_car.svg": "/fronted/static/media/icon_car.0ddc13fd38d8736a8146e919739ce9bd.svg",
+    "static/media/icon_medicine_2.svg": "/fronted/static/media/icon_medicine_2.9a3ff7ad6c9e57753a4cbdb2ae8c25ec.svg",
+    "static/media/icon_medicine_4.svg": "/fronted/static/media/icon_medicine_4.8763f2fa26fb99f97a4771e3726e8f85.svg",
+    "static/media/icon_medicine.svg": "/fronted/static/media/icon_medicine.ee6feec078e52f61e115b6b94e8b25c4.svg",
+    "static/media/icon_medicine_3.svg": "/fronted/static/media/icon_medicine_3.03387e4080aa853a81eb7c4856ef75f7.svg",
     "static/media/icon_sort.svg": "/fronted/static/media/icon_sort.ef8da9a3b321811ebc57.svg",
     "index.html": "/fronted/index.html",
     "static/media/icon-arrow.svg": "/fronted/static/media/icon-arrow.bdc83bba8c303e2e71be.svg",
@@ -24,13 +34,14 @@
     "static/media/icon_search.svg": "/fronted/static/media/icon_search.07329ba2908a77e5c3c1.svg",
     "static/media/Star.svg": "/fronted/static/media/Star.8191c92aef5a9793daa6.svg",
     "static/media/icon_success.svg": "/fronted/static/media/icon_success.8c3cc17de11d3c4892e5.svg",
+    "static/media/icon_burger.svg": "/fronted/static/media/icon_burger.a31e8ef9b650fbe818fd.svg",
     "static/media/icon_close.svg": "/fronted/static/media/icon_close.50cf16b0bc0bf82fab12.svg",
-    "main.cf447745.css.map": "/fronted/static/css/main.cf447745.css.map",
-    "main.40ebd7c8.js.map": "/fronted/static/js/main.40ebd7c8.js.map",
+    "main.4b70b15b.css.map": "/fronted/static/css/main.4b70b15b.css.map",
+    "main.a67125fa.js.map": "/fronted/static/js/main.a67125fa.js.map",
     "787.0101eb82.chunk.js.map": "/fronted/static/js/787.0101eb82.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf447745.css",
-    "static/js/main.40ebd7c8.js"
+    "static/css/main.4b70b15b.css",
+    "static/js/main.a67125fa.js"
   ]
 }
