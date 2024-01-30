@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/fronted/static/css/main.4b70b15b.css",
+    "main.css": "/fronted/static/css/main.cbe22070.css",
     "main.js": "/fronted/static/js/main.a67125fa.js",
     "static/js/787.0101eb82.chunk.js": "/fronted/static/js/787.0101eb82.chunk.js",
     "static/media/Inter-Bold.ttf": "/fronted/static/media/Inter-Bold.0eaf807b1cf0eceabe0f.ttf",
@@ -36,12 +36,12 @@
     "static/media/icon_success.svg": "/fronted/static/media/icon_success.8c3cc17de11d3c4892e5.svg",
     "static/media/icon_burger.svg": "/fronted/static/media/icon_burger.a31e8ef9b650fbe818fd.svg",
     "static/media/icon_close.svg": "/fronted/static/media/icon_close.50cf16b0bc0bf82fab12.svg",
-    "main.4b70b15b.css.map": "/fronted/static/css/main.4b70b15b.css.map",
+    "main.cbe22070.css.map": "/fronted/static/css/main.cbe22070.css.map",
     "main.a67125fa.js.map": "/fronted/static/js/main.a67125fa.js.map",
     "787.0101eb82.chunk.js.map": "/fronted/static/js/787.0101eb82.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b70b15b.css",
+    "static/css/main.cbe22070.css",
     "static/js/main.a67125fa.js"
   ]
 }
