@@ -6,6 +6,6 @@
 
 [Storybook проекта на Chromatic](https://657b2afe3c0bffcfaf2eefa7-iyyigdbuum.chromatic.com)
 
-## Деплой проекта
+## Ссылка на приложение
 
 [Деплой проекта на GH-Pages](https://insurance-product-comparisons.github.io/fronted/)
